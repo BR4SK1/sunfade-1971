@@ -11,7 +11,7 @@ export function ButtonShowcase() {
           <Typography variant="subtitle2" sx={{ mb: 1, textTransform: 'capitalize' }}>
             {variant}
           </Typography>
-          <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+          <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
             {COLORS.map((color) => (
               <Button key={color} variant={variant} color={color} size="small">
                 {color}

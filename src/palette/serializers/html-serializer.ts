@@ -2,8 +2,8 @@
 // HTML One-Sheet Serializer — ResolvedPalette → Self-contained HTML page
 // ──────────────────────────────────────────────
 
-import { relativeLuminance } from '../color-utils.js';
-import type { ResolvedPalette } from '../types.js';
+import { relativeLuminance } from '../color-utils';
+import type { ResolvedPalette } from '../types';
 
 export interface HtmlMeta {
   name: string;

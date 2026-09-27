@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { resolvePalette } from '../resolver.js';
-import { DARK_DEFAULTS, LIGHT_DEFAULTS, DEFAULT_DARK_BASE_COLORS, DEFAULT_LIGHT_BASE_COLORS } from '../defaults.js';
-import type { PaletteConfig, ResolvedPalette } from '../types.js';
+import { resolvePalette } from '../resolver';
+import { DARK_DEFAULTS, LIGHT_DEFAULTS, DEFAULT_DARK_BASE_COLORS, DEFAULT_LIGHT_BASE_COLORS } from '../defaults';
+import type { PaletteConfig, ResolvedPalette } from '../types';
 
 describe('resolvePalette — dark mode identity', () => {
   it('produces the Sunfade dark palette from its default base colors', () => {

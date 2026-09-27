@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { deriveAccentVariants } from '../variant-engine.js';
-import { REFERENCE_ACCENTS, DARK_DEFAULTS } from '../defaults.js';
-import type { AccentName } from '../types.js';
+import { deriveAccentVariants } from '../variant-engine';
+import { REFERENCE_ACCENTS, DARK_DEFAULTS } from '../defaults';
+import type { AccentName } from '../types';
 
 const ACCENT_NAMES: AccentName[] = ['red', 'green', 'yellow', 'blue', 'purple', 'aqua', 'orange'];
 

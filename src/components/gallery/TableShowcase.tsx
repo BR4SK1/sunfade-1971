@@ -8,8 +8,8 @@ import {
   TableRow,
   Paper,
 } from '@mui/material';
-import { usePalette } from '../../context/usePalette.js';
-import { ACCENT_NAMES, ACCENT_TIERS, type ResolvedPalette } from '../../palette/types.js';
+import { usePalette } from '../../context/usePalette';
+import { ACCENT_NAMES, ACCENT_TIERS, type ResolvedPalette } from '../../palette/types';
 
 export function TableShowcase() {
   const { resolved } = usePalette();

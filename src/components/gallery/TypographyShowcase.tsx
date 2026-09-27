@@ -19,8 +19,8 @@ export function TypographyShowcase() {
         body2. The quick brown fox jumps over the lazy dog. Accents derive from user-chosen
         neutral values through HSL delta calculations.
       </Typography>
-      <Typography variant="caption" display="block" gutterBottom>caption text</Typography>
-      <Typography variant="overline" display="block">overline text</Typography>
+      <Typography variant="caption" sx={{ display: 'block' }} gutterBottom>caption text</Typography>
+      <Typography variant="overline" sx={{ display: 'block' }}>overline text</Typography>
     </Box>
   );
 }

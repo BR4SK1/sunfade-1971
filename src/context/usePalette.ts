@@ -1,7 +1,7 @@
 import { useContext, useMemo } from 'react';
-import { PaletteStateContext, PaletteDispatchContext } from './PaletteContext.js';
-import type { PaletteState, PaletteAction } from './palette-reducer.js';
-import type { AccentName, BaseColors, Contrast, Mode } from '../palette/types.js';
+import { PaletteStateContext, PaletteDispatchContext } from './PaletteContext';
+import type { PaletteState, PaletteAction } from './palette-reducer';
+import type { AccentName, BaseColors, Contrast, Mode } from '../palette/types';
 
 export function usePaletteState(): PaletteState {
   const ctx = useContext(PaletteStateContext);

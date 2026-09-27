@@ -1,9 +1,11 @@
+'use client';
+
 import { useEffect, useRef, useState } from 'react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import type { ReactNode } from 'react';
-import { usePaletteState } from '../context/usePalette.js';
-import { buildMuiTheme } from './buildMuiTheme.js';
-import { injectCssVars } from './cssVarInjector.js';
+import { usePaletteState } from '../context/usePalette';
+import { buildMuiTheme } from './buildMuiTheme';
+import { injectCssVars } from './cssVarInjector';
 
 const DEBOUNCE_MS = 150;
 

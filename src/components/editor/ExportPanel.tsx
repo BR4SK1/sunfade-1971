@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { Box, Button, Menu, MenuItem, Snackbar, Typography } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
-import { usePalette } from '../../context/usePalette.js';
-import { serializeMuiTheme } from '../../palette/serializers/mui-serializer.js';
-import { serializeGhosttyConfig } from '../../palette/serializers/ghostty-serializer.js';
-import { serializeCssVars } from '../../palette/serializers/css-serializer.js';
-import { serializeHtmlOneSheet } from '../../palette/serializers/html-serializer.js';
-import { resolvePalette } from '../../palette/resolver.js';
+import { usePalette } from '../../context/usePalette';
+import { serializeMuiTheme } from '../../palette/serializers/mui-serializer';
+import { serializeGhosttyConfig } from '../../palette/serializers/ghostty-serializer';
+import { serializeCssVars } from '../../palette/serializers/css-serializer';
+import { serializeHtmlOneSheet } from '../../palette/serializers/html-serializer';
+import { resolvePalette } from '../../palette/resolver';
 import {
   DEFAULT_DARK_BASE_COLORS,
   DEFAULT_LIGHT_BASE_COLORS,
-} from '../../palette/defaults.js';
+} from '../../palette/defaults';
 
 function download(filename: string, content: string, mimeType: string) {
   const blob = new Blob([content], { type: mimeType });

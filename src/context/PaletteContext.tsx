@@ -1,10 +1,12 @@
+'use client';
+
 import { createContext, useReducer, type ReactNode } from 'react';
 import {
   paletteReducer,
   createInitialState,
   type PaletteState,
   type PaletteAction,
-} from './palette-reducer.js';
+} from './palette-reducer';
 
 export const PaletteStateContext = createContext<PaletteState | null>(null);
 export const PaletteDispatchContext = createContext<React.Dispatch<PaletteAction> | null>(null);

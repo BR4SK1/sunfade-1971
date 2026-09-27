@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { deriveBgShades, deriveFgShades, deriveGray } from '../shade-engine.js';
-import { DARK_DEFAULTS, LIGHT_DEFAULTS, DEFAULT_DARK_BASE_COLORS, DEFAULT_LIGHT_BASE_COLORS } from '../defaults.js';
+import { deriveBgShades, deriveFgShades, deriveGray } from '../shade-engine';
+import { DARK_DEFAULTS, LIGHT_DEFAULTS, DEFAULT_DARK_BASE_COLORS, DEFAULT_LIGHT_BASE_COLORS } from '../defaults';
 
 describe('deriveBgShades — dark mode identity', () => {
   it('derives canonical dark bg shades from default bg0', () => {

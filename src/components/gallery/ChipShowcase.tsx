@@ -5,17 +5,17 @@ const COLORS = ['default', 'primary', 'secondary', 'error', 'warning', 'success'
 export function ChipShowcase() {
   return (
     <Box>
-      <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap sx={{ mb: 2 }}>
+      <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap', mb: 2 }}>
         {COLORS.map((color) => (
           <Chip key={color} label={color} color={color} size="small" />
         ))}
       </Stack>
-      <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap sx={{ mb: 2 }}>
+      <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap', mb: 2 }}>
         {COLORS.map((color) => (
           <Chip key={color} label={color} color={color} variant="outlined" size="small" />
         ))}
       </Stack>
-      <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+      <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
         {COLORS.map((color) => (
           <Chip key={color} label={color} color={color} onDelete={() => {}} size="small" />
         ))}

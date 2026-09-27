@@ -2,7 +2,7 @@
 // CSS Serializer — ResolvedPalette → CSS custom properties string
 // ──────────────────────────────────────────────
 
-import type { ResolvedPalette } from '../types.js';
+import type { ResolvedPalette } from '../types';
 
 /**
  * Convert a palette key like "bg0_hard" or "bright_red" to a CSS variable name

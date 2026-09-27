@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { hexToHsl, hslToHex, clampHsl, computeDelta, applyDelta, relativeLuminance, rgbMidpoint } from '../color-utils.js';
+import { hexToHsl, hslToHex, clampHsl, computeDelta, applyDelta, relativeLuminance, rgbMidpoint } from '../color-utils';
 
 describe('hexToHsl', () => {
   it('converts pure red', () => {

@@ -2,7 +2,7 @@
 // Ghostty Serializer — ResolvedPalette → Ghostty terminal config string
 // ──────────────────────────────────────────────
 
-import type { ResolvedPalette } from '../types.js';
+import type { ResolvedPalette } from '../types';
 
 export interface GhosttyMeta {
   name: string;

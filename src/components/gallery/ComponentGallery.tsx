@@ -1,14 +1,14 @@
 import { Box, Tab, Tabs, Typography } from '@mui/material';
 import { useState, type ReactNode } from 'react';
-import { ButtonShowcase } from './ButtonShowcase.js';
-import { CardShowcase } from './CardShowcase.js';
-import { InputShowcase } from './InputShowcase.js';
-import { ChipShowcase } from './ChipShowcase.js';
-import { AlertShowcase } from './AlertShowcase.js';
-import { TableShowcase } from './TableShowcase.js';
-import { TypographyShowcase } from './TypographyShowcase.js';
-import { NavigationShowcase } from './NavigationShowcase.js';
-import { TerminalPreview } from './TerminalPreview.js';
+import { ButtonShowcase } from './ButtonShowcase';
+import { CardShowcase } from './CardShowcase';
+import { InputShowcase } from './InputShowcase';
+import { ChipShowcase } from './ChipShowcase';
+import { AlertShowcase } from './AlertShowcase';
+import { TableShowcase } from './TableShowcase';
+import { TypographyShowcase } from './TypographyShowcase';
+import { NavigationShowcase } from './NavigationShowcase';
+import { TerminalPreview } from './TerminalPreview';
 
 const SECTIONS: { label: string; component: ReactNode }[] = [
   { label: 'Buttons', component: <ButtonShowcase /> },

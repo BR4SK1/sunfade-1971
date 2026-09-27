@@ -1,6 +1,6 @@
 import { Box, ToggleButton, ToggleButtonGroup, Typography } from '@mui/material';
-import { usePalette } from '../../context/usePalette.js';
-import type { Contrast } from '../../palette/types.js';
+import { usePalette } from '../../context/usePalette';
+import type { Contrast } from '../../palette/types';
 
 const OPTIONS: { value: Contrast; label: string }[] = [
   { value: 'soft', label: 'Soft' },

@@ -1,7 +1,7 @@
 import { Box, Tooltip, Typography } from '@mui/material';
-import { usePalette } from '../../context/usePalette.js';
-import type { DerivedColorKey, ResolvedPalette } from '../../palette/types.js';
-import { relativeLuminance } from '../../palette/color-utils.js';
+import { usePalette } from '../../context/usePalette';
+import type { DerivedColorKey, ResolvedPalette } from '../../palette/types';
+import { relativeLuminance } from '../../palette/color-utils';
 
 const GROUPS: { label: string; keys: (keyof ResolvedPalette)[] }[] = [
   {

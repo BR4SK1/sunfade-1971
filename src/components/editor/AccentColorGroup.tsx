@@ -1,9 +1,9 @@
 import { Accordion, AccordionDetails, AccordionSummary, Box, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { usePalette } from '../../context/usePalette.js';
-import { BaseColorPicker } from './BaseColorPicker.js';
-import { DerivedSwatch } from './DerivedSwatch.js';
-import type { AccentName, AccentTier, ResolvedPalette } from '../../palette/types.js';
+import { usePalette } from '../../context/usePalette';
+import { BaseColorPicker } from './BaseColorPicker';
+import { DerivedSwatch } from './DerivedSwatch';
+import type { AccentName, AccentTier, ResolvedPalette } from '../../palette/types';
 
 const TIERS: AccentTier[] = ['bright', 'neutral', 'faded', 'deep'];
 

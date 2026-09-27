@@ -2,7 +2,7 @@
 // MUI Serializer — ResolvedPalette → MUI createTheme() TypeScript string
 // ──────────────────────────────────────────────
 
-import type { Contrast, Mode, ResolvedPalette } from '../types.js';
+import type { Contrast, Mode, ResolvedPalette } from '../types';
 
 /**
  * Get the effective background color based on contrast setting.

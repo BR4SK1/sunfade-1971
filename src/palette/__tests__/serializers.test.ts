@@ -1,11 +1,11 @@
 import { describe, it, expect } from 'vitest';
-import { resolvePalette } from '../resolver.js';
-import { DEFAULT_DARK_BASE_COLORS, DEFAULT_LIGHT_BASE_COLORS } from '../defaults.js';
-import { serializeMuiTheme } from '../serializers/mui-serializer.js';
-import { serializeGhosttyConfig } from '../serializers/ghostty-serializer.js';
-import { serializeCssVars } from '../serializers/css-serializer.js';
-import { serializeHtmlOneSheet } from '../serializers/html-serializer.js';
-import type { PaletteConfig } from '../types.js';
+import { resolvePalette } from '../resolver';
+import { DEFAULT_DARK_BASE_COLORS, DEFAULT_LIGHT_BASE_COLORS } from '../defaults';
+import { serializeMuiTheme } from '../serializers/mui-serializer';
+import { serializeGhosttyConfig } from '../serializers/ghostty-serializer';
+import { serializeCssVars } from '../serializers/css-serializer';
+import { serializeHtmlOneSheet } from '../serializers/html-serializer';
+import type { PaletteConfig } from '../types';
 
 const darkConfig: PaletteConfig = {
   baseColors: { ...DEFAULT_DARK_BASE_COLORS },

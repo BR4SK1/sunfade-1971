@@ -1,5 +1,5 @@
 import { createTheme, type Theme } from '@mui/material/styles';
-import type { ResolvedPalette, Mode, Contrast } from '../palette/types.js';
+import type { ResolvedPalette, Mode, Contrast } from '../palette/types';
 
 // Module augmentation for MUI
 declare module '@mui/material/styles' {

@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
-import { usePalette } from '../../context/usePalette.js';
-import type { ResolvedPalette } from '../../palette/types.js';
+import { usePalette } from '../../context/usePalette';
+import type { ResolvedPalette } from '../../palette/types';
 
 const ANSI_LABELS = [
   'Black', 'Red', 'Green', 'Yellow', 'Blue', 'Purple', 'Aqua', 'White',

@@ -4,12 +4,12 @@ import type {
   Mode,
   PaletteOverrides,
   ResolvedPalette,
-} from '../palette/types.js';
-import { resolvePalette } from '../palette/resolver.js';
+} from '../palette/types';
+import { resolvePalette } from '../palette/resolver';
 import {
   DEFAULT_DARK_BASE_COLORS,
   DEFAULT_LIGHT_BASE_COLORS,
-} from '../palette/defaults.js';
+} from '../palette/defaults';
 
 // ── Actions ──────────────────────────────────
 

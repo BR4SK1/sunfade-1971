@@ -1,8 +1,10 @@
+'use client';
+
 import { Box, Divider, Typography } from '@mui/material';
-import { AppShell } from './components/layout/AppShell.js';
-import { ColorEditorPanel } from './components/editor/ColorEditorPanel.js';
-import { PaletteGrid } from './components/editor/PaletteGrid.js';
-import { ComponentGallery } from './components/gallery/ComponentGallery.js';
+import { AppShell } from './components/layout/AppShell';
+import { ColorEditorPanel } from './components/editor/ColorEditorPanel';
+import { PaletteGrid } from './components/editor/PaletteGrid';
+import { ComponentGallery } from './components/gallery/ComponentGallery';
 
 export default function App() {
   return (

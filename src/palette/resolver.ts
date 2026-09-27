@@ -2,9 +2,9 @@
 // Resolver — Combine engines + merge overrides → ResolvedPalette
 // ──────────────────────────────────────────────
 
-import { deriveAccentVariants } from './variant-engine.js';
-import { deriveBgShades, deriveFgShades, deriveGray } from './shade-engine.js';
-import { ACCENT_NAMES, type AccentName, type PaletteConfig, type ResolvedPalette } from './types.js';
+import { deriveAccentVariants } from './variant-engine';
+import { deriveBgShades, deriveFgShades, deriveGray } from './shade-engine';
+import { ACCENT_NAMES, type AccentName, type PaletteConfig, type ResolvedPalette } from './types';
 
 /**
  * Resolve a full palette from a PaletteConfig.

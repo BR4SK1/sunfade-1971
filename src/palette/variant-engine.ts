@@ -2,9 +2,9 @@
 // Variant Engine — Derive bright/faded/deep from a neutral accent color
 // ──────────────────────────────────────────────
 
-import { hexToHsl, hslToHex, computeDelta, applyDelta } from './color-utils.js';
-import { REFERENCE_ACCENTS } from './defaults.js';
-import type { AccentName, AccentVariants, Mode } from './types.js';
+import { hexToHsl, hslToHex, computeDelta, applyDelta } from './color-utils';
+import { REFERENCE_ACCENTS } from './defaults';
+import type { AccentName, AccentVariants, Mode } from './types';
 
 /**
  * Derive the bright, faded, and deep variants of an accent color

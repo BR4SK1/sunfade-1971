@@ -2,7 +2,7 @@
 // Color Math Utilities — Pure functions for HSL conversion and manipulation
 // ──────────────────────────────────────────────
 
-import type { HSL } from './types.js';
+import type { HSL } from './types';
 
 /**
  * Parse a hex color string to RGB components [0–255].

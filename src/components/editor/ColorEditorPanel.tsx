@@ -1,12 +1,12 @@
 import { Box, Button, Divider, Typography } from '@mui/material';
 import RestoreIcon from '@mui/icons-material/Restore';
-import { usePalette } from '../../context/usePalette.js';
-import { ModeToggle } from './ModeToggle.js';
-import { ContrastSelector } from './ContrastSelector.js';
-import { BaseColorPicker } from './BaseColorPicker.js';
-import { AccentColorGroup } from './AccentColorGroup.js';
-import { ExportPanel } from './ExportPanel.js';
-import { ACCENT_NAMES, type AccentName } from '../../palette/types.js';
+import { usePalette } from '../../context/usePalette';
+import { ModeToggle } from './ModeToggle';
+import { ContrastSelector } from './ContrastSelector';
+import { BaseColorPicker } from './BaseColorPicker';
+import { AccentColorGroup } from './AccentColorGroup';
+import { ExportPanel } from './ExportPanel';
+import { ACCENT_NAMES, type AccentName } from '../../palette/types';
 
 export function ColorEditorPanel() {
   const { baseColors, setBase, resetDefaults } = usePalette();

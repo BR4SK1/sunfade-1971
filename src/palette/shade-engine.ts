@@ -2,14 +2,14 @@
 // Shade Engine — Derive bg0-bg4, fg0-fg4, and gray from base colors
 // ──────────────────────────────────────────────
 
-import { hexToHsl, hslToHex, clampHsl, rgbMidpoint } from './color-utils.js';
+import { hexToHsl, hslToHex, clampHsl, rgbMidpoint } from './color-utils';
 import {
   REFERENCE_DARK_BG,
   REFERENCE_DARK_FG,
   REFERENCE_LIGHT_BG,
   REFERENCE_LIGHT_FG,
-} from './defaults.js';
-import type { BgShades, FgShades, Mode } from './types.js';
+} from './defaults';
+import type { BgShades, FgShades, Mode } from './types';
 
 /**
  * Derive bg shades from a user's bg0 value.

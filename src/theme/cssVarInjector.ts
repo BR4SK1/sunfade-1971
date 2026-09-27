@@ -1,4 +1,4 @@
-import type { ResolvedPalette } from '../palette/types.js';
+import type { ResolvedPalette } from '../palette/types';
 
 /**
  * Inject/update CSS custom properties on <html> for instant visual feedback.

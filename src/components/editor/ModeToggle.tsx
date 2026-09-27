@@ -1,7 +1,7 @@
 import { Box, ToggleButton, ToggleButtonGroup, Typography } from '@mui/material';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import { usePalette } from '../../context/usePalette.js';
+import { usePalette } from '../../context/usePalette';
 
 export function ModeToggle() {
   const { mode, setMode } = usePalette();

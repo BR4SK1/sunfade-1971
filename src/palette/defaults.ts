@@ -1,6 +1,6 @@
 // Sunfade Retro's original warm, nostalgic palette defaults.
 
-import type { AccentName, BaseColors, ResolvedPalette } from './types.js';
+import type { AccentName, BaseColors, ResolvedPalette } from './types';
 
 export const DARK_DEFAULTS: Readonly<ResolvedPalette> = {
   bg0_hard: '#1d1916',
