@@ -26,6 +26,24 @@ pnpm test       # Run palette and serializer tests
 
 The app is statically exported to `out/` and runs entirely in the browser, with no database or API server required. Deploy the contents of `out/` to any static web host. Palette editing and export are available locally; palette saving and version history are not implemented yet.
 
+## Commit messages
+
+This repository uses [Conventional Commits](https://www.conventionalcommits.org/). Commit messages are checked automatically by a Git hook installed when dependencies are installed.
+
+```text
+<type>[optional scope]: <description>
+```
+
+Common types include `feat`, `fix`, `docs`, `refactor`, `test`, and `chore`:
+
+```text
+feat(palette): add palette import
+fix(editor): keep the mobile drawer open while editing
+docs: document static deployment
+```
+
+Use `!` after the type or scope for a breaking change, for example `feat!: remove legacy palette format`.
+
 ## Stack
 
 - React 19 and TypeScript
