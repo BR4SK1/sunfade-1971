@@ -125,6 +125,49 @@ export function buildMuiTheme(
           elevation: 0,
         },
       },
+      MuiToggleButton: {
+        styleOverrides: {
+          root: {
+            color: palette.fg1,
+            '&.Mui-selected': {
+              color: palette.fg0,
+            },
+          },
+        },
+      },
+      MuiSelect: {
+        styleOverrides: {
+          icon: {
+            color: palette.fg2,
+          },
+        },
+      },
+      MuiFilledInput: {
+        styleOverrides: {
+          root: {
+            backgroundColor: palette.bg0_soft,
+            '&:hover': {
+              backgroundColor: palette.bg1,
+            },
+            '&.Mui-focused': {
+              backgroundColor: palette.bg0_soft,
+            },
+            '&.Mui-disabled': {
+              backgroundColor: palette.bg0_soft,
+            },
+          },
+        },
+      },
+      MuiAccordionSummary: {
+        styleOverrides: {
+          expandIconWrapper: {
+            color: palette.fg2,
+            '&.Mui-expanded': {
+              color: palette.fg1,
+            },
+          },
+        },
+      },
     },
   });
 }

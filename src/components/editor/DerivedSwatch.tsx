@@ -2,6 +2,7 @@ import { Box, IconButton, Tooltip, Typography } from '@mui/material';
 import LinkIcon from '@mui/icons-material/Link';
 import LinkOffIcon from '@mui/icons-material/LinkOff';
 import { useState } from 'react';
+import { ColorPickerControl } from './ColorPickerControl';
 
 interface DerivedSwatchProps {
   label: string;
@@ -31,22 +32,11 @@ export function DerivedSwatch({
     >
       {/* Color swatch / picker */}
       {editing || isOverridden ? (
-        <Box
-          component="input"
-          type="color"
-          value={hex}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => onOverride(e.target.value)}
-          sx={{
-            width: 24,
-            height: 24,
-            border: '2px solid',
-            borderColor: 'warning.main',
-            borderRadius: 0.5,
-            cursor: 'pointer',
-            p: 0,
-            '&::-webkit-color-swatch-wrapper': { p: 0 },
-            '&::-webkit-color-swatch': { border: 'none', borderRadius: 0.5 },
-          }}
+        <ColorPickerControl
+          color={hex}
+          label={`${label} override`}
+          size={24}
+          onChange={onOverride}
         />
       ) : (
         <Box

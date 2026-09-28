@@ -39,6 +39,15 @@ export interface PaletteConfig {
   contrast: Contrast;
 }
 
+/** Editable colors for one appearance mode. */
+export interface ModePalette {
+  baseColors: BaseColors;
+  overrides: PaletteOverrides;
+}
+
+/** Light and dark palette configurations saved together as one scheme. */
+export type ModePalettes = Record<Mode, ModePalette>;
+
 /** HSL color representation. h ∈ [0,360), s ∈ [0,100], l ∈ [0,100]. */
 export interface HSL {
   h: number;

@@ -43,7 +43,7 @@ const GROUPS: { label: string; keys: (keyof ResolvedPalette)[] }[] = [
 ];
 
 export function PaletteGrid() {
-  const { resolved, overrides } = usePalette();
+  const { resolved, overrides, mode } = usePalette();
 
   return (
     <Box>
@@ -57,6 +57,9 @@ export function PaletteGrid() {
               const hex = resolved[key];
               const isLight = relativeLuminance(hex) > 0.179;
               const isOverridden = key in overrides;
+              const swatchTextColor = mode === 'dark'
+                ? (isLight ? resolved.bg0_hard : resolved.fg0)
+                : (isLight ? resolved.fg0 : resolved.bg0_hard);
               return (
                 <Tooltip key={key} title={`${key}: ${hex}${isOverridden ? ' (overridden)' : ''}`}>
                   <Box
@@ -64,7 +67,7 @@ export function PaletteGrid() {
                       flex: 1,
                       minHeight: 48,
                       backgroundColor: hex,
-                      color: isLight ? 'rgba(0,0,0,0.8)' : 'rgba(255,255,255,0.8)',
+                      color: swatchTextColor,
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',

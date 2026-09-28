@@ -1,14 +1,6 @@
 import { useState } from 'react';
-import {
-  AppBar,
-  Box,
-  Drawer,
-  IconButton,
-  Toolbar,
-  useTheme,
-} from '@mui/material';
+import { Box, Button, Drawer, useTheme } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Header } from './Header';
 import type { ReactNode } from 'react';
 
 const DRAWER_WIDTH = 360;
@@ -24,26 +16,7 @@ export function AppShell({ sidebar, children }: AppShellProps) {
 
   return (
     <Box sx={{ display: 'flex', minHeight: '100vh' }}>
-      {/* App Bar */}
-      <AppBar
-        position="fixed"
-        sx={{ zIndex: theme.zIndex.drawer + 1 }}
-      >
-        <Toolbar variant="dense">
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="Open palette editor"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            sx={{ mr: 1, display: { xs: 'inline-flex', md: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Header />
-        </Toolbar>
-      </AppBar>
-
-      {/* Desktop sidebar is present in server-rendered HTML at every viewport. */}
+      {/* Desktop editor is present in server-rendered HTML at every viewport. */}
       <Drawer
         variant="permanent"
         sx={{
@@ -53,7 +26,6 @@ export function AppShell({ sidebar, children }: AppShellProps) {
           '& .MuiDrawer-paper': {
             width: DRAWER_WIDTH,
             boxSizing: 'border-box',
-            mt: '48px',
             borderRight: `1px solid ${theme.palette.divider}`,
           },
         }}
@@ -72,8 +44,8 @@ export function AppShell({ sidebar, children }: AppShellProps) {
             width: DRAWER_WIDTH,
             maxWidth: 'calc(100vw - 48px)',
             boxSizing: 'border-box',
-            top: '48px',
-            height: 'calc(100% - 48px)',
+            top: 0,
+            height: '100%',
             borderRight: `1px solid ${theme.palette.divider}`,
           },
         }}
@@ -86,12 +58,25 @@ export function AppShell({ sidebar, children }: AppShellProps) {
         component="main"
         sx={{
           flexGrow: 1,
+          minWidth: 0,
           p: 3,
-          mt: '48px',
           overflow: 'auto',
         }}
       >
-        {children}
+        <Box sx={{ width: '100%', maxWidth: { xl: 1000 } }}>
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end', mb: 1 }}>
+            <Button
+              variant="outlined"
+              size="small"
+              startIcon={<MenuIcon />}
+              aria-label="Open palette editor"
+              onClick={() => setMobileOpen(true)}
+            >
+              Edit Palette
+            </Button>
+          </Box>
+          {children}
+        </Box>
       </Box>
     </Box>
   );

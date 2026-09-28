@@ -1,7 +1,7 @@
 import { useContext, useMemo } from 'react';
 import { PaletteStateContext, PaletteDispatchContext } from './PaletteContext';
 import type { PaletteState, PaletteAction } from './palette-reducer';
-import type { AccentName, BaseColors, Contrast, Mode } from '../palette/types';
+import type { AccentName, BaseColors, Contrast, Mode, ModePalettes } from '../palette/types';
 
 export function usePaletteState(): PaletteState {
   const ctx = useContext(PaletteStateContext);
@@ -33,6 +33,8 @@ export function usePalette() {
       dispatch({ type: 'SET_CONTRAST', contrast }),
     loadSnapshot: (snap: { baseColors: BaseColors; overrides: Record<string, string>; mode: Mode; contrast: Contrast }) =>
       dispatch({ type: 'LOAD_SNAPSHOT', ...snap }),
+    loadScheme: (scheme: { palettes: ModePalettes; mode: Mode; contrast: Contrast }) =>
+      dispatch({ type: 'LOAD_SCHEME', ...scheme }),
     resetDefaults: () =>
       dispatch({ type: 'RESET_DEFAULTS' }),
   }), [dispatch]);

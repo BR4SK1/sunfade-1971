@@ -1,16 +1,15 @@
-import { useState } from 'react';
-import { Box, Button, Menu, MenuItem, Snackbar, Typography } from '@mui/material';
+import { useRef, useState } from 'react';
+import { Alert, Box, Button, Menu, MenuItem, Snackbar, Typography } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
+import SaveIcon from '@mui/icons-material/Save';
+import UploadFileIcon from '@mui/icons-material/UploadFile';
 import { usePalette } from '../../context/usePalette';
 import { serializeMuiTheme } from '../../palette/serializers/mui-serializer';
 import { serializeGhosttyConfig } from '../../palette/serializers/ghostty-serializer';
 import { serializeCssVars } from '../../palette/serializers/css-serializer';
 import { serializeHtmlOneSheet } from '../../palette/serializers/html-serializer';
 import { resolvePalette } from '../../palette/resolver';
-import {
-  DEFAULT_DARK_BASE_COLORS,
-  DEFAULT_LIGHT_BASE_COLORS,
-} from '../../palette/defaults';
+import { parsePaletteFile, serializePaletteFile } from '../../palette/scheme-file';
 
 function download(filename: string, content: string, mimeType: string) {
   const blob = new Blob([content], { type: mimeType });
@@ -18,14 +17,36 @@ function download(filename: string, content: string, mimeType: string) {
   const a = document.createElement('a');
   a.href = url;
   a.download = filename;
+  document.body.appendChild(a);
   a.click();
-  URL.revokeObjectURL(url);
+  a.remove();
+  window.setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 export function ExportPanel() {
-  const { resolved, mode, contrast, baseColors, overrides } = usePalette();
+  const { resolved, mode, contrast, modePalettes, loadScheme } = usePalette();
   const [anchor, setAnchor] = useState<HTMLElement | null>(null);
-  const [toast, setToast] = useState('');
+  const [toast, setToast] = useState<{ message: string; severity: 'success' | 'error' } | null>(null);
+  const fileInput = useRef<HTMLInputElement>(null);
+
+  const savePaletteFile = () => {
+    const content = serializePaletteFile({ palettes: modePalettes, mode, contrast });
+    download('sunfade-retro-scheme.json', content, 'application/json');
+    setToast({ message: 'Palette scheme saved.', severity: 'success' });
+  };
+
+  const loadPaletteFile = async (file: File) => {
+    try {
+      const scheme = parsePaletteFile(await file.text());
+      loadScheme(scheme);
+      setToast({ message: 'Palette scheme loaded.', severity: 'success' });
+    } catch (error) {
+      setToast({
+        message: error instanceof Error ? error.message : 'Unable to load this palette file.',
+        severity: 'error',
+      });
+    }
+  };
 
   const exports = [
     {
@@ -53,16 +74,14 @@ export function ExportPanel() {
       label: 'HTML One-Sheet',
       action: () => {
         const opposite = mode === 'dark' ? 'light' : 'dark';
-        const oppositeBase = opposite === 'dark' ? DEFAULT_DARK_BASE_COLORS : DEFAULT_LIGHT_BASE_COLORS;
-        const oppositePalette = resolvePalette({
-          baseColors: oppositeBase,
-          overrides: {},
+        const oppositeConfig = modePalettes[opposite];
+        const oppositeResolved = resolvePalette({
+          baseColors: oppositeConfig.baseColors,
+          overrides: oppositeConfig.overrides,
           mode: opposite,
           contrast,
         });
-        const [dark, light] = mode === 'dark'
-          ? [resolved, oppositePalette]
-          : [oppositePalette, resolved];
+        const [dark, light] = mode === 'dark' ? [resolved, oppositeResolved] : [oppositeResolved, resolved];
         const content = serializeHtmlOneSheet(dark, light, { name: 'Sunfade Retro', version: 1 });
         download('sunfade-retro-palette.html', content, 'text/html');
       },
@@ -71,13 +90,33 @@ export function ExportPanel() {
       label: 'Copy CSS to clipboard',
       action: () => {
         const content = serializeCssVars(resolved);
-        navigator.clipboard.writeText(content).then(() => setToast('CSS copied!'));
+        navigator.clipboard.writeText(content).then(() => setToast({ message: 'CSS copied!', severity: 'success' }));
       },
     },
   ];
 
   return (
     <Box sx={{ mb: 2 }}>
+      <Box sx={{ display: 'flex', gap: 1, mb: 1 }}>
+        <Button
+          variant="outlined"
+          size="small"
+          startIcon={<SaveIcon />}
+          onClick={savePaletteFile}
+          fullWidth
+        >
+          Save Scheme
+        </Button>
+        <Button
+          variant="outlined"
+          size="small"
+          startIcon={<UploadFileIcon />}
+          onClick={() => fileInput.current?.click()}
+          fullWidth
+        >
+          Load Scheme
+        </Button>
+      </Box>
       <Button
         variant="outlined"
         size="small"
@@ -100,12 +139,28 @@ export function ExportPanel() {
           </MenuItem>
         ))}
       </Menu>
+      <input
+        ref={fileInput}
+        type="file"
+        accept=".json,application/json"
+        hidden
+        onChange={(event) => {
+          const file = event.target.files?.[0];
+          event.target.value = '';
+          if (file) void loadPaletteFile(file);
+        }}
+      />
       <Snackbar
         open={!!toast}
-        autoHideDuration={2000}
-        onClose={() => setToast('')}
-        message={toast}
-      />
+        autoHideDuration={4000}
+        onClose={() => setToast(null)}
+      >
+        {toast ? (
+          <Alert severity={toast.severity} onClose={() => setToast(null)} sx={{ width: '100%' }}>
+            {toast.message}
+          </Alert>
+        ) : undefined}
+      </Snackbar>
     </Box>
   );
 }

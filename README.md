@@ -24,7 +24,7 @@ pnpm typecheck  # Check TypeScript types
 pnpm test       # Run palette and serializer tests
 ```
 
-The app is statically exported to `out/` and runs entirely in the browser, with no database or API server required. Deploy the contents of `out/` to any static web host. Palette editing and export are available locally; palette saving and version history are not implemented yet.
+The app is statically exported to `out/` and runs entirely in the browser, with no database or API server required. Deploy the contents of `out/` to any static web host. Save and load light/dark palette schemes as portable JSON files from the editor; palette version history is not implemented yet.
 
 ## Commit messages
 
