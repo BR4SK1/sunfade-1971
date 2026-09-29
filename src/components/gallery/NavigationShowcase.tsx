@@ -20,7 +20,7 @@ export function NavigationShowcase() {
       <Breadcrumbs sx={{ mb: 3 }}>
         <Link underline="hover" color="inherit" href="#">Home</Link>
         <Link underline="hover" color="inherit" href="#">Palettes</Link>
-        <Typography color="text.primary">sunfade-retro</Typography>
+        <Typography color="text.primary">sunfade-1971</Typography>
       </Breadcrumbs>
 
       {/* App Bar sample */}

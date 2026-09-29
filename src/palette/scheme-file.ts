@@ -1,7 +1,8 @@
 import { ACCENT_NAMES, type BaseColors, type Contrast, type Mode, type ModePalette, type ModePalettes } from './types';
 import { DARK_DEFAULTS } from './defaults';
 
-const FILE_FORMAT = 'sunfade-retro-palette';
+const FILE_FORMAT = 'sunfade-1971-palette';
+const LEGACY_FILE_FORMAT = 'sunfade-retro-palette';
 const FILE_VERSION = 1;
 const MODES: readonly Mode[] = ['dark', 'light'];
 const BASE_COLOR_KEYS = [...ACCENT_NAMES, 'fg', 'bg'] as const satisfies readonly (keyof BaseColors)[];
@@ -37,7 +38,11 @@ export function parsePaletteFile(text: string): PaletteFileData {
     throw new Error('The selected file is not valid JSON.');
   }
 
-  if (!isRecord(value) || value.format !== FILE_FORMAT || value.version !== FILE_VERSION) {
+  if (
+    !isRecord(value) ||
+    (value.format !== FILE_FORMAT && value.format !== LEGACY_FILE_FORMAT) ||
+    value.version !== FILE_VERSION
+  ) {
     throw new Error('This is not a supported Sunfade palette file.');
   }
   if (!isMode(value.mode)) {

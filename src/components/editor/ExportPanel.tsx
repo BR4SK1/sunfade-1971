@@ -31,7 +31,7 @@ export function ExportPanel() {
 
   const savePaletteFile = () => {
     const content = serializePaletteFile({ palettes: modePalettes, mode, contrast });
-    download('sunfade-retro-scheme.json', content, 'application/json');
+    download('sunfade-1971-scheme.json', content, 'application/json');
     setToast({ message: 'Palette scheme saved.', severity: 'success' });
   };
 
@@ -53,21 +53,21 @@ export function ExportPanel() {
       label: 'MUI Theme (.ts)',
       action: () => {
         const content = serializeMuiTheme(resolved, mode, contrast);
-        download('sunfade-retro-theme.ts', content, 'text/typescript');
+        download('sunfade-1971-theme.ts', content, 'text/typescript');
       },
     },
     {
       label: 'Ghostty Config',
       action: () => {
-        const content = serializeGhosttyConfig(resolved, { name: 'Sunfade Retro', version: 1 });
-        download('sunfade-retro-ghostty.conf', content, 'text/plain');
+        const content = serializeGhosttyConfig(resolved, { name: 'Sunfade 1971', version: 1 });
+        download('sunfade-1971-ghostty.conf', content, 'text/plain');
       },
     },
     {
       label: 'CSS Variables',
       action: () => {
         const content = serializeCssVars(resolved);
-        download('sunfade-retro-vars.css', content, 'text/css');
+        download('sunfade-1971-vars.css', content, 'text/css');
       },
     },
     {
@@ -82,8 +82,8 @@ export function ExportPanel() {
           contrast,
         });
         const [dark, light] = mode === 'dark' ? [resolved, oppositeResolved] : [oppositeResolved, resolved];
-        const content = serializeHtmlOneSheet(dark, light, { name: 'Sunfade Retro', version: 1 });
-        download('sunfade-retro-palette.html', content, 'text/html');
+        const content = serializeHtmlOneSheet(dark, light, { name: 'Sunfade 1971', version: 1 });
+        download('sunfade-1971-palette.html', content, 'text/html');
       },
     },
     {
@@ -97,6 +97,9 @@ export function ExportPanel() {
 
   return (
     <Box sx={{ mb: 2 }}>
+      <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 1, lineHeight: 1.35 }}>
+        Export files to keep a copy of your palette. Changes reset when this page is refreshed.
+      </Typography>
       <Box sx={{ display: 'flex', gap: 1, mb: 1 }}>
         <Button
           variant="outlined"

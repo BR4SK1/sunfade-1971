@@ -1,5 +1,5 @@
 // ──────────────────────────────────────────────
-// Sunfade Retro palette engine — type definitions
+// Sunfade 1971 palette engine — type definitions
 // ──────────────────────────────────────────────
 
 export type Mode = 'dark' | 'light';

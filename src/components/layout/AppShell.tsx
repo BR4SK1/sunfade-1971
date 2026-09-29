@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Box, Button, Drawer, useTheme } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import type { ReactNode } from 'react';
 
-const DRAWER_WIDTH = 360;
+const DRAWER_WIDTH = 344;
 
 interface AppShellProps {
   sidebar: ReactNode;
@@ -26,7 +27,9 @@ export function AppShell({ sidebar, children }: AppShellProps) {
           '& .MuiDrawer-paper': {
             width: DRAWER_WIDTH,
             boxSizing: 'border-box',
+            borderRadius: 1,
             borderRight: `1px solid ${theme.palette.divider}`,
+            backgroundColor: theme.palette.background.paper,
           },
         }}
       >
@@ -36,6 +39,7 @@ export function AppShell({ sidebar, children }: AppShellProps) {
       {/* Mobile editor drawer */}
       <Drawer
         variant="temporary"
+        id="palette-editor-drawer"
         open={mobileOpen}
         onClose={() => setMobileOpen(false)}
         sx={{
@@ -46,10 +50,27 @@ export function AppShell({ sidebar, children }: AppShellProps) {
             boxSizing: 'border-box',
             top: 0,
             height: '100%',
-            borderRight: `1px solid ${theme.palette.divider}`,
+            display: 'flex',
+            flexDirection: 'column',
+            border: `3px double ${theme.palette.divider}`,
+            borderRadius: 1,
+            backgroundColor: theme.palette.background.paper,
+            boxShadow: 'none',
+            '& > aside': { flex: 1, minHeight: 0 },
           },
         }}
       >
+        <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 1 }}>
+          <Button
+            variant="outlined"
+            size="small"
+            startIcon={<CloseIcon />}
+            aria-label="Close palette editor"
+            onClick={() => setMobileOpen(false)}
+          >
+            Close
+          </Button>
+        </Box>
         {sidebar}
       </Drawer>
 
@@ -59,17 +80,19 @@ export function AppShell({ sidebar, children }: AppShellProps) {
         sx={{
           flexGrow: 1,
           minWidth: 0,
-          p: 3,
+          p: { xs: 1.5, sm: 2.5, lg: 3 },
           overflow: 'auto',
         }}
       >
-        <Box sx={{ width: '100%', maxWidth: { xl: 1000 } }}>
+        <Box sx={{ width: '100%', maxWidth: { xl: 1200 } }}>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end', mb: 1 }}>
             <Button
               variant="outlined"
               size="small"
               startIcon={<MenuIcon />}
               aria-label="Open palette editor"
+              aria-controls="palette-editor-drawer"
+              aria-expanded={mobileOpen}
               onClick={() => setMobileOpen(true)}
             >
               Edit Palette

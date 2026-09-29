@@ -4,7 +4,7 @@ import { PaletteProvider } from '../context/PaletteContext';
 import { ThemeWrapper } from '../theme/ThemeWrapper';
 
 export const metadata: Metadata = {
-  title: 'Sunfade Retro',
+  title: 'Sunfade 1971',
   description: 'A warm, retro-inspired color palette playground.',
 };
 

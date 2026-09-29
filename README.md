@@ -1,8 +1,8 @@
-# Sunfade Retro
+# Sunfade 1971
 
 A warm, retro-inspired color palette playground. Tune a palette, preview it across a component gallery, and export it for your projects.
 
-Sunfade Retro is an independent palette inspired by the warm, earthy approach of [Gruvbox](https://github.com/morhetz/gruvbox). Its default colors are a distinct Sunfade palette.
+Sunfade 1971 is an independent palette inspired by the warm, earthy approach of [Gruvbox](https://github.com/morhetz/gruvbox). Its default colors are a distinct Sunfade palette.
 
 ## Run locally
 
@@ -25,6 +25,10 @@ pnpm test       # Run palette and serializer tests
 ```
 
 The app is statically exported to `out/` and runs entirely in the browser, with no database or API server required. Deploy the contents of `out/` to any static web host. Save and load light/dark palette schemes as portable JSON files from the editor; palette version history is not implemented yet.
+
+The Soft, Medium, and Hard contrast settings change the preview's surfaces, text, borders, inputs, and accent roles in either mode. Palette swatches and CSS/terminal exports retain the underlying colors; the MUI theme export uses the selected contrast setting.
+
+The interface follows a full-color terminal style: inverse header bands, squared components with 1–2px corners, and single borders throughout the workspace. Double borders are reserved for floating layers such as menus, popovers, dialogs, and the mobile editor drawer.
 
 ## Commit messages
 

@@ -1,7 +1,7 @@
 import { Box, Tooltip, Typography } from '@mui/material';
 import { usePalette } from '../../context/usePalette';
-import type { DerivedColorKey, ResolvedPalette } from '../../palette/types';
-import { relativeLuminance } from '../../palette/color-utils';
+import type { ResolvedPalette } from '../../palette/types';
+import { getContrastRatio } from '@mui/material/styles';
 
 const GROUPS: { label: string; keys: (keyof ResolvedPalette)[] }[] = [
   {
@@ -43,45 +43,61 @@ const GROUPS: { label: string; keys: (keyof ResolvedPalette)[] }[] = [
 ];
 
 export function PaletteGrid() {
-  const { resolved, overrides, mode } = usePalette();
+  const { resolved, overrides } = usePalette();
 
   return (
     <Box>
       {GROUPS.map((group) => (
-        <Box key={group.label} sx={{ mb: 2 }}>
-          <Typography variant="caption" sx={{ fontWeight: 600, mb: 0.5, display: 'block' }}>
-            {group.label}
+        <Box
+          key={group.label}
+          component="section"
+          aria-labelledby={`palette-group-${group.label.toLowerCase()}`}
+          sx={{ mb: 2 }}
+        >
+          <Typography
+            id={`palette-group-${group.label.toLowerCase()}`}
+            component="h3"
+            variant="subtitle2"
+            sx={{ fontWeight: 700, mb: 0.5 }}
+          >
+              {group.label}
           </Typography>
-          <Box sx={{ display: 'flex', gap: '2px' }}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(70px, 1fr))', gap: 0.5 }}>
             {group.keys.map((key) => {
               const hex = resolved[key];
-              const isLight = relativeLuminance(hex) > 0.179;
               const isOverridden = key in overrides;
-              const swatchTextColor = mode === 'dark'
-                ? (isLight ? resolved.bg0_hard : resolved.fg0)
-                : (isLight ? resolved.fg0 : resolved.bg0_hard);
+              const swatchTextColor = getContrastRatio(hex, resolved.fg0) >= getContrastRatio(hex, resolved.bg0_hard)
+                ? resolved.fg0
+                : resolved.bg0_hard;
               return (
                 <Tooltip key={key} title={`${key}: ${hex}${isOverridden ? ' (overridden)' : ''}`}>
                   <Box
+                    role="img"
+                    aria-label={`${key.replace(/_/g, ' ')} ${hex}${isOverridden ? ', overridden' : ''}`}
                     sx={{
-                      flex: 1,
-                      minHeight: 48,
+                      minWidth: 0,
+                      minHeight: 64,
                       backgroundColor: hex,
                       color: swatchTextColor,
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
                       justifyContent: 'center',
+                      gap: 0.25,
                       fontSize: 10,
                       fontFamily: 'monospace',
-                      borderRadius: 0.5,
+                      borderRadius: 1,
+                      border: '1px solid',
+                      borderColor: 'divider',
                       position: 'relative',
                       cursor: 'default',
                     }}
                   >
+                    <span style={{ fontSize: 9, textAlign: 'center' }}>{key.replace(/_/g, ' ')}</span>
                     <span>{hex}</span>
                     {isOverridden && (
                       <Box
+                        aria-hidden="true"
                         sx={{
                           position: 'absolute',
                           top: 2,

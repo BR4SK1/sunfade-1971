@@ -17,7 +17,7 @@ export function serializeGhosttyConfig(
   palette: ResolvedPalette,
   meta: GhosttyMeta,
 ): string {
-  return `# Sunfade Retro theme
+  return `# Sunfade 1971 theme
 # Palette: ${meta.name} v${meta.version}
 
 background = ${palette.bg0}

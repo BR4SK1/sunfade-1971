@@ -14,6 +14,7 @@ export function ModeToggle() {
       <ToggleButtonGroup
         value={mode}
         exclusive
+        aria-label="Color mode"
         onChange={(_, v) => v && setMode(v)}
         size="small"
         fullWidth

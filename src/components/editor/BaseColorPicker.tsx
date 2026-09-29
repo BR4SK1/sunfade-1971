@@ -10,7 +10,7 @@ interface BaseColorPickerProps {
 export function BaseColorPicker({ label, value, onChange }: BaseColorPickerProps) {
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
-      <ColorPickerControl color={value} label={label} size={32} onChange={onChange} />
+      <ColorPickerControl color={value} label={label} size={44} onChange={onChange} />
       <Box sx={{ flex: 1 }}>
         <Typography variant="caption" sx={{ fontWeight: 600 }}>
           {label}

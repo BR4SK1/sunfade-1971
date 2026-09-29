@@ -12,7 +12,7 @@ export function TypographyShowcase() {
       <Typography variant="subtitle1" gutterBottom>subtitle1. Lorem ipsum dolor sit amet</Typography>
       <Typography variant="subtitle2" gutterBottom>subtitle2. Lorem ipsum dolor sit amet</Typography>
       <Typography variant="body1" gutterBottom>
-        body1. The quick brown fox jumps over the lazy dog. Sunfade Retro brings warm, nostalgic colors
+        body1. The quick brown fox jumps over the lazy dog. Sunfade 1971 brings warm, nostalgic colors
         that reduce eye strain while maintaining excellent readability.
       </Typography>
       <Typography variant="body2" gutterBottom>

@@ -30,15 +30,29 @@ export function ComponentGallery() {
       <Tabs
         value={tab}
         onChange={(_, v) => setTab(v)}
+        aria-label="Component preview sections"
         variant="scrollable"
         scrollButtons="auto"
         sx={{ mb: 2, borderBottom: 1, borderColor: 'divider' }}
       >
-        {SECTIONS.map((s) => (
-          <Tab key={s.label} label={s.label} sx={{ textTransform: 'none', minWidth: 'auto' }} />
+        {SECTIONS.map((s, index) => (
+          <Tab
+            key={s.label}
+            id={`gallery-tab-${index}`}
+            aria-controls="gallery-panel"
+            label={s.label}
+            sx={{ textTransform: 'none', minWidth: 'auto' }}
+          />
         ))}
       </Tabs>
-      <Box>{SECTIONS[tab].component}</Box>
+      <Box
+        id="gallery-panel"
+        role="tabpanel"
+        aria-labelledby={`gallery-tab-${tab}`}
+        tabIndex={0}
+      >
+        {SECTIONS[tab].component}
+      </Box>
     </Box>
   );
 }

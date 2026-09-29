@@ -1,4 +1,4 @@
-// Sunfade Retro's original warm, nostalgic palette defaults.
+// Sunfade 1971's original warm, nostalgic palette defaults.
 
 import type { AccentName, BaseColors, ResolvedPalette } from './types';
 

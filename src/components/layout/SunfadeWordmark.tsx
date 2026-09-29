@@ -1,31 +1,21 @@
 import { Box } from '@mui/material';
 
-// Generated with the Rebel FIGlet font by Valerie Mates, based on Ron Bliss's original.
-const WORDMARK = [
-  '  █████████                           ██████                █████             ███████████             █████',
-  ' ███▒▒▒▒▒███                         ███▒▒███              ▒▒███             ▒▒███▒▒▒▒▒███           ▒▒███',
-  '▒███    ▒▒▒  █████ ████ ████████    ▒███ ▒▒▒   ██████    ███████   ██████     ▒███    ▒███   ██████  ███████   ████████   ██████',
-  '▒▒█████████ ▒▒███ ▒███ ▒▒███▒▒███  ███████    ▒▒▒▒▒███  ███▒▒███  ███▒▒███    ▒██████████   ███▒▒███▒▒▒███▒   ▒▒███▒▒███ ███▒▒███',
-  ' ▒▒▒▒▒▒▒▒███ ▒███ ▒███  ▒███ ▒███ ▒▒▒███▒      ███████ ▒███ ▒███ ▒███████     ▒███▒▒▒▒▒███ ▒███████   ▒███     ▒███ ▒▒▒ ▒███ ▒███',
-  ' ███    ▒███ ▒███ ▒███  ▒███ ▒███   ▒███      ███▒▒███ ▒███ ▒███ ▒███▒▒▒      ▒███    ▒███ ▒███▒▒▒    ▒███ ███ ▒███     ▒███ ▒███',
-  '▒▒█████████  ▒▒████████ ████ █████  █████    ▒▒████████▒▒████████▒▒██████     █████   █████▒▒██████   ▒▒█████  █████    ▒▒██████',
-  ' ▒▒▒▒▒▒▒▒▒    ▒▒▒▒▒▒▒▒ ▒▒▒▒ ▒▒▒▒▒  ▒▒▒▒▒      ▒▒▒▒▒▒▒▒  ▒▒▒▒▒▒▒▒  ▒▒▒▒▒▒     ▒▒▒▒▒   ▒▒▒▒▒  ▒▒▒▒▒▒     ▒▒▒▒▒  ▒▒▒▒▒      ▒▒▒▒▒▒',
-].join('\n');
+const WORDMARK = 'SUNFADE 1971';
 
 export function SunfadeWordmark() {
   return (
-    <Box sx={{ width: '100%', mb: 3, containerType: 'inline-size' }}>
+    <Box sx={{ width: 'max-content', minWidth: '100%', containerType: 'inline-size' }}>
       <Box
         component="pre"
-        role="img"
-        aria-label="Sunfade Retro"
+        aria-hidden="true"
         sx={{
           m: 0,
-          color: 'primary.main',
+          color: 'terminalHeader.text',
           fontFamily: 'monospace',
-          fontSize: { xs: '4px', sm: '7px', md: '6px', lg: '10px', xl: '12px' },
+          fontSize: { xs: '14px', sm: '20px', md: '24px', lg: '32px', xl: '40px' },
           fontWeight: 700,
           lineHeight: 1,
+          letterSpacing: '0.08em',
           whiteSpace: 'pre',
           textAlign: 'left',
         }}

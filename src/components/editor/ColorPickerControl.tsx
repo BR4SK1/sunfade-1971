@@ -32,6 +32,7 @@ export function ColorPickerControl({ color, label, size, onChange }: ColorPicker
           borderColor: theme.palette.divider,
           borderRadius: 0.75,
           cursor: 'pointer',
+          '&:focus-visible': { outline: `2px solid ${theme.palette.primary.main}`, outlineOffset: 2 },
         }}
       />
       <Popover

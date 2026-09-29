@@ -35,7 +35,7 @@ export function DerivedSwatch({
         <ColorPickerControl
           color={hex}
           label={`${label} override`}
-          size={24}
+          size={28}
           onChange={onOverride}
         />
       ) : (
@@ -72,6 +72,7 @@ export function DerivedSwatch({
       <Tooltip title={isOverridden ? 'Reset to derived' : 'Override'}>
         <IconButton
           size="small"
+          aria-label={isOverridden ? `Reset ${label} to derived color` : `Override ${label} color`}
           onClick={() => {
             if (isOverridden) {
               onClearOverride();
@@ -80,7 +81,7 @@ export function DerivedSwatch({
               setEditing(!editing);
             }
           }}
-          sx={{ p: 0.25 }}
+          sx={{ p: 0.5 }}
         >
           {isOverridden ? (
             <LinkOffIcon sx={{ fontSize: 14, color: 'warning.main' }} />

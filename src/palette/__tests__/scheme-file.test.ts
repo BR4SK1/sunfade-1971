@@ -30,6 +30,22 @@ describe('palette scheme files', () => {
     });
   });
 
+  it('continues to load palette files from the previous project name', () => {
+    const state = createInitialState();
+    const currentFormat = serializePaletteFile({
+      mode: state.mode,
+      contrast: state.contrast,
+      palettes: state.modePalettes,
+    });
+    const legacyFormat = currentFormat.replace('sunfade-1971-palette', 'sunfade-retro-palette');
+
+    expect(parsePaletteFile(legacyFormat)).toEqual({
+      mode: state.mode,
+      contrast: state.contrast,
+      palettes: state.modePalettes,
+    });
+  });
+
   it('rejects invalid colors and unsupported override keys', () => {
     const state = createInitialState();
     const valid = JSON.parse(serializePaletteFile({

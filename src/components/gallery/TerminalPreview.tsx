@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+import { getContrastRatio } from '@mui/material/styles';
 import { usePalette } from '../../context/usePalette';
 import type { ResolvedPalette } from '../../palette/types';
 
@@ -144,8 +145,26 @@ function tokenize(source: string): SyntaxToken[] {
 }
 
 export function TerminalPreview() {
-  const { resolved } = usePalette();
+  const { resolved, mode } = usePalette();
   const colors = ANSI_KEYS.map((key) => resolved[key]);
+  const terminalTextColor = (key: keyof ResolvedPalette): keyof ResolvedPalette => {
+    if (key === 'gray') return 'fg1';
+    if (!/^(?:bright|neutral|faded|deep)_/.test(key)) {
+      const candidates: (keyof ResolvedPalette)[] = [key, 'fg0', 'fg1', 'fg2'];
+      return candidates.find((candidate) => getContrastRatio(resolved[candidate], resolved.bg0_hard) >= 4.5)
+        ?? 'fg1';
+    }
+    const accent = key.slice(key.indexOf('_') + 1);
+    const variants = ['bright', 'neutral', 'faded', 'deep'].map((tier) => `${tier}_${accent}` as keyof ResolvedPalette);
+    const ordered = mode === 'dark' ? variants : [...variants].reverse();
+    const candidates: (keyof ResolvedPalette)[] = [key, ...ordered, 'fg0', 'fg1', 'fg2'];
+    return candidates.find((candidate) => getContrastRatio(resolved[candidate], resolved.bg0_hard) >= 4.5)
+      ?? candidates.reduce((best, candidate) =>
+        getContrastRatio(resolved[candidate], resolved.bg0_hard) > getContrastRatio(resolved[best], resolved.bg0_hard)
+          ? candidate
+          : best,
+      );
+  };
 
   return (
     <Box>
@@ -161,7 +180,8 @@ export function TerminalPreview() {
         {colors.map((hex, index) => (
           <Box key={ANSI_LABELS[index]} sx={{ minWidth: 0 }}>
             <Box
-              aria-label={`ANSI ${index}: ${ANSI_LABELS[index]}, ${hex}`}
+                role="img"
+                aria-label={`ANSI ${index}: ${ANSI_LABELS[index]}, ${hex}`}
               sx={{
                 height: 28,
                 backgroundColor: hex,
@@ -236,7 +256,7 @@ export function TerminalPreview() {
                     component="span"
                     aria-hidden="true"
                     sx={{
-                      color: resolved.gray,
+                      color: resolved.fg1,
                       width: '3.5em',
                       flexShrink: 0,
                       pr: 1.5,
@@ -248,7 +268,7 @@ export function TerminalPreview() {
                   </Box>
                   <Box component="span">
                     {tokenize(text).map((token, tokenIndex) => (
-                      <Box component="span" key={`${tokenIndex}-${token.text}`} sx={{ color: resolved[token.color] }}>
+                      <Box component="span" key={`${tokenIndex}-${token.text}`} sx={{ color: resolved[terminalTextColor(token.color)] }}>
                         {token.text}
                       </Box>
                     ))}
