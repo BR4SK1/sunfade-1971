@@ -3,19 +3,19 @@
 import type { AccentName, BaseColors, ResolvedPalette } from './types';
 
 export const DARK_DEFAULTS: Readonly<ResolvedPalette> = {
-  bg0_hard: '#1d1916',
-  bg0: '#28201b',
-  bg0_soft: '#332720',
-  bg1: '#3b2d25',
-  bg2: '#4e392e',
-  bg3: '#654a39',
-  bg4: '#7f604a',
+  bg0_hard: '#111010',
+  bg0: '#1b1816',
+  bg0_soft: '#251f1c',
+  bg1: '#2c2622',
+  bg2: '#3e332c',
+  bg3: '#534339',
+  bg4: '#6b594c',
   fg0: '#fff1d6',
   fg1: '#ead3b0',
   fg2: '#d5b991',
   fg3: '#b99b75',
   fg4: '#a78762',
-  gray: '#937456',
+  gray: '#897057',
   bright_red: '#e4775f',
   bright_green: '#a1a45b',
   bright_yellow: '#dfa54c',
@@ -99,7 +99,7 @@ export const DEFAULT_DARK_BASE_COLORS: Readonly<BaseColors> = {
   aqua: '#6e8b70',
   orange: '#c46a35',
   fg: '#ead3b0',
-  bg: '#28201b',
+  bg: '#1b1816',
 };
 
 export const DEFAULT_LIGHT_BASE_COLORS: Readonly<BaseColors> = {

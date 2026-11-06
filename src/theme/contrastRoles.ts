@@ -3,11 +3,26 @@ import { hexToHsl, hslToHex } from '../palette/color-utils';
 import type { AccentName, Contrast, Mode, ResolvedPalette } from '../palette/types';
 
 interface AccentRoles {
+  /** Bright tier — reserved for hover/highlight fills, never the resting main. */
   light: string;
+  /** Label ink that stays ≥ 4.5:1 on the bright tier (recomputed, not main's label). */
+  lightContrastText: string;
+  /**
+   * The display accent for TEXT roles (links, icons, outlined/text button ink).
+   * May be readability-adjusted toward ink on the page background; never use
+   * it as a fill. The resting fill role is `neutralFill` (the exact swatch).
+   */
   main: string;
   dark: string;
   darker: string;
   contrastText: string;
+  /**
+   * FILL role: the exact user swatch, unadjusted. Contained buttons rest on
+   * this and must never render the readability-adjusted `main` instead.
+   */
+  neutralFill: string;
+  /** Label ink ≥ 4.5:1 on the raw `neutralFill`, computed for that actual fill. */
+  neutralFillLabel: string;
 }
 
 /** Colors used to display a palette at a given contrast, without changing its swatches. */
@@ -18,6 +33,8 @@ export interface ContrastRoles {
   secondaryText: string;
   disabledText: string;
   divider: string;
+  /** Prominent element-frame color: always the fg2 swatch. */
+  frame: string;
   input: string;
   inputHover: string;
   headerBackground: string;
@@ -105,16 +122,27 @@ function accentRoles(
   } else if (contrast === 'medium') {
     main = readableAccent(neutral, palette, background, paper);
   } else if (contrast === 'hard') {
-    main = readableAccent(mode === 'dark' ? light : dark, palette, background, paper);
+    // The default accent tone stays on the neutral tier in every mode so the
+    // bright/faded variants are reserved for highlights and interactive states.
+    main = readableAccent(neutral, palette, background, paper);
   }
 
-  return { light, main, dark, darker, contrastText: readableLabel(main, palette) };
+  return {
+    light,
+    lightContrastText: readableLabel(light, palette),
+    main, dark, darker, contrastText: readableLabel(main, palette),
+    // Fill roles stay on the exact swatches: the resting contained fill is the
+    // user's neutral swatch itself, with a label ink computed for that fill —
+    // independent of the readability-adjusted `main` text role above.
+    neutralFill: neutral,
+    neutralFillLabel: readableLabel(neutral, palette),
+  };
 }
 
 export function getContrastRoles(palette: ResolvedPalette, mode: Mode, contrast: Contrast): ContrastRoles {
-  // fg0/bg0_hard exchange light and dark values between the two mode palettes,
-  // producing the requested inverse terminal header in each mode.
-  const headerBackground = palette.fg0;
+  // Filled title bars use fg2 so the frame and the header share one accent tone.
+  // readableLabel picks the strongest ink on that fill; fg0 stays reserved for body text.
+  const headerBackground = palette.fg2;
   const headerText = readableLabel(headerBackground, palette);
   const surfaces = {
     soft: {
@@ -151,5 +179,5 @@ export function getContrastRoles(palette: ResolvedPalette, mode: Mode, contrast:
       .map((name) => [name, accentRoles(palette, name, mode, contrast, surfaces.background, surfaces.paper)]),
   ) as Record<AccentName, AccentRoles>;
 
-  return { ...surfaces, disabledText: palette.fg4, headerBackground, headerText, accents };
+  return { ...surfaces, disabledText: palette.fg4, frame: palette.fg2, headerBackground, headerText, accents };
 }

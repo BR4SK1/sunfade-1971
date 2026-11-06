@@ -24,8 +24,6 @@ export function AccentColorGroup({ accent }: AccentColorGroupProps) {
               height: 16,
               borderRadius: '50%',
               backgroundColor: baseColors[accent],
-              border: '1px solid',
-              borderColor: 'divider',
             }}
           />
           <Typography variant="body2" sx={{ fontWeight: 600, textTransform: 'capitalize' }}>

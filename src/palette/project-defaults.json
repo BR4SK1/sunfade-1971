@@ -1,0 +1,37 @@
+{
+  "revision": 4,
+  "palettes": {
+    "dark": {
+      "baseColors": {
+        "red": "#c05945",
+        "green": "#767437",
+        "yellow": "#c28a38",
+        "blue": "#5e797c",
+        "purple": "#87606a",
+        "aqua": "#5d7868",
+        "orange": "#a4613a",
+        "fg": "#e3cfb2",
+        "bg": "#2d2926"
+      },
+      "overrides": {
+        "neutral_aqua": "#5d7860",
+        "faded_aqua": "#3f5645",
+        "deep_aqua": "#233228"
+      }
+    },
+    "light": {
+      "baseColors": {
+        "red": "#c05a45",
+        "green": "#7f873f",
+        "yellow": "#c28a38",
+        "blue": "#66828a",
+        "purple": "#9a6f86",
+        "aqua": "#6e8b70",
+        "orange": "#c46a35",
+        "fg": "#392b24",
+        "bg": "#f8e9d2"
+      },
+      "overrides": {}
+    }
+  }
+}

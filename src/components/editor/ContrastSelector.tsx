@@ -13,7 +13,7 @@ export function ContrastSelector() {
 
   return (
     <Box sx={{ mb: 2 }}>
-      <Typography variant="caption" sx={{ mb: 0.5, display: 'block', fontWeight: 600 }}>
+      <Typography variant="caption" sx={{ mb: 0.5, display: 'block', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
         Preview contrast
       </Typography>
       <ToggleButtonGroup

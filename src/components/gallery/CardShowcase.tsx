@@ -16,7 +16,7 @@ export function CardShowcase() {
         <CardHeader title="Outlined Card" subheader="Border variant" />
         <CardContent>
           <Typography variant="body2">
-            Uses divider color for the border.
+            Uses the fg2 frame color for the border.
           </Typography>
         </CardContent>
       </Card>
@@ -31,7 +31,7 @@ export function CardShowcase() {
       <Paper variant="outlined" sx={{ p: 2 }}>
         <Typography variant="subtitle2" gutterBottom>Outlined Paper</Typography>
         <Typography variant="body2">
-          Outlined variant with bg2 border.
+          Outlined variant with a 1px fg2 frame.
         </Typography>
       </Paper>
     </Box>

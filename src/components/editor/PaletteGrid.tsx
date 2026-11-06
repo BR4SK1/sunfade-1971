@@ -85,10 +85,7 @@ export function PaletteGrid() {
                       justifyContent: 'center',
                       gap: 0.25,
                       fontSize: 10,
-                      fontFamily: 'monospace',
                       borderRadius: 1,
-                      border: '1px solid',
-                      borderColor: 'divider',
                       position: 'relative',
                       cursor: 'default',
                     }}

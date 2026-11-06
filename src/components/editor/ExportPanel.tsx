@@ -50,9 +50,9 @@ export function ExportPanel() {
 
   const exports = [
     {
-      label: 'MUI Theme (.ts)',
+      label: 'MUI Theme (.ts) — all six variants',
       action: () => {
-        const content = serializeMuiTheme(resolved, mode, contrast);
+        const content = serializeMuiTheme(modePalettes);
         download('sunfade-1971-theme.ts', content, 'text/typescript');
       },
     },
@@ -98,7 +98,8 @@ export function ExportPanel() {
   return (
     <Box sx={{ mb: 2 }}>
       <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 1, lineHeight: 1.35 }}>
-        Export files to keep a copy of your palette. Changes reset when this page is refreshed.
+        Export files to keep a copy of your palette. Use Save Changes (above) to keep edits as project defaults between
+        sessions; this button only downloads a scheme file.
       </Typography>
       <Box sx={{ display: 'flex', gap: 1, mb: 1 }}>
         <Button

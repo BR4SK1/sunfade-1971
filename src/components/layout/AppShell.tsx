@@ -28,7 +28,7 @@ export function AppShell({ sidebar, children }: AppShellProps) {
             width: DRAWER_WIDTH,
             boxSizing: 'border-box',
             borderRadius: 1,
-            borderRight: `1px solid ${theme.palette.divider}`,
+            borderRight: `1px solid ${theme.palette.frame}`,
             backgroundColor: theme.palette.background.paper,
           },
         }}
@@ -52,7 +52,7 @@ export function AppShell({ sidebar, children }: AppShellProps) {
             height: '100%',
             display: 'flex',
             flexDirection: 'column',
-            border: `3px double ${theme.palette.divider}`,
+            border: `1px solid ${theme.palette.frame}`,
             borderRadius: 1,
             backgroundColor: theme.palette.background.paper,
             boxShadow: 'none',

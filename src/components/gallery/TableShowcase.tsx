@@ -49,8 +49,6 @@ export function TableShowcase() {
                           height: 14,
                           borderRadius: '50%',
                           backgroundColor: hex,
-                          border: '1px solid',
-                          borderColor: 'divider',
                         }}
                       />
                       <Box component="code" sx={{ fontSize: 11 }}>

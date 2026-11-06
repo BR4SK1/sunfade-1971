@@ -17,6 +17,7 @@ import { ContrastSelector } from './ContrastSelector';
 import { BaseColorPicker } from './BaseColorPicker';
 import { AccentColorGroup } from './AccentColorGroup';
 import { ExportPanel } from './ExportPanel';
+import { ProjectSavePanel } from './ProjectSavePanel';
 import { ACCENT_NAMES } from '../../palette/types';
 
 export function ColorEditorPanel() {
@@ -26,7 +27,7 @@ export function ColorEditorPanel() {
 
   return (
     <Box component="aside" aria-label="Palette editor" sx={{ p: 1.5, overflow: 'auto', height: { xs: 'auto', md: '100%' }, flex: 1, minHeight: 0 }}>
-      <Typography component="h2" variant="subtitle1" sx={{ fontWeight: 700, mb: 1 }}>
+      <Typography component="h2" variant="subtitle1" sx={{ fontWeight: 700, mb: 1, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
         Palette Controls
       </Typography>
       <ModeToggle />
@@ -35,7 +36,7 @@ export function ColorEditorPanel() {
       <Box
         component="section"
         aria-label="Live palette preview"
-        sx={{ mb: 2, overflow: 'hidden', border: 1, borderColor: 'divider', borderRadius: 1 }}
+        sx={{ mb: 2, overflow: 'hidden', border: 1, borderColor: 'frame', borderRadius: 1 }}
       >
         <Typography
           variant="caption"
@@ -43,18 +44,11 @@ export function ColorEditorPanel() {
         >
           LIVE PREVIEW
         </Typography>
-        <Box sx={{ p: 1, backgroundColor: resolved.bg0_hard, color: resolved.fg1, fontFamily: 'monospace' }}>
-          <Typography component="div" variant="caption" sx={{ color: 'inherit', fontFamily: 'inherit' }}>
-            READY · SUNFADE 1971
-          </Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.75, mt: 0.75 }}>
-            {(['bright_red', 'bright_yellow', 'bright_green'] as const).map((key) => (
-              <Box
-                key={key}
-                aria-hidden="true"
-                sx={{ width: 9, height: 9, borderRadius: '50%', backgroundColor: resolved[key] }}
-              />
-            ))}
+        <Box sx={{ p: 1, backgroundColor: resolved.bg0_hard, color: resolved.fg1, fontFamily: 'var(--font-sunfade-caskaydia, "CaskaydiaCove Nerd Font"), ui-monospace, monospace' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Typography component="div" variant="caption" sx={{ color: 'inherit', fontFamily: 'inherit' }}>
+              READY · SUNFADE 1971
+            </Typography>
             <Typography component="span" variant="caption" sx={{ ml: 'auto', color: 'inherit', fontFamily: 'inherit' }}>
               {resolved.bg0.toUpperCase()}
             </Typography>
@@ -65,7 +59,7 @@ export function ColorEditorPanel() {
       <Divider sx={{ my: 1.5 }} />
 
       {/* Base BG/FG */}
-      <Typography variant="caption" sx={{ fontWeight: 600, mb: 0.5, display: 'block' }}>
+      <Typography variant="caption" sx={{ fontWeight: 600, mb: 0.5, display: 'block', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
         Background & Foreground
       </Typography>
       <BaseColorPicker
@@ -82,7 +76,7 @@ export function ColorEditorPanel() {
       <Divider sx={{ my: 1.5 }} />
 
       {/* Accent groups */}
-      <Typography variant="caption" sx={{ fontWeight: 600, mb: 0.5, display: 'block' }}>
+      <Typography variant="caption" sx={{ fontWeight: 600, mb: 0.5, display: 'block', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
         Accents
       </Typography>
       {ACCENT_NAMES.map((accent) => (
@@ -90,6 +84,8 @@ export function ColorEditorPanel() {
       ))}
 
       <Divider sx={{ my: 1.5 }} />
+
+      <ProjectSavePanel />
 
       <Button
         variant="text"
@@ -106,7 +102,7 @@ export function ColorEditorPanel() {
         <DialogTitle id={resetTitleId}>Reset this mode?</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            This restores the current mode&apos;s default colors and clears its overrides.
+            This restores the current mode&apos;s saved default colors and overrides.
           </DialogContentText>
         </DialogContent>
         <DialogActions sx={{ p: 2, pt: 0 }}>

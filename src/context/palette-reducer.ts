@@ -8,10 +8,7 @@ import type {
   ResolvedPalette,
 } from '../palette/types';
 import { resolvePalette } from '../palette/resolver';
-import {
-  DEFAULT_DARK_BASE_COLORS,
-  DEFAULT_LIGHT_BASE_COLORS,
-} from '../palette/defaults';
+import { PROJECT_DEFAULTS } from '../palette/project-defaults';
 
 // ── Actions ──────────────────────────────────
 
@@ -23,6 +20,8 @@ export type PaletteAction =
   | { type: 'SET_CONTRAST'; contrast: Contrast }
   | { type: 'LOAD_SNAPSHOT'; baseColors: BaseColors; overrides: PaletteOverrides; mode: Mode; contrast: Contrast }
   | { type: 'LOAD_SCHEME'; palettes: ModePalettes; mode: Mode; contrast: Contrast }
+  | { type: 'HYDRATE_PROJECT_DEFAULTS'; revision: number; palettes: ModePalettes }
+  | { type: 'SAVE_DEFAULTS_SUCCEEDED'; revision: number }
   | { type: 'RESET_DEFAULTS' };
 
 // ── State ────────────────────────────────────
@@ -34,6 +33,10 @@ export interface PaletteState {
   mode: Mode;
   contrast: Contrast;
   resolved: ResolvedPalette;
+  /** Revision of the project defaults this state was last synced with. */
+  savedRevision: number;
+  /** Snapshot of the palettes as last loaded/saved as project defaults. */
+  savedPalettes: ModePalettes;
 }
 
 function resolve(
@@ -45,18 +48,34 @@ function resolve(
   return resolvePalette({ baseColors, overrides, mode, contrast });
 }
 
-export function createInitialState(mode: Mode = 'dark'): PaletteState {
-  const modePalettes: ModePalettes = {
-    dark: { baseColors: { ...DEFAULT_DARK_BASE_COLORS }, overrides: {} },
-    light: { baseColors: { ...DEFAULT_LIGHT_BASE_COLORS }, overrides: {} },
+function copyModePalettes(palettes: ModePalettes): ModePalettes {
+  return {
+    dark: { baseColors: { ...palettes.dark.baseColors }, overrides: { ...palettes.dark.overrides } },
+    light: { baseColors: { ...palettes.light.baseColors }, overrides: { ...palettes.light.overrides } },
   };
-  const contrast: Contrast = 'medium';
-  return stateForMode(modePalettes, mode, contrast);
 }
 
-function stateForMode(modePalettes: ModePalettes, mode: Mode, contrast: Contrast): PaletteState {
+export function createInitialState(mode: Mode = 'dark'): PaletteState {
+  // The tracked project-defaults artifact is the canonical source for both
+  // modes; it is what fresh reloads and Reset restore to.
+  const modePalettes = copyModePalettes(PROJECT_DEFAULTS.palettes);
+  const contrast: Contrast = 'medium';
+  const defaultsMetadata = {
+    savedRevision: PROJECT_DEFAULTS.revision,
+    savedPalettes: copyModePalettes(PROJECT_DEFAULTS.palettes),
+  };
+  return stateForMode(modePalettes, mode, contrast, defaultsMetadata);
+}
+
+function stateForMode(
+  modePalettes: ModePalettes,
+  mode: Mode,
+  contrast: Contrast,
+  metadata: Pick<PaletteState, 'savedRevision' | 'savedPalettes'>,
+): PaletteState {
   const { baseColors, overrides } = modePalettes[mode];
   return {
+    ...metadata,
     baseColors,
     overrides,
     modePalettes,
@@ -100,7 +119,10 @@ export function paletteReducer(state: PaletteState, action: PaletteAction): Pale
     }
 
     case 'SET_MODE': {
-      return stateForMode(state.modePalettes, action.mode, state.contrast);
+      return stateForMode(state.modePalettes, action.mode, state.contrast, {
+        savedRevision: state.savedRevision,
+        savedPalettes: state.savedPalettes,
+      });
     }
 
     case 'SET_CONTRAST': {
@@ -112,17 +134,58 @@ export function paletteReducer(state: PaletteState, action: PaletteAction): Pale
         baseColors: action.baseColors,
         overrides: action.overrides,
       });
-      return stateForMode(modePalettes, action.mode, action.contrast);
+      return stateForMode(modePalettes, action.mode, action.contrast, {
+        savedRevision: state.savedRevision,
+        savedPalettes: state.savedPalettes,
+      });
     }
 
     case 'LOAD_SCHEME': {
-      return stateForMode(action.palettes, action.mode, action.contrast);
+      return stateForMode(action.palettes, action.mode, action.contrast, {
+        savedRevision: state.savedRevision,
+        savedPalettes: state.savedPalettes,
+      });
+    }
+
+    case 'HYDRATE_PROJECT_DEFAULTS': {
+      // Fresh reloads and restarts must use the saved project defaults. If the
+      // on-disk artifact is newer than the bundled copy, adopt it — but only
+      // when the user has not already diverged from what this page loaded
+      // (their edits would otherwise be silently discarded).
+      const unchanged = JSON.stringify(state.modePalettes) === JSON.stringify(state.savedPalettes);
+      if (action.revision <= state.savedRevision || !unchanged) {
+        return state;
+      }
+      const modePalettes = copyModePalettes(action.palettes);
+      return stateForMode(modePalettes, state.mode, state.contrast, {
+        savedRevision: action.revision,
+        savedPalettes: copyModePalettes(action.palettes),
+      });
+    }
+
+    case 'SAVE_DEFAULTS_SUCCEEDED': {
+      // The save service accepted the current palettes as the project
+      // defaults; record the revision and snapshot so dirty-state tracking
+      // and future saves stay correct. Current edits are preserved.
+      return {
+        ...state,
+        savedRevision: action.revision,
+        savedPalettes: copyModePalettes(state.modePalettes),
+      };
     }
 
     case 'RESET_DEFAULTS': {
-      const baseColors = state.mode === 'dark' ? { ...DEFAULT_DARK_BASE_COLORS } : { ...DEFAULT_LIGHT_BASE_COLORS };
-      const modePalettes = updateModePalette(state.modePalettes, state.mode, { baseColors, overrides: {} });
-      return stateForMode(modePalettes, state.mode, state.contrast);
+      // Reset restores the saved project defaults for the active mode,
+      // including any saved overrides. It uses the state's snapshot of the
+      // saved defaults (which may be newer than the bundled artifact after a
+      // hydrate or an in-session save) rather than the bundled copy.
+      const saved = state.mode === 'dark' ? state.savedPalettes.dark : state.savedPalettes.light;
+      const restored = { baseColors: { ...saved.baseColors }, overrides: { ...saved.overrides } };
+      const modePalettes = updateModePalette(state.modePalettes, state.mode, restored);
+      return stateForMode(modePalettes, state.mode, state.contrast, {
+        savedRevision: state.savedRevision,
+        savedPalettes: state.savedPalettes,
+      });
     }
 
     default:
