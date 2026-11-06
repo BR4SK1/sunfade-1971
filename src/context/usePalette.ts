@@ -35,6 +35,10 @@ export function usePalette() {
       dispatch({ type: 'LOAD_SNAPSHOT', ...snap }),
     loadScheme: (scheme: { palettes: ModePalettes; mode: Mode; contrast: Contrast }) =>
       dispatch({ type: 'LOAD_SCHEME', ...scheme }),
+    hydrateProjectDefaults: (palettes: ModePalettes, revision: number) =>
+      dispatch({ type: 'HYDRATE_PROJECT_DEFAULTS', palettes, revision }),
+    saveDefaultsSucceeded: (revision: number) =>
+      dispatch({ type: 'SAVE_DEFAULTS_SUCCEEDED', revision }),
     resetDefaults: () =>
       dispatch({ type: 'RESET_DEFAULTS' }),
   }), [dispatch]);

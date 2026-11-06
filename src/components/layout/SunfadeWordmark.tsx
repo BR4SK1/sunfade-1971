@@ -11,7 +11,7 @@ export function SunfadeWordmark() {
         sx={{
           m: 0,
           color: 'terminalHeader.text',
-          fontFamily: 'monospace',
+          fontFamily: 'var(--font-sunfade-montserrat, "Montserrat"), "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
           fontSize: { xs: '14px', sm: '20px', md: '24px', lg: '32px', xl: '40px' },
           fontWeight: 700,
           lineHeight: 1,

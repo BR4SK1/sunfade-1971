@@ -1,12 +1,15 @@
 import { describe, it, expect } from 'vitest';
 import { resolvePalette } from '../resolver';
-import { DEFAULT_DARK_BASE_COLORS, DEFAULT_LIGHT_BASE_COLORS } from '../defaults';
+import {
+  DEFAULT_DARK_BASE_COLORS,
+  DEFAULT_LIGHT_BASE_COLORS,
+} from '../defaults';
 import { serializeMuiTheme } from '../serializers/mui-serializer';
 import { getContrastRoles } from '../../theme/contrastRoles';
 import { serializeGhosttyConfig } from '../serializers/ghostty-serializer';
 import { serializeCssVars } from '../serializers/css-serializer';
 import { serializeHtmlOneSheet } from '../serializers/html-serializer';
-import type { PaletteConfig } from '../types';
+import type { BaseColors, ModePalettes, PaletteConfig } from '../types';
 
 const darkConfig: PaletteConfig = {
   baseColors: { ...DEFAULT_DARK_BASE_COLORS },
@@ -26,36 +29,89 @@ const darkPalette = resolvePalette(darkConfig);
 const lightPalette = resolvePalette(lightConfig);
 
 describe('MUI Serializer', () => {
-  it('produces valid TypeScript-like output', () => {
-    const output = serializeMuiTheme(darkPalette, 'dark', 'medium');
+  const defaultModePalettes: ModePalettes = {
+    dark: { baseColors: { ...DEFAULT_DARK_BASE_COLORS }, overrides: {} },
+    light: { baseColors: { ...DEFAULT_LIGHT_BASE_COLORS }, overrides: {} },
+  };
+  const output = serializeMuiTheme(defaultModePalettes);
 
-    expect(output).toContain("import { createTheme }");
-    expect(output).toContain("mode: 'dark'");
+  it('produces valid TypeScript-like output', () => {
+    expect(output).toContain("import { createTheme");
+    expect(output).toContain('"mode": "dark"');
+    expect(output).toContain('"mode": "light"');
     expect(output).toContain(darkPalette.bg0);
     expect(output).toContain(darkPalette.fg1);
     expect(output).toContain(getContrastRoles(darkPalette, 'dark', 'medium').accents.blue.main);
-    expect(output).toContain('export default theme');
+    expect(output).toContain('export default sunfadeTheme');
+    expect(output).toContain('getSunfadeTheme');
   });
 
   it('includes module augmentation for darker and orange', () => {
-    const output = serializeMuiTheme(darkPalette, 'dark', 'medium');
-
     expect(output).toContain('darker?: string');
     expect(output).toContain('orange: PaletteColor');
   });
 
+  it('contains all six mode/contrast variants', () => {
+    for (const variant of ['dark-soft', 'dark-medium', 'dark-hard', 'light-soft', 'light-medium', 'light-hard']) {
+      expect(output).toContain(`'${variant}':`);
+    }
+    expect(output).toContain("'dark-medium': createTheme(sunfadeThemeOptions['dark-medium'])");
+    expect(output).toContain("DEFAULT_SUNFADE_VARIANT: SunfadeVariant = 'dark-medium'");
+  });
+
   it('uses bg0_hard for hard contrast', () => {
-    const output = serializeMuiTheme(darkPalette, 'dark', 'hard');
     expect(output).toContain(darkPalette.bg0_hard);
   });
 
   it('uses bg0_soft for soft contrast', () => {
-    const output = serializeMuiTheme(darkPalette, 'dark', 'soft');
     expect(output).toContain(darkPalette.bg0_soft);
   });
 
+  it('preserves edits from both mode palettes', () => {
+    const edited: ModePalettes = {
+      dark: {
+        baseColors: { ...DEFAULT_DARK_BASE_COLORS, bg: '#221d1a', blue: '#4f7f8f' },
+        overrides: { bright_red: '#ff8f70' },
+      },
+      light: {
+        baseColors: { ...DEFAULT_LIGHT_BASE_COLORS, bg: '#f5e4cb', red: '#b0402e' },
+        overrides: { fg2: '#554032' },
+      },
+    };
+    const editedOutput = serializeMuiTheme(edited);
+
+    // Raw edited palettes are embedded for both modes
+    expect(editedOutput).toContain('"bg": "#221d1a"');
+    expect(editedOutput).toContain('"bg": "#f5e4cb"');
+    expect(editedOutput).toContain('"bright_red": "#ff8f70"');
+    expect(editedOutput).toContain('"fg2": "#554032"');
+
+    // Each mode's edits flow into that mode's resolved themes only
+    const darkResolved = resolvePalette({ baseColors: edited.dark.baseColors, overrides: edited.dark.overrides, mode: 'dark', contrast: 'medium' });
+    const lightResolved = resolvePalette({ baseColors: edited.light.baseColors, overrides: edited.light.overrides, mode: 'light', contrast: 'medium' });
+    expect(editedOutput).toContain(`"default": "${darkResolved.bg0}"`);
+    expect(editedOutput).toContain(`"default": "${lightResolved.bg0}"`);
+    expect(darkResolved.bg0).toBe('#221d1a');
+    expect(lightResolved.bg0).toBe('#f5e4cb');
+  });
+
+  it('includes consumer guidance with ThemeProvider and CssBaseline', () => {
+    expect(output).toContain('ThemeProvider');
+    expect(output).toContain('CssBaseline');
+    expect(output).toContain('default export is the dark-medium variant');
+  });
+
+  it('is deterministic regardless of palette key order', () => {
+    const { red, green, yellow, blue, purple, aqua, orange, fg, bg } = DEFAULT_DARK_BASE_COLORS;
+    const reordered = { fg, bg, orange, aqua, purple, blue, yellow, green, red } as BaseColors;
+    const shuffled: ModePalettes = {
+      dark: { baseColors: reordered, overrides: {} },
+      light: { baseColors: { ...DEFAULT_LIGHT_BASE_COLORS }, overrides: {} },
+    };
+    expect(serializeMuiTheme(shuffled)).toBe(output);
+  });
+
   it('snapshot', () => {
-    const output = serializeMuiTheme(darkPalette, 'dark', 'medium');
     expect(output).toMatchSnapshot();
   });
 });

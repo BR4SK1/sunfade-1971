@@ -28,11 +28,12 @@ export function ColorPickerControl({ color, label, size, onChange }: ColorPicker
           height: size,
           flexShrink: 0,
           backgroundColor: color,
-          border: '1px solid',
-          borderColor: theme.palette.divider,
+          border: 1,
+          borderColor: theme.palette.frame,
           borderRadius: 0.75,
           cursor: 'pointer',
-          '&:focus-visible': { outline: `2px solid ${theme.palette.primary.main}`, outlineOffset: 2 },
+          '&:hover': { border: `1px solid ${theme.palette.primary.main}` },
+          '&:focus-visible': { outline: `1px solid ${theme.palette.primary.main}`, outlineOffset: 2 },
         }}
       />
       <Popover
@@ -62,8 +63,6 @@ export function ColorPickerControl({ color, label, size, onChange }: ColorPicker
                 height: 28,
                 flexShrink: 0,
                 borderRadius: 0.75,
-                border: '1px solid',
-                borderColor: theme.palette.divider,
                 backgroundColor: color,
               }}
             />
@@ -77,11 +76,12 @@ export function ColorPickerControl({ color, label, size, onChange }: ColorPicker
                 width: '100%',
                 height: 32,
                 padding: '0 8px',
-                border: `1px solid ${theme.palette.divider}`,
+                border: `1px solid ${theme.palette.frame}`,
                 borderRadius: 4,
                 backgroundColor: pickerBackground,
                 color: theme.palette.text.primary,
-                font: '13px monospace',
+                fontSize: 13,
+                fontFamily: 'var(--font-sunfade-caskaydia, "CaskaydiaCove Nerd Font"), ui-monospace, monospace',
               }}
             />
           </Box>

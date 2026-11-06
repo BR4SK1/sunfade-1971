@@ -15,7 +15,7 @@ export function BaseColorPicker({ label, value, onChange }: BaseColorPickerProps
         <Typography variant="caption" sx={{ fontWeight: 600 }}>
           {label}
         </Typography>
-        <Typography variant="caption" sx={{ display: 'block', fontFamily: 'monospace', opacity: 0.7 }}>
+        <Typography variant="caption" sx={{ display: 'block', fontFamily: 'var(--font-sunfade-caskaydia, "CaskaydiaCove Nerd Font"), ui-monospace, monospace', opacity: 0.7 }}>
           {value}
         </Typography>
       </Box>

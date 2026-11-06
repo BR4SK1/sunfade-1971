@@ -1,0 +1,82 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sunfade
+  labels:
+    app.kubernetes.io/part-of: sunfade-1971
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sunfade-1971
+  namespace: sunfade
+  labels:
+    app.kubernetes.io/name: sunfade-1971
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: sunfade-1971
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: sunfade-1971
+    spec:
+      containers:
+        - name: web
+          image: localhost:5104/sunfade-1971:be2dd99
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+            periodSeconds: 20
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sunfade-1971
+  namespace: sunfade
+  labels:
+    app.kubernetes.io/name: sunfade-1971
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: sunfade-1971
+  ports:
+    - name: http
+      port: 5107
+      targetPort: http
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sunfade-1971-local
+  namespace: sunfade
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.middlewares: platform-default-compress@kubernetescrd,platform-default-security-headers@kubernetescrd
+spec:
+  ingressClassName: traefik
+  tls:
+    - hosts:
+        - sunfade.local.brasky-house.com
+  rules:
+    - host: sunfade.local.brasky-house.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: sunfade-1971
+                port:
+                  number: 5107

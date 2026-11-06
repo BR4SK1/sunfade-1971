@@ -5,7 +5,11 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    include: ['src/**/__tests__/**/*.test.ts', 'src/**/__tests__/**/*.test.tsx'],
+    include: [
+      'src/**/__tests__/**/*.test.ts',
+      'src/**/__tests__/**/*.test.tsx',
+      'src/scripts/**/*.test.mjs',
+    ],
   },
   resolve: {
     alias: {

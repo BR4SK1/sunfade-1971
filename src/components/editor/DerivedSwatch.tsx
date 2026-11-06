@@ -45,8 +45,6 @@ export function DerivedSwatch({
             height: 24,
             backgroundColor: hex,
             borderRadius: 0.5,
-            border: '1px solid',
-            borderColor: 'divider',
             flexShrink: 0,
           }}
         />
@@ -56,7 +54,6 @@ export function DerivedSwatch({
         variant="caption"
         sx={{
           flex: 1,
-          fontFamily: 'monospace',
           fontSize: 11,
           opacity: isOverridden ? 1 : 0.8,
           fontWeight: isOverridden ? 600 : 400,

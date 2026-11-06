@@ -23,7 +23,7 @@ const KEYWORDS = new Set([
 const TYPES = new Set(['AccentName', 'PaletteConfig', 'Record', 'ResolvedPalette', 'string']);
 const CONSTANTS = new Set(['ACCENT_NAMES']);
 
-const TOKEN_PATTERN = /\/\/.*|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`|===|!==|=>|\.\.\.|[A-Za-z_$][\w$]*|\d+(?:\.\d+)?|[=+\-*\/<>!&|]+|\{|\}|\(|\)|\[|\]|\.|,|:|;|\?/g;
+const TOKEN_PATTERN = /\/\/.*|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`|===|!==|=>|\.\.\.|[A-Za-z_$][\w$]*|\d+(?:\.\d+)?|[=+*/<>!&|-]+|\{|\}|\(|\)|\[|\]|\.|,|:|;|\?/g;
 
 interface CodeLine {
   number: number | null;
@@ -131,7 +131,7 @@ function tokenize(source: string): SyntaxToken[] {
       tokens.push({ text, color });
     } else if (/^\d/.test(text)) {
       tokens.push({ text, color: 'bright_yellow' });
-    } else if (/^(?:\.\.\.|=>|===|!==|[=+\-*\/<>!&|])/.test(text)) {
+    } else if (/^(?:\.\.\.|=>|===|!==|[=+*/<>!&|-])/.test(text)) {
       tokens.push({ text, color: 'neutral_red' });
     } else {
       tokens.push({ text, color: 'fg2' });
@@ -185,8 +185,6 @@ export function TerminalPreview() {
               sx={{
                 height: 28,
                 backgroundColor: hex,
-                border: '1px solid',
-                borderColor: 'divider',
                 borderRadius: 0.5,
               }}
             />
@@ -210,8 +208,8 @@ export function TerminalPreview() {
         sx={{
           backgroundColor: resolved.bg0_hard,
           borderRadius: 1,
-          border: '1px solid',
-          borderColor: 'divider',
+          border: 1,
+          borderColor: 'frame',
           overflow: 'hidden',
         }}
       >
@@ -219,17 +217,13 @@ export function TerminalPreview() {
           sx={{
             display: 'flex',
             alignItems: 'center',
-            gap: 0.75,
             px: 1.5,
             py: 0.75,
             borderBottom: '1px solid',
             borderColor: 'divider',
           }}
         >
-          {(['bright_red', 'bright_yellow', 'bright_green'] as const).map((color) => (
-            <Box key={color} aria-hidden="true" sx={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: resolved[color] }} />
-          ))}
-          <Typography variant="caption" sx={{ color: 'text.secondary', ml: 1, fontFamily: 'monospace' }}>
+          <Typography variant="caption" sx={{ color: 'text.secondary' }}>
             src/palette/resolver.ts — TypeScript
           </Typography>
         </Box>
@@ -244,12 +238,12 @@ export function TerminalPreview() {
               m: 0,
               width: 'max-content',
               minWidth: '100%',
-              fontFamily: '"JetBrains Mono", "Fira Code", "Cascadia Code", monospace',
               fontSize: 12,
               lineHeight: 1.65,
+              fontFamily: 'var(--font-sunfade-caskaydia, "CaskaydiaCove Nerd Font"), ui-monospace, monospace',
             }}
           >
-            <Box component="code">
+            <Box component="code" sx={{ fontFamily: 'inherit' }}>
               {CODE_LINES.map(({ number, text }, index) => (
                 <Box key={`${number ?? 'gap'}-${index}`} sx={{ display: 'flex', minHeight: '1.65em', whiteSpace: 'pre' }}>
                   <Box

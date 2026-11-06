@@ -50,6 +50,9 @@ function useDebouncedMemo<T>(factory: () => T, deps: unknown[], delay: number): 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps);
 
+  // This ref intentionally preserves the previous memoized value until the
+  // debounced effect updates it.
+  // eslint-disable-next-line react-hooks/refs
   return valueRef.current;
 }
 
