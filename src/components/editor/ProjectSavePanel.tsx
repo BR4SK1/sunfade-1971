@@ -17,6 +17,22 @@ interface SaveAlert {
   message: string;
 }
 
+// Guard against the reported Firefox hydration mismatch on this Save button:
+// the DOM lacked `disabled` at hydration while React expected it disabled.
+// The documented, suspected cause is Firefox restoring a control's prior
+// dynamic `disabled` state on reload and ignoring the `disabled` in the SSR
+// markup (https://bugzilla.mozilla.org/1847798) — plausible here since the
+// user is on Firefox, but unconfirmed for this specific warning.
+// `autocomplete="off"` is that bug's documented, Firefox-specific opt-out
+// from form-control restoration; other engines ignore it. The attribute is
+// nonstandard on <button>, so MUI's typings don't declare it: spreading this
+// constant (cast-free — JSX spread attributes skip excess-property checks)
+// forwards it to the underlying SSR <button>, and the camelCase spelling is
+// the one React serializes without a dev-mode "Invalid DOM property"
+// warning. SSR markup and hydration are covered by tests; a real Firefox
+// reload still needs manual confirmation.
+const firefoxAutocompleteGuard = { autoComplete: 'off' } as const;
+
 /**
  * Saves the edited light and dark palettes as the project's actual defaults
  * via the local dev companion. Distinct from the scheme file download in
@@ -103,6 +119,7 @@ export function ProjectSavePanel() {
   return (
     <Box sx={{ mb: 2 }}>
       <Button
+        {...firefoxAutocompleteGuard}
         variant="contained"
         size="small"
         startIcon={<SaveIcon />}

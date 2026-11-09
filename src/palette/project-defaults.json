@@ -1,35 +1,39 @@
 {
-  "revision": 4,
+  "revision": 27,
   "palettes": {
     "dark": {
       "baseColors": {
-        "red": "#c05945",
-        "green": "#767437",
-        "yellow": "#c28a38",
-        "blue": "#5e797c",
-        "purple": "#87606a",
-        "aqua": "#5d7868",
-        "orange": "#a4613a",
-        "fg": "#e3cfb2",
-        "bg": "#2d2926"
+        "red": "#b24533",
+        "green": "#5a7c3f",
+        "yellow": "#d3a13d",
+        "blue": "#467992",
+        "purple": "#8b5b7a",
+        "aqua": "#3e7d67",
+        "orange": "#af5728",
+        "fg": "#dfd0b6",
+        "bg": "#2b2926"
       },
       "overrides": {
-        "neutral_aqua": "#5d7860",
-        "faded_aqua": "#3f5645",
-        "deep_aqua": "#233228"
+        "bright_red": "#e66953",
+        "bright_green": "#8ba470",
+        "bright_yellow": "#efc97a",
+        "bright_blue": "#7db3bc",
+        "bright_purple": "#b489a5",
+        "bright_aqua": "#5fb690",
+        "bright_orange": "#e07f4a"
       }
     },
     "light": {
       "baseColors": {
-        "red": "#c05a45",
-        "green": "#7f873f",
-        "yellow": "#c28a38",
-        "blue": "#66828a",
-        "purple": "#9a6f86",
-        "aqua": "#6e8b70",
-        "orange": "#c46a35",
-        "fg": "#392b24",
-        "bg": "#f8e9d2"
+        "red": "#b24533",
+        "green": "#5a7c3f",
+        "yellow": "#d3a13d",
+        "blue": "#467992",
+        "purple": "#8b5b7a",
+        "aqua": "#3e7d67",
+        "orange": "#af5728",
+        "fg": "#675f57",
+        "bg": "#f3ecdd"
       },
       "overrides": {}
     }

@@ -15,7 +15,7 @@ export function AccentColorGroup({ accent }: AccentColorGroupProps) {
   const { baseColors, resolved, overrides, setBase, setOverride, clearOverride } = usePalette();
 
   return (
-    <Accordion disableGutters elevation={0} sx={{ '&:before': { display: 'none' } }}>
+    <Accordion disableGutters elevation={0}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ minHeight: 40, px: 1.5 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <Box

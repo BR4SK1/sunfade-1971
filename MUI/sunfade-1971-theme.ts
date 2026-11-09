@@ -127,33 +127,37 @@ export const DEFAULT_SUNFADE_VARIANT: SunfadeVariant = 'dark-medium';
 export const sunfadePalettes: Record<SunfadeMode, SunfadeModePalette> = {
     "dark": {
       "baseColors": {
-        "red": "#c05945",
-        "green": "#767437",
-        "yellow": "#c28a38",
-        "blue": "#5e797c",
-        "purple": "#87606a",
-        "aqua": "#5d7868",
-        "orange": "#a4613a",
-        "fg": "#e3cfb2",
-        "bg": "#2d2926"
+        "red": "#b24533",
+        "green": "#5a7c3f",
+        "yellow": "#d3a13d",
+        "blue": "#467992",
+        "purple": "#8b5b7a",
+        "aqua": "#3e7d67",
+        "orange": "#af5728",
+        "fg": "#dfd0b6",
+        "bg": "#2b2926"
       },
       "overrides": {
-        "deep_aqua": "#233228",
-        "faded_aqua": "#3f5645",
-        "neutral_aqua": "#5d7860"
+        "bright_aqua": "#5fb690",
+        "bright_blue": "#7db3bc",
+        "bright_green": "#8ba470",
+        "bright_orange": "#e07f4a",
+        "bright_purple": "#b489a5",
+        "bright_red": "#e66953",
+        "bright_yellow": "#efc97a"
       }
     },
     "light": {
       "baseColors": {
-        "red": "#c05a45",
-        "green": "#7f873f",
-        "yellow": "#c28a38",
-        "blue": "#66828a",
-        "purple": "#9a6f86",
-        "aqua": "#6e8b70",
-        "orange": "#c46a35",
-        "fg": "#392b24",
-        "bg": "#f8e9d2"
+        "red": "#b24533",
+        "green": "#5a7c3f",
+        "yellow": "#d3a13d",
+        "blue": "#467992",
+        "purple": "#8b5b7a",
+        "aqua": "#3e7d67",
+        "orange": "#af5728",
+        "fg": "#675f57",
+        "bg": "#f3ecdd"
       },
       "overrides": {}
     }
@@ -165,95 +169,95 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
     "palette": {
       "mode": "dark",
       "background": {
-        "default": "#37302c",
-        "paper": "#3f3731"
+        "default": "#35312c",
+        "paper": "#3c3832"
       },
       "text": {
-        "primary": "#cbb596",
-        "secondary": "#ab977e",
-        "disabled": "#97836d"
+        "primary": "#c5b59c",
+        "secondary": "#a39786",
+        "disabled": "#8e8476"
       },
       "primary": {
-        "light": "#7e9997",
-        "lightContrastText": "#222121",
-        "main": "#9da39a",
-        "dark": "#415d5f",
-        "darker": "#273e3f",
-        "contrastText": "#222121",
-        "neutralFill": "#5e797c",
-        "neutralFillLabel": "#fefbf4"
+        "light": "#e07f4a",
+        "lightContrastText": "#212120",
+        "main": "#c0997d",
+        "dark": "#7c3e1f",
+        "darker": "#4b2614",
+        "contrastText": "#212120",
+        "neutralFill": "#af5728",
+        "neutralFillLabel": "#fcf3de"
       },
       "secondary": {
-        "light": "#a47683",
-        "lightContrastText": "#1c1b1b",
-        "main": "#b19d96",
-        "dark": "#5e434a",
-        "darker": "#36252a",
-        "contrastText": "#222121",
-        "neutralFill": "#87606a",
-        "neutralFillLabel": "#fceed4"
+        "light": "#dfd0b6",
+        "lightContrastText": "#212120",
+        "main": "#c5b59c",
+        "dark": "#a39786",
+        "darker": "#8e8476",
+        "contrastText": "#212120",
+        "neutralFill": "#c5b59c",
+        "neutralFillLabel": "#212120"
       },
       "error": {
-        "light": "#e4765f",
-        "lightContrastText": "#222121",
-        "main": "#c69684",
-        "dark": "#914234",
-        "darker": "#602d25",
-        "contrastText": "#222121",
-        "neutralFill": "#c05945",
-        "neutralFillLabel": "#090808"
+        "light": "#e66953",
+        "lightContrastText": "#212120",
+        "main": "#c49785",
+        "dark": "#7e3227",
+        "darker": "#4c1f19",
+        "contrastText": "#212120",
+        "neutralFill": "#b24533",
+        "neutralFillLabel": "#fbefd5"
       },
       "warning": {
-        "light": "#dfa54c",
-        "lightContrastText": "#222121",
-        "main": "#bc9c6c",
-        "dark": "#906222",
-        "darker": "#593a11",
-        "contrastText": "#222121",
-        "neutralFill": "#c28a38",
-        "neutralFillLabel": "#222121"
+        "light": "#efc97a",
+        "lightContrastText": "#212120",
+        "main": "#bc9d5e",
+        "dark": "#aa791e",
+        "darker": "#714e0f",
+        "contrastText": "#212120",
+        "neutralFill": "#d3a13d",
+        "neutralFillLabel": "#212120"
       },
       "success": {
-        "light": "#948d52",
-        "lightContrastText": "#222121",
-        "main": "#a8a27f",
-        "dark": "#575627",
-        "darker": "#373718",
-        "contrastText": "#222121",
-        "neutralFill": "#767437",
-        "neutralFillLabel": "#fdf6e7"
+        "light": "#8ba470",
+        "lightContrastText": "#212120",
+        "main": "#9ca583",
+        "dark": "#435e2e",
+        "darker": "#2c3f1e",
+        "contrastText": "#212120",
+        "neutralFill": "#5a7c3f",
+        "neutralFillLabel": "#fdf8eb"
       },
       "info": {
-        "light": "#719770",
-        "lightContrastText": "#222121",
-        "main": "#9ea390",
-        "dark": "#3f5645",
-        "darker": "#233228",
-        "contrastText": "#222121",
-        "neutralFill": "#5d7860",
-        "neutralFillLabel": "#fdf6e7"
+        "light": "#7db3bc",
+        "lightContrastText": "#212120",
+        "main": "#94a4a4",
+        "dark": "#2f5c6f",
+        "darker": "#1c3c48",
+        "contrastText": "#212120",
+        "neutralFill": "#467992",
+        "neutralFillLabel": "#fdf9ee"
       },
       "orange": {
-        "light": "#d6753d",
-        "lightContrastText": "#222121",
-        "main": "#ba9b81",
-        "dark": "#75472d",
-        "darker": "#482c1e",
-        "contrastText": "#222121",
-        "neutralFill": "#a4613a",
-        "neutralFillLabel": "#fdf6e9"
+        "light": "#e07f4a",
+        "lightContrastText": "#212120",
+        "main": "#c0997d",
+        "dark": "#7c3e1f",
+        "darker": "#4b2614",
+        "contrastText": "#212120",
+        "neutralFill": "#af5728",
+        "neutralFillLabel": "#fcf3de"
       },
       "terminalHeader": {
-        "background": "#cbb596",
-        "text": "#222121"
+        "background": "#c5b59c",
+        "text": "#212120"
       },
-      "frame": "#cbb596",
-      "divider": "#50443c",
+      "frame": "#c5b59c",
+      "divider": "#c5b59c",
       "action": {
-        "hover": "#cbb59614",
-        "selected": "#cbb59629",
-        "disabled": "#97836d",
-        "disabledBackground": "#37302c"
+        "hover": "#c5b59c14",
+        "selected": "#c5b59c29",
+        "disabled": "#8e8476",
+        "disabledBackground": "#35312c"
       }
     },
     "shape": {
@@ -262,34 +266,70 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
     "typography": {
       "fontFamily": "var(--font-sunfade-caskaydia, \"CaskaydiaCove Nerd Font\"), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", monospace",
       "h1": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "2.875rem",
+        "lineHeight": 1.08,
+        "fontWeight": 700,
+        "letterSpacing": "-0.01em"
       },
       "h2": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "2.125rem",
+        "lineHeight": 1.14,
+        "fontWeight": 600,
+        "letterSpacing": "-0.005em"
       },
       "h3": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.75rem",
+        "lineHeight": 1.18,
+        "fontWeight": 600,
+        "letterSpacing": "0"
       },
       "h4": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.5rem",
+        "lineHeight": 1.22,
+        "fontWeight": 600,
+        "letterSpacing": "0"
       },
       "h5": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.25rem",
+        "lineHeight": 1.26,
+        "fontWeight": 500,
+        "letterSpacing": "0"
       },
       "h6": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.0625rem",
+        "lineHeight": 1.28,
+        "fontWeight": 500,
+        "letterSpacing": "0.01em"
       },
       "subtitle1": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1rem",
+        "lineHeight": 1.4,
+        "fontWeight": 600,
+        "letterSpacing": "0.01em"
       },
       "subtitle2": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "0.875rem",
+        "lineHeight": 1.45,
+        "fontWeight": 600,
+        "letterSpacing": "0.01em"
       },
       "caption": {
         "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
       },
       "overline": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "0.75rem",
+        "lineHeight": 2,
+        "fontWeight": 600,
+        "letterSpacing": "0.08em"
       },
       "button": {
         "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
@@ -299,13 +339,13 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiCssBaseline": {
         "styleOverrides": {
           "body": {
-            "backgroundColor": "#37302c",
-            "color": "#cbb596",
+            "backgroundColor": "#35312c",
+            "color": "#c5b59c",
             "backgroundImage": "none"
           },
           "::selection": {
-            "backgroundColor": "#7e9997",
-            "color": "#222121"
+            "backgroundColor": "#7db3bc",
+            "color": "#212120"
           }
         }
       },
@@ -313,8 +353,9 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "backgroundImage": "none",
-            "borderColor": "#cbb596",
-            "borderRadius": 2
+            "borderColor": "#c5b59c",
+            "borderRadius": 2,
+            "boxShadow": "none"
           },
           "outlined": {
             "borderWidth": 1
@@ -332,9 +373,9 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiAppBar": {
         "styleOverrides": {
           "root": {
-            "backgroundColor": "#cbb596",
-            "color": "#222121",
-            "border": "1px solid #50443c"
+            "backgroundColor": "#c5b59c",
+            "color": "#212120",
+            "border": "1px solid #c5b59c"
           }
         },
         "defaultProps": {
@@ -345,15 +386,19 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "color": "#cbb596",
+            "color": "#c5b59c",
             "borderRadius": 2,
             "minHeight": 40,
             "&.Mui-selected": {
-              "backgroundColor": "#cbb596",
-              "color": "#222121"
+              "backgroundColor": "#c5b59c",
+              "color": "#212120",
+              "&:hover": {
+                "backgroundColor": "#c5b59c",
+                "color": "#212120"
+              }
             },
             "&:focus-visible": {
-              "outline": "1px solid #9da39a",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 2
             }
           }
@@ -364,16 +409,34 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
           "root": {
             "borderRadius": 2,
             "boxShadow": "none",
+            "&:active": {
+              "boxShadow": "none"
+            },
             "minHeight": 40,
             "fontWeight": 600,
             "textTransform": "none",
             "&:focus-visible": {
-              "outline": "1px solid #9da39a",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 2
             }
           },
           "contained": {
-            "boxShadow": "none"
+            "boxShadow": "none",
+            "&:hover": {
+              "boxShadow": "none",
+              "@media (hover: none)": {
+                "boxShadow": "none"
+              }
+            },
+            "&:active": {
+              "boxShadow": "none"
+            },
+            "&.Mui-focusVisible": {
+              "boxShadow": "none"
+            },
+            "&.Mui-disabled": {
+              "boxShadow": "none"
+            }
           }
         },
         "variants": [
@@ -382,9 +445,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "primary"
             },
             "style": {
-              "--variant-outlinedBorder": "#9da39a",
-              "--variant-containedBg": "#5e797c",
-              "--variant-containedColor": "#fefbf4"
+              "--variant-textColor": "#af5728",
+              "--variant-outlinedColor": "#af5728",
+              "--variant-outlinedBorder": "#af5728",
+              "--variant-containedBg": "#af5728",
+              "--variant-containedColor": "#fcf3de"
             }
           },
           {
@@ -392,9 +457,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "secondary"
             },
             "style": {
-              "--variant-outlinedBorder": "#b19d96",
-              "--variant-containedBg": "#87606a",
-              "--variant-containedColor": "#fceed4"
+              "--variant-textColor": "#c5b59c",
+              "--variant-outlinedColor": "#c5b59c",
+              "--variant-outlinedBorder": "#c5b59c",
+              "--variant-containedBg": "#c5b59c",
+              "--variant-containedColor": "#212120"
             }
           },
           {
@@ -402,9 +469,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "error"
             },
             "style": {
-              "--variant-outlinedBorder": "#c69684",
-              "--variant-containedBg": "#c05945",
-              "--variant-containedColor": "#090808"
+              "--variant-textColor": "#b24533",
+              "--variant-outlinedColor": "#b24533",
+              "--variant-outlinedBorder": "#b24533",
+              "--variant-containedBg": "#b24533",
+              "--variant-containedColor": "#fbefd5"
             }
           },
           {
@@ -412,9 +481,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "warning"
             },
             "style": {
-              "--variant-outlinedBorder": "#bc9c6c",
-              "--variant-containedBg": "#c28a38",
-              "--variant-containedColor": "#222121"
+              "--variant-textColor": "#d3a13d",
+              "--variant-outlinedColor": "#d3a13d",
+              "--variant-outlinedBorder": "#d3a13d",
+              "--variant-containedBg": "#d3a13d",
+              "--variant-containedColor": "#212120"
             }
           },
           {
@@ -422,9 +493,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "success"
             },
             "style": {
-              "--variant-outlinedBorder": "#a8a27f",
-              "--variant-containedBg": "#767437",
-              "--variant-containedColor": "#fdf6e7"
+              "--variant-textColor": "#5a7c3f",
+              "--variant-outlinedColor": "#5a7c3f",
+              "--variant-outlinedBorder": "#5a7c3f",
+              "--variant-containedBg": "#5a7c3f",
+              "--variant-containedColor": "#fdf8eb"
             }
           },
           {
@@ -432,9 +505,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "info"
             },
             "style": {
-              "--variant-outlinedBorder": "#9ea390",
-              "--variant-containedBg": "#5d7860",
-              "--variant-containedColor": "#fdf6e7"
+              "--variant-textColor": "#467992",
+              "--variant-outlinedColor": "#467992",
+              "--variant-outlinedBorder": "#467992",
+              "--variant-containedBg": "#467992",
+              "--variant-containedColor": "#fdf9ee"
             }
           },
           {
@@ -445,8 +520,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#7e9997",
-                  "color": "#222121"
+                  "backgroundColor": "#e07f4a",
+                  "color": "#212120"
                 }
               }
             }
@@ -459,8 +534,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#a47683",
-                  "color": "#1c1b1b"
+                  "backgroundColor": "#dfd0b6",
+                  "color": "#212120"
                 }
               }
             }
@@ -473,8 +548,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#e4765f",
-                  "color": "#222121"
+                  "backgroundColor": "#e66953",
+                  "color": "#212120"
                 }
               }
             }
@@ -487,8 +562,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#dfa54c",
-                  "color": "#222121"
+                  "backgroundColor": "#efc97a",
+                  "color": "#212120"
                 }
               }
             }
@@ -501,8 +576,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#948d52",
-                  "color": "#222121"
+                  "backgroundColor": "#8ba470",
+                  "color": "#212120"
                 }
               }
             }
@@ -515,10 +590,115 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#719770",
-                  "color": "#222121"
+                  "backgroundColor": "#7db3bc",
+                  "color": "#212120"
                 }
               }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "primary"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e07f4a",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "secondary"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#dfd0b6",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "error"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e66953",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "warning"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#efc97a",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "success"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#8ba470",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "info"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#7db3bc",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "inherit"
+            },
+            "style": {
+              "--variant-outlinedBg": "#2b2926"
             }
           }
         ]
@@ -527,7 +707,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "&.Mui-focusVisible": {
-              "outline": "1px solid #9da39a",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 2
             }
           }
@@ -540,7 +720,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "minWidth": 40,
             "minHeight": 40,
             "&:focus-visible": {
-              "outline": "1px solid #9da39a",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 2
             }
           }
@@ -552,13 +732,13 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
             "border": "1px solid transparent",
             "borderRadius": 2,
-            "color": "#ab977e",
+            "color": "#a39786",
             "&.Mui-selected": {
-              "color": "#222121",
-              "backgroundColor": "#cbb596"
+              "color": "#212120",
+              "backgroundColor": "#c5b59c"
             },
             "&:focus-visible": {
-              "outline": "1px solid #9da39a",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 1
             }
           }
@@ -566,26 +746,38 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       },
       "MuiOutlinedInput": {
         "styleOverrides": {
+          "notchedOutline": {
+            "borderWidth": 1,
+            "borderColor": "#c5b59c"
+          },
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
             "borderRadius": 2,
+            "&:hover:not(.Mui-focused):not(.Mui-error) .MuiOutlinedInput-notchedOutline": {
+              "borderColor": "#c5b59c"
+            },
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
               "borderWidth": 1,
-              "borderColor": "#9da39a"
+              "borderColor": "#e07f4a"
             }
-          },
-          "notchedOutline": {
-            "borderWidth": 1,
-            "borderColor": "#cbb596"
           }
         }
       },
       "MuiInput": {
         "styleOverrides": {
+          "root": {
+            "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+            "&::before": {
+              "borderBottomColor": "#c5b59c"
+            },
+            "&:hover:not(.Mui-disabled):not(.Mui-error)::before": {
+              "borderBottom": "1px solid #c5b59c"
+            }
+          },
           "underline": {
             "&:after": {
               "borderBottomWidth": 1,
-              "borderBottomColor": "#9da39a"
+              "borderBottomColor": "#e07f4a"
             }
           }
         }
@@ -593,7 +785,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiSelect": {
         "styleOverrides": {
           "icon": {
-            "color": "#ab977e"
+            "color": "#a39786"
           }
         }
       },
@@ -601,21 +793,21 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "backgroundColor": "#37302c",
-            "border": "1px solid #cbb596",
+            "backgroundColor": "#35312c",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2,
             "&:before, &:after": {
               "display": "none"
             },
             "&:hover": {
-              "backgroundColor": "#3f3731"
+              "backgroundColor": "#3c3832"
             },
             "&.Mui-focused": {
-              "backgroundColor": "#3f3731",
-              "borderColor": "#9da39a"
+              "backgroundColor": "#3c3832",
+              "borderColor": "#e07f4a"
             },
             "&.Mui-disabled": {
-              "backgroundColor": "#37302c"
+              "backgroundColor": "#35312c"
             }
           }
         }
@@ -624,11 +816,10 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "color": "#cbb596",
+            "color": "#c5b59c",
             "borderRadius": 2,
             "&.Mui-expanded": {
-              "minHeight": 44,
-              "borderBottom": "1px solid #50443c"
+              "minHeight": 44
             }
           },
           "content": {
@@ -637,13 +828,14 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             }
           },
           "expandIconWrapper": {
-            "color": "#ab977e"
+            "color": "#a39786"
           }
         }
       },
       "MuiAccordion": {
         "styleOverrides": {
           "root": {
+            "border": "1px solid #c5b59c",
             "boxShadow": "none",
             "&:before": {
               "display": "none"
@@ -655,79 +847,182 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "border": "1px solid #cbb596",
             "borderRadius": 2,
-            "&.MuiChip-filledPrimary": {
-              "backgroundColor": "#9da39a",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#7e9997",
-                "color": "#222121"
+            "&.MuiChip-colorPrimary.MuiChip-filled": {
+              "backgroundColor": "#af5728",
+              "color": "#fcf3de",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e07f4a",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledSecondary": {
-              "backgroundColor": "#b19d96",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#a47683",
-                "color": "#1c1b1b"
+            "&.MuiChip-colorSecondary.MuiChip-filled": {
+              "backgroundColor": "#c5b59c",
+              "color": "#212120",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#dfd0b6",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledError": {
-              "backgroundColor": "#c69684",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#e4765f",
-                "color": "#222121"
+            "&.MuiChip-colorError.MuiChip-filled": {
+              "backgroundColor": "#b24533",
+              "color": "#fbefd5",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e66953",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledWarning": {
-              "backgroundColor": "#bc9c6c",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#dfa54c",
-                "color": "#222121"
+            "&.MuiChip-colorWarning.MuiChip-filled": {
+              "backgroundColor": "#d3a13d",
+              "color": "#212120",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#efc97a",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledSuccess": {
-              "backgroundColor": "#a8a27f",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#948d52",
-                "color": "#222121"
+            "&.MuiChip-colorSuccess.MuiChip-filled": {
+              "backgroundColor": "#5a7c3f",
+              "color": "#fdf8eb",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#8ba470",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledInfo": {
-              "backgroundColor": "#9ea390",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#719770",
-                "color": "#222121"
+            "&.MuiChip-colorInfo.MuiChip-filled": {
+              "backgroundColor": "#467992",
+              "color": "#fdf9ee",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#7db3bc",
+                  "color": "#212120"
+                }
               }
             }
           }
-        }
+        },
+        "variants": [
+          {
+            "props": {
+              "variant": "outlined"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "primary"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "secondary"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "error"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "warning"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "success"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "info"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          }
+        ]
       },
       "MuiAlert": {
         "styleOverrides": {
           "root": {
-            "border": "1px solid #cbb596",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2,
-            "&.MuiAlert-filledError": {
-              "backgroundColor": "#c69684",
-              "color": "#222121"
+            "&.MuiAlert-colorError.MuiAlert-filled": {
+              "backgroundColor": "#b24533",
+              "color": "#fbefd5"
             },
-            "&.MuiAlert-filledWarning": {
-              "backgroundColor": "#bc9c6c",
-              "color": "#222121"
+            "&.MuiAlert-colorWarning.MuiAlert-filled": {
+              "backgroundColor": "#d3a13d",
+              "color": "#212120"
             },
-            "&.MuiAlert-filledSuccess": {
-              "backgroundColor": "#a8a27f",
-              "color": "#222121"
+            "&.MuiAlert-colorSuccess.MuiAlert-filled": {
+              "backgroundColor": "#5a7c3f",
+              "color": "#fdf8eb"
             },
-            "&.MuiAlert-filledInfo": {
-              "backgroundColor": "#9ea390",
-              "color": "#222121"
+            "&.MuiAlert-colorInfo.MuiAlert-filled": {
+              "backgroundColor": "#467992",
+              "color": "#fdf9ee"
+            },
+            "&.MuiAlert-standard.MuiAlert-colorError": {
+              "backgroundColor": "#212120",
+              "color": "#e66953",
+              "& .MuiAlert-icon": {
+                "color": "#e66953"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorWarning": {
+              "backgroundColor": "#212120",
+              "color": "#efc97a",
+              "& .MuiAlert-icon": {
+                "color": "#efc97a"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorSuccess": {
+              "backgroundColor": "#212120",
+              "color": "#8ba470",
+              "& .MuiAlert-icon": {
+                "color": "#8ba470"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorInfo": {
+              "backgroundColor": "#212120",
+              "color": "#7db3bc",
+              "& .MuiAlert-icon": {
+                "color": "#7db3bc"
+              }
             }
           }
         }
@@ -735,7 +1030,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiPopover": {
         "styleOverrides": {
           "paper": {
-            "border": "1px solid #cbb596",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2,
             "boxShadow": "none"
           }
@@ -744,17 +1039,17 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiDrawer": {
         "styleOverrides": {
           "paper": {
-            "backgroundColor": "#3f3731",
-            "borderColor": "#cbb596",
+            "backgroundColor": "#3c3832",
+            "borderColor": "#c5b59c",
             "borderRadius": 2,
             "boxShadow": "none"
           },
           "root": {
             "&.MuiDrawer-modal .MuiDrawer-paper": {
-              "border": "1px solid #cbb596"
+              "border": "1px solid #c5b59c"
             },
             "&.MuiDrawer-docked .MuiDrawer-paper": {
-              "border": "1px solid #cbb596"
+              "border": "1px solid #c5b59c"
             }
           }
         }
@@ -762,9 +1057,18 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiDialog": {
         "styleOverrides": {
           "paper": {
-            "border": "1px solid #cbb596",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2,
             "boxShadow": "none"
+          }
+        }
+      },
+      "MuiSnackbarContent": {
+        "styleOverrides": {
+          "root": {
+            "backgroundColor": "#3c3832",
+            "color": "#c5b59c",
+            "border": "1px solid #c5b59c"
           }
         }
       },
@@ -772,7 +1076,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "tooltip": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "border": "1px solid #cbb596",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2
           }
         }
@@ -794,7 +1098,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiTableCell": {
         "styleOverrides": {
           "root": {
-            "borderBottomColor": "#50443c"
+            "borderBottomColor": "#c5b59c"
           }
         }
       }
@@ -804,95 +1108,95 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
     "palette": {
       "mode": "dark",
       "background": {
-        "default": "#2d2926",
-        "paper": "#3f3731"
+        "default": "#2b2926",
+        "paper": "#3c3832"
       },
       "text": {
-        "primary": "#e3cfb2",
-        "secondary": "#cbb596",
-        "disabled": "#97836d"
+        "primary": "#dfd0b6",
+        "secondary": "#c5b59c",
+        "disabled": "#8e8476"
       },
       "primary": {
-        "light": "#7e9997",
-        "lightContrastText": "#222121",
-        "main": "#97a49c",
-        "dark": "#415d5f",
-        "darker": "#273e3f",
-        "contrastText": "#222121",
-        "neutralFill": "#5e797c",
-        "neutralFillLabel": "#fefbf4"
+        "light": "#e07f4a",
+        "lightContrastText": "#212120",
+        "main": "#ce956e",
+        "dark": "#7c3e1f",
+        "darker": "#4b2614",
+        "contrastText": "#212120",
+        "neutralFill": "#af5728",
+        "neutralFillLabel": "#fcf3de"
       },
       "secondary": {
-        "light": "#a47683",
-        "lightContrastText": "#1c1b1b",
-        "main": "#b79b96",
-        "dark": "#5e434a",
-        "darker": "#36252a",
-        "contrastText": "#222121",
-        "neutralFill": "#87606a",
-        "neutralFillLabel": "#fceed4"
+        "light": "#dfd0b6",
+        "lightContrastText": "#212120",
+        "main": "#c5b59c",
+        "dark": "#a39786",
+        "darker": "#8e8476",
+        "contrastText": "#212120",
+        "neutralFill": "#c5b59c",
+        "neutralFillLabel": "#212120"
       },
       "error": {
-        "light": "#e4765f",
-        "lightContrastText": "#222121",
-        "main": "#d69079",
-        "dark": "#914234",
-        "darker": "#602d25",
-        "contrastText": "#222121",
-        "neutralFill": "#c05945",
-        "neutralFillLabel": "#090808"
+        "light": "#e66953",
+        "lightContrastText": "#212120",
+        "main": "#d3917b",
+        "dark": "#7e3227",
+        "darker": "#4c1f19",
+        "contrastText": "#212120",
+        "neutralFill": "#b24533",
+        "neutralFillLabel": "#fbefd5"
       },
       "warning": {
-        "light": "#dfa54c",
-        "lightContrastText": "#222121",
-        "main": "#ca984d",
-        "dark": "#906222",
-        "darker": "#593a11",
-        "contrastText": "#222121",
-        "neutralFill": "#c28a38",
-        "neutralFillLabel": "#222121"
+        "light": "#efc97a",
+        "lightContrastText": "#212120",
+        "main": "#d3a13d",
+        "dark": "#aa791e",
+        "darker": "#714e0f",
+        "contrastText": "#212120",
+        "neutralFill": "#d3a13d",
+        "neutralFillLabel": "#212120"
       },
       "success": {
-        "light": "#948d52",
-        "lightContrastText": "#222121",
-        "main": "#a9a272",
-        "dark": "#575627",
-        "darker": "#373718",
-        "contrastText": "#222121",
-        "neutralFill": "#767437",
-        "neutralFillLabel": "#fdf6e7"
+        "light": "#8ba470",
+        "lightContrastText": "#212120",
+        "main": "#96a777",
+        "dark": "#435e2e",
+        "darker": "#2c3f1e",
+        "contrastText": "#212120",
+        "neutralFill": "#5a7c3f",
+        "neutralFillLabel": "#fdf8eb"
       },
       "info": {
-        "light": "#719770",
-        "lightContrastText": "#222121",
-        "main": "#99a58c",
-        "dark": "#3f5645",
-        "darker": "#233228",
-        "contrastText": "#222121",
-        "neutralFill": "#5d7860",
-        "neutralFillLabel": "#fdf6e7"
+        "light": "#7db3bc",
+        "lightContrastText": "#212120",
+        "main": "#8aa6ab",
+        "dark": "#2f5c6f",
+        "darker": "#1c3c48",
+        "contrastText": "#212120",
+        "neutralFill": "#467992",
+        "neutralFillLabel": "#fdf9ee"
       },
       "orange": {
-        "light": "#d6753d",
-        "lightContrastText": "#222121",
-        "main": "#c69876",
-        "dark": "#75472d",
-        "darker": "#482c1e",
-        "contrastText": "#222121",
-        "neutralFill": "#a4613a",
-        "neutralFillLabel": "#fdf6e9"
+        "light": "#e07f4a",
+        "lightContrastText": "#212120",
+        "main": "#ce956e",
+        "dark": "#7c3e1f",
+        "darker": "#4b2614",
+        "contrastText": "#212120",
+        "neutralFill": "#af5728",
+        "neutralFillLabel": "#fcf3de"
       },
       "terminalHeader": {
-        "background": "#cbb596",
-        "text": "#222121"
+        "background": "#c5b59c",
+        "text": "#212120"
       },
-      "frame": "#cbb596",
-      "divider": "#50443c",
+      "frame": "#c5b59c",
+      "divider": "#c5b59c",
       "action": {
-        "hover": "#e3cfb214",
-        "selected": "#e3cfb229",
-        "disabled": "#97836d",
-        "disabledBackground": "#37302c"
+        "hover": "#dfd0b614",
+        "selected": "#dfd0b629",
+        "disabled": "#8e8476",
+        "disabledBackground": "#35312c"
       }
     },
     "shape": {
@@ -901,34 +1205,70 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
     "typography": {
       "fontFamily": "var(--font-sunfade-caskaydia, \"CaskaydiaCove Nerd Font\"), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", monospace",
       "h1": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "2.875rem",
+        "lineHeight": 1.08,
+        "fontWeight": 700,
+        "letterSpacing": "-0.01em"
       },
       "h2": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "2.125rem",
+        "lineHeight": 1.14,
+        "fontWeight": 600,
+        "letterSpacing": "-0.005em"
       },
       "h3": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.75rem",
+        "lineHeight": 1.18,
+        "fontWeight": 600,
+        "letterSpacing": "0"
       },
       "h4": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.5rem",
+        "lineHeight": 1.22,
+        "fontWeight": 600,
+        "letterSpacing": "0"
       },
       "h5": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.25rem",
+        "lineHeight": 1.26,
+        "fontWeight": 500,
+        "letterSpacing": "0"
       },
       "h6": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.0625rem",
+        "lineHeight": 1.28,
+        "fontWeight": 500,
+        "letterSpacing": "0.01em"
       },
       "subtitle1": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1rem",
+        "lineHeight": 1.4,
+        "fontWeight": 600,
+        "letterSpacing": "0.01em"
       },
       "subtitle2": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "0.875rem",
+        "lineHeight": 1.45,
+        "fontWeight": 600,
+        "letterSpacing": "0.01em"
       },
       "caption": {
         "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
       },
       "overline": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "0.75rem",
+        "lineHeight": 2,
+        "fontWeight": 600,
+        "letterSpacing": "0.08em"
       },
       "button": {
         "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
@@ -938,13 +1278,13 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiCssBaseline": {
         "styleOverrides": {
           "body": {
-            "backgroundColor": "#2d2926",
-            "color": "#e3cfb2",
+            "backgroundColor": "#2b2926",
+            "color": "#dfd0b6",
             "backgroundImage": "none"
           },
           "::selection": {
-            "backgroundColor": "#7e9997",
-            "color": "#222121"
+            "backgroundColor": "#7db3bc",
+            "color": "#212120"
           }
         }
       },
@@ -952,8 +1292,9 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "backgroundImage": "none",
-            "borderColor": "#cbb596",
-            "borderRadius": 2
+            "borderColor": "#c5b59c",
+            "borderRadius": 2,
+            "boxShadow": "none"
           },
           "outlined": {
             "borderWidth": 1
@@ -971,9 +1312,9 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiAppBar": {
         "styleOverrides": {
           "root": {
-            "backgroundColor": "#cbb596",
-            "color": "#222121",
-            "border": "1px solid #50443c"
+            "backgroundColor": "#c5b59c",
+            "color": "#212120",
+            "border": "1px solid #c5b59c"
           }
         },
         "defaultProps": {
@@ -984,15 +1325,19 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "color": "#e3cfb2",
+            "color": "#dfd0b6",
             "borderRadius": 2,
             "minHeight": 40,
             "&.Mui-selected": {
-              "backgroundColor": "#cbb596",
-              "color": "#222121"
+              "backgroundColor": "#c5b59c",
+              "color": "#212120",
+              "&:hover": {
+                "backgroundColor": "#c5b59c",
+                "color": "#212120"
+              }
             },
             "&:focus-visible": {
-              "outline": "1px solid #97a49c",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 2
             }
           }
@@ -1003,16 +1348,34 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
           "root": {
             "borderRadius": 2,
             "boxShadow": "none",
+            "&:active": {
+              "boxShadow": "none"
+            },
             "minHeight": 40,
             "fontWeight": 600,
             "textTransform": "none",
             "&:focus-visible": {
-              "outline": "1px solid #97a49c",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 2
             }
           },
           "contained": {
-            "boxShadow": "none"
+            "boxShadow": "none",
+            "&:hover": {
+              "boxShadow": "none",
+              "@media (hover: none)": {
+                "boxShadow": "none"
+              }
+            },
+            "&:active": {
+              "boxShadow": "none"
+            },
+            "&.Mui-focusVisible": {
+              "boxShadow": "none"
+            },
+            "&.Mui-disabled": {
+              "boxShadow": "none"
+            }
           }
         },
         "variants": [
@@ -1021,9 +1384,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "primary"
             },
             "style": {
-              "--variant-outlinedBorder": "#97a49c",
-              "--variant-containedBg": "#5e797c",
-              "--variant-containedColor": "#fefbf4"
+              "--variant-textColor": "#af5728",
+              "--variant-outlinedColor": "#af5728",
+              "--variant-outlinedBorder": "#af5728",
+              "--variant-containedBg": "#af5728",
+              "--variant-containedColor": "#fcf3de"
             }
           },
           {
@@ -1031,9 +1396,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "secondary"
             },
             "style": {
-              "--variant-outlinedBorder": "#b79b96",
-              "--variant-containedBg": "#87606a",
-              "--variant-containedColor": "#fceed4"
+              "--variant-textColor": "#c5b59c",
+              "--variant-outlinedColor": "#c5b59c",
+              "--variant-outlinedBorder": "#c5b59c",
+              "--variant-containedBg": "#c5b59c",
+              "--variant-containedColor": "#212120"
             }
           },
           {
@@ -1041,9 +1408,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "error"
             },
             "style": {
-              "--variant-outlinedBorder": "#d69079",
-              "--variant-containedBg": "#c05945",
-              "--variant-containedColor": "#090808"
+              "--variant-textColor": "#b24533",
+              "--variant-outlinedColor": "#b24533",
+              "--variant-outlinedBorder": "#b24533",
+              "--variant-containedBg": "#b24533",
+              "--variant-containedColor": "#fbefd5"
             }
           },
           {
@@ -1051,9 +1420,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "warning"
             },
             "style": {
-              "--variant-outlinedBorder": "#ca984d",
-              "--variant-containedBg": "#c28a38",
-              "--variant-containedColor": "#222121"
+              "--variant-textColor": "#d3a13d",
+              "--variant-outlinedColor": "#d3a13d",
+              "--variant-outlinedBorder": "#d3a13d",
+              "--variant-containedBg": "#d3a13d",
+              "--variant-containedColor": "#212120"
             }
           },
           {
@@ -1061,9 +1432,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "success"
             },
             "style": {
-              "--variant-outlinedBorder": "#a9a272",
-              "--variant-containedBg": "#767437",
-              "--variant-containedColor": "#fdf6e7"
+              "--variant-textColor": "#5a7c3f",
+              "--variant-outlinedColor": "#5a7c3f",
+              "--variant-outlinedBorder": "#5a7c3f",
+              "--variant-containedBg": "#5a7c3f",
+              "--variant-containedColor": "#fdf8eb"
             }
           },
           {
@@ -1071,9 +1444,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "info"
             },
             "style": {
-              "--variant-outlinedBorder": "#99a58c",
-              "--variant-containedBg": "#5d7860",
-              "--variant-containedColor": "#fdf6e7"
+              "--variant-textColor": "#467992",
+              "--variant-outlinedColor": "#467992",
+              "--variant-outlinedBorder": "#467992",
+              "--variant-containedBg": "#467992",
+              "--variant-containedColor": "#fdf9ee"
             }
           },
           {
@@ -1084,8 +1459,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#7e9997",
-                  "color": "#222121"
+                  "backgroundColor": "#e07f4a",
+                  "color": "#212120"
                 }
               }
             }
@@ -1098,8 +1473,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#a47683",
-                  "color": "#1c1b1b"
+                  "backgroundColor": "#dfd0b6",
+                  "color": "#212120"
                 }
               }
             }
@@ -1112,8 +1487,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#e4765f",
-                  "color": "#222121"
+                  "backgroundColor": "#e66953",
+                  "color": "#212120"
                 }
               }
             }
@@ -1126,8 +1501,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#dfa54c",
-                  "color": "#222121"
+                  "backgroundColor": "#efc97a",
+                  "color": "#212120"
                 }
               }
             }
@@ -1140,8 +1515,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#948d52",
-                  "color": "#222121"
+                  "backgroundColor": "#8ba470",
+                  "color": "#212120"
                 }
               }
             }
@@ -1154,10 +1529,115 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#719770",
-                  "color": "#222121"
+                  "backgroundColor": "#7db3bc",
+                  "color": "#212120"
                 }
               }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "primary"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e07f4a",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "secondary"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#dfd0b6",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "error"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e66953",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "warning"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#efc97a",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "success"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#8ba470",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "info"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#7db3bc",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "inherit"
+            },
+            "style": {
+              "--variant-outlinedBg": "#2b2926"
             }
           }
         ]
@@ -1166,7 +1646,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "&.Mui-focusVisible": {
-              "outline": "1px solid #97a49c",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 2
             }
           }
@@ -1179,7 +1659,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "minWidth": 40,
             "minHeight": 40,
             "&:focus-visible": {
-              "outline": "1px solid #97a49c",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 2
             }
           }
@@ -1191,13 +1671,13 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
             "border": "1px solid transparent",
             "borderRadius": 2,
-            "color": "#cbb596",
+            "color": "#c5b59c",
             "&.Mui-selected": {
-              "color": "#222121",
-              "backgroundColor": "#cbb596"
+              "color": "#212120",
+              "backgroundColor": "#c5b59c"
             },
             "&:focus-visible": {
-              "outline": "1px solid #97a49c",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 1
             }
           }
@@ -1205,26 +1685,38 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       },
       "MuiOutlinedInput": {
         "styleOverrides": {
+          "notchedOutline": {
+            "borderWidth": 1,
+            "borderColor": "#c5b59c"
+          },
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
             "borderRadius": 2,
+            "&:hover:not(.Mui-focused):not(.Mui-error) .MuiOutlinedInput-notchedOutline": {
+              "borderColor": "#c5b59c"
+            },
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
               "borderWidth": 1,
-              "borderColor": "#97a49c"
+              "borderColor": "#e07f4a"
             }
-          },
-          "notchedOutline": {
-            "borderWidth": 1,
-            "borderColor": "#cbb596"
           }
         }
       },
       "MuiInput": {
         "styleOverrides": {
+          "root": {
+            "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+            "&::before": {
+              "borderBottomColor": "#c5b59c"
+            },
+            "&:hover:not(.Mui-disabled):not(.Mui-error)::before": {
+              "borderBottom": "1px solid #c5b59c"
+            }
+          },
           "underline": {
             "&:after": {
               "borderBottomWidth": 1,
-              "borderBottomColor": "#97a49c"
+              "borderBottomColor": "#e07f4a"
             }
           }
         }
@@ -1232,7 +1724,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiSelect": {
         "styleOverrides": {
           "icon": {
-            "color": "#cbb596"
+            "color": "#c5b59c"
           }
         }
       },
@@ -1240,21 +1732,21 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "backgroundColor": "#37302c",
-            "border": "1px solid #cbb596",
+            "backgroundColor": "#35312c",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2,
             "&:before, &:after": {
               "display": "none"
             },
             "&:hover": {
-              "backgroundColor": "#3f3731"
+              "backgroundColor": "#3c3832"
             },
             "&.Mui-focused": {
-              "backgroundColor": "#3f3731",
-              "borderColor": "#97a49c"
+              "backgroundColor": "#3c3832",
+              "borderColor": "#e07f4a"
             },
             "&.Mui-disabled": {
-              "backgroundColor": "#37302c"
+              "backgroundColor": "#35312c"
             }
           }
         }
@@ -1263,11 +1755,10 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "color": "#e3cfb2",
+            "color": "#dfd0b6",
             "borderRadius": 2,
             "&.Mui-expanded": {
-              "minHeight": 44,
-              "borderBottom": "1px solid #50443c"
+              "minHeight": 44
             }
           },
           "content": {
@@ -1276,13 +1767,14 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             }
           },
           "expandIconWrapper": {
-            "color": "#cbb596"
+            "color": "#c5b59c"
           }
         }
       },
       "MuiAccordion": {
         "styleOverrides": {
           "root": {
+            "border": "1px solid #c5b59c",
             "boxShadow": "none",
             "&:before": {
               "display": "none"
@@ -1294,79 +1786,182 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "border": "1px solid #cbb596",
             "borderRadius": 2,
-            "&.MuiChip-filledPrimary": {
-              "backgroundColor": "#97a49c",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#7e9997",
-                "color": "#222121"
+            "&.MuiChip-colorPrimary.MuiChip-filled": {
+              "backgroundColor": "#af5728",
+              "color": "#fcf3de",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e07f4a",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledSecondary": {
-              "backgroundColor": "#b79b96",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#a47683",
-                "color": "#1c1b1b"
+            "&.MuiChip-colorSecondary.MuiChip-filled": {
+              "backgroundColor": "#c5b59c",
+              "color": "#212120",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#dfd0b6",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledError": {
-              "backgroundColor": "#d69079",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#e4765f",
-                "color": "#222121"
+            "&.MuiChip-colorError.MuiChip-filled": {
+              "backgroundColor": "#b24533",
+              "color": "#fbefd5",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e66953",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledWarning": {
-              "backgroundColor": "#ca984d",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#dfa54c",
-                "color": "#222121"
+            "&.MuiChip-colorWarning.MuiChip-filled": {
+              "backgroundColor": "#d3a13d",
+              "color": "#212120",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#efc97a",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledSuccess": {
-              "backgroundColor": "#a9a272",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#948d52",
-                "color": "#222121"
+            "&.MuiChip-colorSuccess.MuiChip-filled": {
+              "backgroundColor": "#5a7c3f",
+              "color": "#fdf8eb",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#8ba470",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledInfo": {
-              "backgroundColor": "#99a58c",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#719770",
-                "color": "#222121"
+            "&.MuiChip-colorInfo.MuiChip-filled": {
+              "backgroundColor": "#467992",
+              "color": "#fdf9ee",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#7db3bc",
+                  "color": "#212120"
+                }
               }
             }
           }
-        }
+        },
+        "variants": [
+          {
+            "props": {
+              "variant": "outlined"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "primary"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "secondary"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "error"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "warning"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "success"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "info"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          }
+        ]
       },
       "MuiAlert": {
         "styleOverrides": {
           "root": {
-            "border": "1px solid #cbb596",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2,
-            "&.MuiAlert-filledError": {
-              "backgroundColor": "#d69079",
-              "color": "#222121"
+            "&.MuiAlert-colorError.MuiAlert-filled": {
+              "backgroundColor": "#b24533",
+              "color": "#fbefd5"
             },
-            "&.MuiAlert-filledWarning": {
-              "backgroundColor": "#ca984d",
-              "color": "#222121"
+            "&.MuiAlert-colorWarning.MuiAlert-filled": {
+              "backgroundColor": "#d3a13d",
+              "color": "#212120"
             },
-            "&.MuiAlert-filledSuccess": {
-              "backgroundColor": "#a9a272",
-              "color": "#222121"
+            "&.MuiAlert-colorSuccess.MuiAlert-filled": {
+              "backgroundColor": "#5a7c3f",
+              "color": "#fdf8eb"
             },
-            "&.MuiAlert-filledInfo": {
-              "backgroundColor": "#99a58c",
-              "color": "#222121"
+            "&.MuiAlert-colorInfo.MuiAlert-filled": {
+              "backgroundColor": "#467992",
+              "color": "#fdf9ee"
+            },
+            "&.MuiAlert-standard.MuiAlert-colorError": {
+              "backgroundColor": "#212120",
+              "color": "#e66953",
+              "& .MuiAlert-icon": {
+                "color": "#e66953"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorWarning": {
+              "backgroundColor": "#212120",
+              "color": "#efc97a",
+              "& .MuiAlert-icon": {
+                "color": "#efc97a"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorSuccess": {
+              "backgroundColor": "#212120",
+              "color": "#8ba470",
+              "& .MuiAlert-icon": {
+                "color": "#8ba470"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorInfo": {
+              "backgroundColor": "#212120",
+              "color": "#7db3bc",
+              "& .MuiAlert-icon": {
+                "color": "#7db3bc"
+              }
             }
           }
         }
@@ -1374,7 +1969,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiPopover": {
         "styleOverrides": {
           "paper": {
-            "border": "1px solid #cbb596",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2,
             "boxShadow": "none"
           }
@@ -1383,17 +1978,17 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiDrawer": {
         "styleOverrides": {
           "paper": {
-            "backgroundColor": "#3f3731",
-            "borderColor": "#cbb596",
+            "backgroundColor": "#3c3832",
+            "borderColor": "#c5b59c",
             "borderRadius": 2,
             "boxShadow": "none"
           },
           "root": {
             "&.MuiDrawer-modal .MuiDrawer-paper": {
-              "border": "1px solid #cbb596"
+              "border": "1px solid #c5b59c"
             },
             "&.MuiDrawer-docked .MuiDrawer-paper": {
-              "border": "1px solid #cbb596"
+              "border": "1px solid #c5b59c"
             }
           }
         }
@@ -1401,9 +1996,18 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiDialog": {
         "styleOverrides": {
           "paper": {
-            "border": "1px solid #cbb596",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2,
             "boxShadow": "none"
+          }
+        }
+      },
+      "MuiSnackbarContent": {
+        "styleOverrides": {
+          "root": {
+            "backgroundColor": "#3c3832",
+            "color": "#dfd0b6",
+            "border": "1px solid #c5b59c"
           }
         }
       },
@@ -1411,7 +2015,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "tooltip": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "border": "1px solid #cbb596",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2
           }
         }
@@ -1433,7 +2037,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiTableCell": {
         "styleOverrides": {
           "root": {
-            "borderBottomColor": "#50443c"
+            "borderBottomColor": "#c5b59c"
           }
         }
       }
@@ -1443,95 +2047,95 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
     "palette": {
       "mode": "dark",
       "background": {
-        "default": "#222121",
-        "paper": "#50443c"
+        "default": "#212120",
+        "paper": "#4e463c"
       },
       "text": {
-        "primary": "#fceed4",
-        "secondary": "#e3cfb2",
-        "disabled": "#97836d"
+        "primary": "#fbefd5",
+        "secondary": "#dfd0b6",
+        "disabled": "#8e8476"
       },
       "primary": {
-        "light": "#7e9997",
-        "lightContrastText": "#222121",
-        "main": "#b0b6aa",
-        "dark": "#415d5f",
-        "darker": "#273e3f",
-        "contrastText": "#222121",
-        "neutralFill": "#5e797c",
-        "neutralFillLabel": "#fefbf4"
+        "light": "#e07f4a",
+        "lightContrastText": "#212120",
+        "main": "#d9ac88",
+        "dark": "#7c3e1f",
+        "darker": "#4b2614",
+        "contrastText": "#212120",
+        "neutralFill": "#af5728",
+        "neutralFillLabel": "#fcf3de"
       },
       "secondary": {
-        "light": "#a47683",
-        "lightContrastText": "#1c1b1b",
-        "main": "#c8afa5",
-        "dark": "#5e434a",
-        "darker": "#36252a",
-        "contrastText": "#222121",
-        "neutralFill": "#87606a",
-        "neutralFillLabel": "#fceed4"
+        "light": "#dfd0b6",
+        "lightContrastText": "#212120",
+        "main": "#c5b59c",
+        "dark": "#a39786",
+        "darker": "#8e8476",
+        "contrastText": "#212120",
+        "neutralFill": "#c5b59c",
+        "neutralFillLabel": "#212120"
       },
       "error": {
-        "light": "#e4765f",
-        "lightContrastText": "#222121",
-        "main": "#e0a790",
-        "dark": "#914234",
-        "darker": "#602d25",
-        "contrastText": "#222121",
-        "neutralFill": "#c05945",
-        "neutralFillLabel": "#090808"
+        "light": "#e66953",
+        "lightContrastText": "#212120",
+        "main": "#dda993",
+        "dark": "#7e3227",
+        "darker": "#4c1f19",
+        "contrastText": "#212120",
+        "neutralFill": "#b24533",
+        "neutralFillLabel": "#fbefd5"
       },
       "warning": {
-        "light": "#dfa54c",
-        "lightContrastText": "#222121",
-        "main": "#d7ad6f",
-        "dark": "#906222",
-        "darker": "#593a11",
-        "contrastText": "#222121",
-        "neutralFill": "#c28a38",
-        "neutralFillLabel": "#222121"
+        "light": "#efc97a",
+        "lightContrastText": "#212120",
+        "main": "#daae57",
+        "dark": "#aa791e",
+        "darker": "#714e0f",
+        "contrastText": "#212120",
+        "neutralFill": "#d3a13d",
+        "neutralFillLabel": "#212120"
       },
       "success": {
-        "light": "#948d52",
-        "lightContrastText": "#222121",
-        "main": "#bdb58a",
-        "dark": "#575627",
-        "darker": "#373718",
-        "contrastText": "#222121",
-        "neutralFill": "#767437",
-        "neutralFillLabel": "#fdf6e7"
+        "light": "#8ba470",
+        "lightContrastText": "#212120",
+        "main": "#b0b98f",
+        "dark": "#435e2e",
+        "darker": "#2c3f1e",
+        "contrastText": "#212120",
+        "neutralFill": "#5a7c3f",
+        "neutralFillLabel": "#fdf8eb"
       },
       "info": {
-        "light": "#719770",
-        "lightContrastText": "#222121",
-        "main": "#b1b79d",
-        "dark": "#3f5645",
-        "darker": "#233228",
-        "contrastText": "#222121",
-        "neutralFill": "#5d7860",
-        "neutralFillLabel": "#fdf6e7"
+        "light": "#7db3bc",
+        "lightContrastText": "#212120",
+        "main": "#a7b8b6",
+        "dark": "#2f5c6f",
+        "darker": "#1c3c48",
+        "contrastText": "#212120",
+        "neutralFill": "#467992",
+        "neutralFillLabel": "#fdf9ee"
       },
       "orange": {
-        "light": "#d6753d",
-        "lightContrastText": "#222121",
-        "main": "#d3ad8c",
-        "dark": "#75472d",
-        "darker": "#482c1e",
-        "contrastText": "#222121",
-        "neutralFill": "#a4613a",
-        "neutralFillLabel": "#fdf6e9"
+        "light": "#e07f4a",
+        "lightContrastText": "#212120",
+        "main": "#d9ac88",
+        "dark": "#7c3e1f",
+        "darker": "#4b2614",
+        "contrastText": "#212120",
+        "neutralFill": "#af5728",
+        "neutralFillLabel": "#fcf3de"
       },
       "terminalHeader": {
-        "background": "#cbb596",
-        "text": "#222121"
+        "background": "#c5b59c",
+        "text": "#212120"
       },
-      "frame": "#cbb596",
-      "divider": "#7d6b5c",
+      "frame": "#c5b59c",
+      "divider": "#c5b59c",
       "action": {
-        "hover": "#fceed414",
-        "selected": "#fceed429",
-        "disabled": "#97836d",
-        "disabledBackground": "#3f3731"
+        "hover": "#fbefd514",
+        "selected": "#fbefd529",
+        "disabled": "#8e8476",
+        "disabledBackground": "#3c3832"
       }
     },
     "shape": {
@@ -1540,34 +2144,70 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
     "typography": {
       "fontFamily": "var(--font-sunfade-caskaydia, \"CaskaydiaCove Nerd Font\"), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", monospace",
       "h1": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "2.875rem",
+        "lineHeight": 1.08,
+        "fontWeight": 700,
+        "letterSpacing": "-0.01em"
       },
       "h2": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "2.125rem",
+        "lineHeight": 1.14,
+        "fontWeight": 600,
+        "letterSpacing": "-0.005em"
       },
       "h3": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.75rem",
+        "lineHeight": 1.18,
+        "fontWeight": 600,
+        "letterSpacing": "0"
       },
       "h4": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.5rem",
+        "lineHeight": 1.22,
+        "fontWeight": 600,
+        "letterSpacing": "0"
       },
       "h5": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.25rem",
+        "lineHeight": 1.26,
+        "fontWeight": 500,
+        "letterSpacing": "0"
       },
       "h6": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.0625rem",
+        "lineHeight": 1.28,
+        "fontWeight": 500,
+        "letterSpacing": "0.01em"
       },
       "subtitle1": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1rem",
+        "lineHeight": 1.4,
+        "fontWeight": 600,
+        "letterSpacing": "0.01em"
       },
       "subtitle2": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "0.875rem",
+        "lineHeight": 1.45,
+        "fontWeight": 600,
+        "letterSpacing": "0.01em"
       },
       "caption": {
         "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
       },
       "overline": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "0.75rem",
+        "lineHeight": 2,
+        "fontWeight": 600,
+        "letterSpacing": "0.08em"
       },
       "button": {
         "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
@@ -1577,13 +2217,13 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiCssBaseline": {
         "styleOverrides": {
           "body": {
-            "backgroundColor": "#222121",
-            "color": "#fceed4",
+            "backgroundColor": "#212120",
+            "color": "#fbefd5",
             "backgroundImage": "none"
           },
           "::selection": {
-            "backgroundColor": "#7e9997",
-            "color": "#222121"
+            "backgroundColor": "#7db3bc",
+            "color": "#212120"
           }
         }
       },
@@ -1591,8 +2231,9 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "backgroundImage": "none",
-            "borderColor": "#cbb596",
-            "borderRadius": 2
+            "borderColor": "#c5b59c",
+            "borderRadius": 2,
+            "boxShadow": "none"
           },
           "outlined": {
             "borderWidth": 1
@@ -1610,9 +2251,9 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiAppBar": {
         "styleOverrides": {
           "root": {
-            "backgroundColor": "#cbb596",
-            "color": "#222121",
-            "border": "1px solid #7d6b5c"
+            "backgroundColor": "#c5b59c",
+            "color": "#212120",
+            "border": "1px solid #c5b59c"
           }
         },
         "defaultProps": {
@@ -1623,15 +2264,19 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "color": "#fceed4",
+            "color": "#fbefd5",
             "borderRadius": 2,
             "minHeight": 40,
             "&.Mui-selected": {
-              "backgroundColor": "#cbb596",
-              "color": "#222121"
+              "backgroundColor": "#c5b59c",
+              "color": "#212120",
+              "&:hover": {
+                "backgroundColor": "#c5b59c",
+                "color": "#212120"
+              }
             },
             "&:focus-visible": {
-              "outline": "1px solid #b0b6aa",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 2
             }
           }
@@ -1642,16 +2287,34 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
           "root": {
             "borderRadius": 2,
             "boxShadow": "none",
+            "&:active": {
+              "boxShadow": "none"
+            },
             "minHeight": 40,
             "fontWeight": 600,
             "textTransform": "none",
             "&:focus-visible": {
-              "outline": "1px solid #b0b6aa",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 2
             }
           },
           "contained": {
-            "boxShadow": "none"
+            "boxShadow": "none",
+            "&:hover": {
+              "boxShadow": "none",
+              "@media (hover: none)": {
+                "boxShadow": "none"
+              }
+            },
+            "&:active": {
+              "boxShadow": "none"
+            },
+            "&.Mui-focusVisible": {
+              "boxShadow": "none"
+            },
+            "&.Mui-disabled": {
+              "boxShadow": "none"
+            }
           }
         },
         "variants": [
@@ -1660,9 +2323,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "primary"
             },
             "style": {
-              "--variant-outlinedBorder": "#b0b6aa",
-              "--variant-containedBg": "#5e797c",
-              "--variant-containedColor": "#fefbf4"
+              "--variant-textColor": "#af5728",
+              "--variant-outlinedColor": "#af5728",
+              "--variant-outlinedBorder": "#af5728",
+              "--variant-containedBg": "#af5728",
+              "--variant-containedColor": "#fcf3de"
             }
           },
           {
@@ -1670,9 +2335,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "secondary"
             },
             "style": {
-              "--variant-outlinedBorder": "#c8afa5",
-              "--variant-containedBg": "#87606a",
-              "--variant-containedColor": "#fceed4"
+              "--variant-textColor": "#c5b59c",
+              "--variant-outlinedColor": "#c5b59c",
+              "--variant-outlinedBorder": "#c5b59c",
+              "--variant-containedBg": "#c5b59c",
+              "--variant-containedColor": "#212120"
             }
           },
           {
@@ -1680,9 +2347,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "error"
             },
             "style": {
-              "--variant-outlinedBorder": "#e0a790",
-              "--variant-containedBg": "#c05945",
-              "--variant-containedColor": "#090808"
+              "--variant-textColor": "#b24533",
+              "--variant-outlinedColor": "#b24533",
+              "--variant-outlinedBorder": "#b24533",
+              "--variant-containedBg": "#b24533",
+              "--variant-containedColor": "#fbefd5"
             }
           },
           {
@@ -1690,9 +2359,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "warning"
             },
             "style": {
-              "--variant-outlinedBorder": "#d7ad6f",
-              "--variant-containedBg": "#c28a38",
-              "--variant-containedColor": "#222121"
+              "--variant-textColor": "#d3a13d",
+              "--variant-outlinedColor": "#d3a13d",
+              "--variant-outlinedBorder": "#d3a13d",
+              "--variant-containedBg": "#d3a13d",
+              "--variant-containedColor": "#212120"
             }
           },
           {
@@ -1700,9 +2371,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "success"
             },
             "style": {
-              "--variant-outlinedBorder": "#bdb58a",
-              "--variant-containedBg": "#767437",
-              "--variant-containedColor": "#fdf6e7"
+              "--variant-textColor": "#5a7c3f",
+              "--variant-outlinedColor": "#5a7c3f",
+              "--variant-outlinedBorder": "#5a7c3f",
+              "--variant-containedBg": "#5a7c3f",
+              "--variant-containedColor": "#fdf8eb"
             }
           },
           {
@@ -1710,9 +2383,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "info"
             },
             "style": {
-              "--variant-outlinedBorder": "#b1b79d",
-              "--variant-containedBg": "#5d7860",
-              "--variant-containedColor": "#fdf6e7"
+              "--variant-textColor": "#467992",
+              "--variant-outlinedColor": "#467992",
+              "--variant-outlinedBorder": "#467992",
+              "--variant-containedBg": "#467992",
+              "--variant-containedColor": "#fdf9ee"
             }
           },
           {
@@ -1723,8 +2398,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#7e9997",
-                  "color": "#222121"
+                  "backgroundColor": "#e07f4a",
+                  "color": "#212120"
                 }
               }
             }
@@ -1737,8 +2412,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#a47683",
-                  "color": "#1c1b1b"
+                  "backgroundColor": "#dfd0b6",
+                  "color": "#212120"
                 }
               }
             }
@@ -1751,8 +2426,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#e4765f",
-                  "color": "#222121"
+                  "backgroundColor": "#e66953",
+                  "color": "#212120"
                 }
               }
             }
@@ -1765,8 +2440,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#dfa54c",
-                  "color": "#222121"
+                  "backgroundColor": "#efc97a",
+                  "color": "#212120"
                 }
               }
             }
@@ -1779,8 +2454,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#948d52",
-                  "color": "#222121"
+                  "backgroundColor": "#8ba470",
+                  "color": "#212120"
                 }
               }
             }
@@ -1793,10 +2468,115 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#719770",
-                  "color": "#222121"
+                  "backgroundColor": "#7db3bc",
+                  "color": "#212120"
                 }
               }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "primary"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e07f4a",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "secondary"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#dfd0b6",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "error"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e66953",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "warning"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#efc97a",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "success"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#8ba470",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "info"
+            },
+            "style": {
+              "backgroundColor": "#2b2926",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#7db3bc",
+                  "color": "#212120",
+                  "--variant-outlinedBorder": "#212120"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "inherit"
+            },
+            "style": {
+              "--variant-outlinedBg": "#2b2926"
             }
           }
         ]
@@ -1805,7 +2585,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "&.Mui-focusVisible": {
-              "outline": "1px solid #b0b6aa",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 2
             }
           }
@@ -1818,7 +2598,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "minWidth": 40,
             "minHeight": 40,
             "&:focus-visible": {
-              "outline": "1px solid #b0b6aa",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 2
             }
           }
@@ -1830,13 +2610,13 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
             "border": "1px solid transparent",
             "borderRadius": 2,
-            "color": "#e3cfb2",
+            "color": "#dfd0b6",
             "&.Mui-selected": {
-              "color": "#222121",
-              "backgroundColor": "#cbb596"
+              "color": "#212120",
+              "backgroundColor": "#c5b59c"
             },
             "&:focus-visible": {
-              "outline": "1px solid #b0b6aa",
+              "outline": "1px solid #e07f4a",
               "outlineOffset": 1
             }
           }
@@ -1844,26 +2624,38 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       },
       "MuiOutlinedInput": {
         "styleOverrides": {
+          "notchedOutline": {
+            "borderWidth": 1,
+            "borderColor": "#c5b59c"
+          },
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
             "borderRadius": 2,
+            "&:hover:not(.Mui-focused):not(.Mui-error) .MuiOutlinedInput-notchedOutline": {
+              "borderColor": "#c5b59c"
+            },
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
               "borderWidth": 1,
-              "borderColor": "#b0b6aa"
+              "borderColor": "#e07f4a"
             }
-          },
-          "notchedOutline": {
-            "borderWidth": 1,
-            "borderColor": "#cbb596"
           }
         }
       },
       "MuiInput": {
         "styleOverrides": {
+          "root": {
+            "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+            "&::before": {
+              "borderBottomColor": "#c5b59c"
+            },
+            "&:hover:not(.Mui-disabled):not(.Mui-error)::before": {
+              "borderBottom": "1px solid #c5b59c"
+            }
+          },
           "underline": {
             "&:after": {
               "borderBottomWidth": 1,
-              "borderBottomColor": "#b0b6aa"
+              "borderBottomColor": "#e07f4a"
             }
           }
         }
@@ -1871,7 +2663,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiSelect": {
         "styleOverrides": {
           "icon": {
-            "color": "#e3cfb2"
+            "color": "#dfd0b6"
           }
         }
       },
@@ -1879,21 +2671,21 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "backgroundColor": "#3f3731",
-            "border": "1px solid #cbb596",
+            "backgroundColor": "#3c3832",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2,
             "&:before, &:after": {
               "display": "none"
             },
             "&:hover": {
-              "backgroundColor": "#50443c"
+              "backgroundColor": "#4e463c"
             },
             "&.Mui-focused": {
-              "backgroundColor": "#50443c",
-              "borderColor": "#b0b6aa"
+              "backgroundColor": "#4e463c",
+              "borderColor": "#e07f4a"
             },
             "&.Mui-disabled": {
-              "backgroundColor": "#3f3731"
+              "backgroundColor": "#3c3832"
             }
           }
         }
@@ -1902,11 +2694,10 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "color": "#fceed4",
+            "color": "#fbefd5",
             "borderRadius": 2,
             "&.Mui-expanded": {
-              "minHeight": 44,
-              "borderBottom": "1px solid #7d6b5c"
+              "minHeight": 44
             }
           },
           "content": {
@@ -1915,13 +2706,14 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             }
           },
           "expandIconWrapper": {
-            "color": "#e3cfb2"
+            "color": "#dfd0b6"
           }
         }
       },
       "MuiAccordion": {
         "styleOverrides": {
           "root": {
+            "border": "1px solid #c5b59c",
             "boxShadow": "none",
             "&:before": {
               "display": "none"
@@ -1933,79 +2725,182 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "border": "1px solid #cbb596",
             "borderRadius": 2,
-            "&.MuiChip-filledPrimary": {
-              "backgroundColor": "#b0b6aa",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#7e9997",
-                "color": "#222121"
+            "&.MuiChip-colorPrimary.MuiChip-filled": {
+              "backgroundColor": "#af5728",
+              "color": "#fcf3de",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e07f4a",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledSecondary": {
-              "backgroundColor": "#c8afa5",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#a47683",
-                "color": "#1c1b1b"
+            "&.MuiChip-colorSecondary.MuiChip-filled": {
+              "backgroundColor": "#c5b59c",
+              "color": "#212120",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#dfd0b6",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledError": {
-              "backgroundColor": "#e0a790",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#e4765f",
-                "color": "#222121"
+            "&.MuiChip-colorError.MuiChip-filled": {
+              "backgroundColor": "#b24533",
+              "color": "#fbefd5",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e66953",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledWarning": {
-              "backgroundColor": "#d7ad6f",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#dfa54c",
-                "color": "#222121"
+            "&.MuiChip-colorWarning.MuiChip-filled": {
+              "backgroundColor": "#d3a13d",
+              "color": "#212120",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#efc97a",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledSuccess": {
-              "backgroundColor": "#bdb58a",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#948d52",
-                "color": "#222121"
+            "&.MuiChip-colorSuccess.MuiChip-filled": {
+              "backgroundColor": "#5a7c3f",
+              "color": "#fdf8eb",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#8ba470",
+                  "color": "#212120"
+                }
               }
             },
-            "&.MuiChip-filledInfo": {
-              "backgroundColor": "#b1b79d",
-              "color": "#222121",
-              "&:hover": {
-                "backgroundColor": "#719770",
-                "color": "#222121"
+            "&.MuiChip-colorInfo.MuiChip-filled": {
+              "backgroundColor": "#467992",
+              "color": "#fdf9ee",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#7db3bc",
+                  "color": "#212120"
+                }
               }
             }
           }
-        }
+        },
+        "variants": [
+          {
+            "props": {
+              "variant": "outlined"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "primary"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "secondary"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "error"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "warning"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "success"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "info"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          }
+        ]
       },
       "MuiAlert": {
         "styleOverrides": {
           "root": {
-            "border": "1px solid #cbb596",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2,
-            "&.MuiAlert-filledError": {
-              "backgroundColor": "#e0a790",
-              "color": "#222121"
+            "&.MuiAlert-colorError.MuiAlert-filled": {
+              "backgroundColor": "#b24533",
+              "color": "#fbefd5"
             },
-            "&.MuiAlert-filledWarning": {
-              "backgroundColor": "#d7ad6f",
-              "color": "#222121"
+            "&.MuiAlert-colorWarning.MuiAlert-filled": {
+              "backgroundColor": "#d3a13d",
+              "color": "#212120"
             },
-            "&.MuiAlert-filledSuccess": {
-              "backgroundColor": "#bdb58a",
-              "color": "#222121"
+            "&.MuiAlert-colorSuccess.MuiAlert-filled": {
+              "backgroundColor": "#5a7c3f",
+              "color": "#fdf8eb"
             },
-            "&.MuiAlert-filledInfo": {
-              "backgroundColor": "#b1b79d",
-              "color": "#222121"
+            "&.MuiAlert-colorInfo.MuiAlert-filled": {
+              "backgroundColor": "#467992",
+              "color": "#fdf9ee"
+            },
+            "&.MuiAlert-standard.MuiAlert-colorError": {
+              "backgroundColor": "#212120",
+              "color": "#e66953",
+              "& .MuiAlert-icon": {
+                "color": "#e66953"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorWarning": {
+              "backgroundColor": "#212120",
+              "color": "#efc97a",
+              "& .MuiAlert-icon": {
+                "color": "#efc97a"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorSuccess": {
+              "backgroundColor": "#212120",
+              "color": "#8ba470",
+              "& .MuiAlert-icon": {
+                "color": "#8ba470"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorInfo": {
+              "backgroundColor": "#212120",
+              "color": "#7db3bc",
+              "& .MuiAlert-icon": {
+                "color": "#7db3bc"
+              }
             }
           }
         }
@@ -2013,7 +2908,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiPopover": {
         "styleOverrides": {
           "paper": {
-            "border": "1px solid #cbb596",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2,
             "boxShadow": "none"
           }
@@ -2022,17 +2917,17 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiDrawer": {
         "styleOverrides": {
           "paper": {
-            "backgroundColor": "#50443c",
-            "borderColor": "#cbb596",
+            "backgroundColor": "#4e463c",
+            "borderColor": "#c5b59c",
             "borderRadius": 2,
             "boxShadow": "none"
           },
           "root": {
             "&.MuiDrawer-modal .MuiDrawer-paper": {
-              "border": "1px solid #cbb596"
+              "border": "1px solid #c5b59c"
             },
             "&.MuiDrawer-docked .MuiDrawer-paper": {
-              "border": "1px solid #cbb596"
+              "border": "1px solid #c5b59c"
             }
           }
         }
@@ -2040,9 +2935,18 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiDialog": {
         "styleOverrides": {
           "paper": {
-            "border": "1px solid #cbb596",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2,
             "boxShadow": "none"
+          }
+        }
+      },
+      "MuiSnackbarContent": {
+        "styleOverrides": {
+          "root": {
+            "backgroundColor": "#4e463c",
+            "color": "#fbefd5",
+            "border": "1px solid #c5b59c"
           }
         }
       },
@@ -2050,7 +2954,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "tooltip": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "border": "1px solid #cbb596",
+            "border": "1px solid #c5b59c",
             "borderRadius": 2
           }
         }
@@ -2072,7 +2976,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiTableCell": {
         "styleOverrides": {
           "root": {
-            "borderBottomColor": "#7d6b5c"
+            "borderBottomColor": "#c5b59c"
           }
         }
       }
@@ -2082,95 +2986,95 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
     "palette": {
       "mode": "light",
       "background": {
-        "default": "#efddc2",
-        "paper": "#e6cfb1"
+        "default": "#e7e0d0",
+        "paper": "#dbd2c2"
       },
       "text": {
-        "primary": "#4c392e",
-        "secondary": "#624939",
-        "disabled": "#795a45"
+        "primary": "#796e62",
+        "secondary": "#8d806f",
+        "disabled": "#9e9281"
       },
       "primary": {
-        "light": "#89a3a4",
-        "lightContrastText": "#241c17",
-        "main": "#535c5f",
-        "dark": "#49666d",
-        "darker": "#2f484d",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#66828a",
-        "neutralFillLabel": "#17120f"
+        "light": "#e76925",
+        "lightContrastText": "#2a2824",
+        "main": "#715545",
+        "dark": "#7c3e1f",
+        "darker": "#4b2614",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#af5728",
+        "neutralFillLabel": "#fdfaf1"
       },
       "secondary": {
-        "light": "#b28aa0",
-        "lightContrastText": "#241c17",
-        "main": "#6a555d",
-        "dark": "#735063",
-        "darker": "#4a3340",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#9a6f86",
-        "neutralFillLabel": "#14100d"
+        "light": "#675f57",
+        "lightContrastText": "#fdfaf1",
+        "main": "#625a52",
+        "dark": "#8d806f",
+        "darker": "#9e9281",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#796e62",
+        "neutralFillLabel": "#fdfaf1"
       },
       "error": {
-        "light": "#e4775f",
-        "lightContrastText": "#241c17",
-        "main": "#7e4f44",
-        "dark": "#914334",
-        "darker": "#602e25",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#c05a45",
-        "neutralFillLabel": "#0d0a09"
+        "light": "#e6573d",
+        "lightContrastText": "#21201d",
+        "main": "#785249",
+        "dark": "#7e3227",
+        "darker": "#4c1f19",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#b24533",
+        "neutralFillLabel": "#fdfaf1"
       },
       "warning": {
-        "light": "#dfa54c",
-        "lightContrastText": "#241c17",
-        "main": "#6f5637",
-        "dark": "#906222",
-        "darker": "#593a11",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#c28a38",
-        "neutralFillLabel": "#241c17"
+        "light": "#eabb57",
+        "lightContrastText": "#544f48",
+        "main": "#645a4a",
+        "dark": "#aa791e",
+        "darker": "#714e0f",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#d3a13d",
+        "neutralFillLabel": "#423e39"
       },
       "success": {
-        "light": "#a1a45b",
-        "lightContrastText": "#241c17",
-        "main": "#5c5d3c",
-        "dark": "#61682f",
-        "darker": "#434820",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#7f873f",
-        "neutralFillLabel": "#1f1814"
+        "light": "#7b985c",
+        "lightContrastText": "#2b2925",
+        "main": "#575e49",
+        "dark": "#435e2e",
+        "darker": "#2c3f1e",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#5a7c3f",
+        "neutralFillLabel": "#fdfaf1"
       },
       "info": {
-        "light": "#91a586",
-        "lightContrastText": "#241c17",
-        "main": "#555d50",
-        "dark": "#4f6a54",
-        "darker": "#324738",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#6e8b70",
-        "neutralFillLabel": "#231c17"
+        "light": "#64a6b1",
+        "lightContrastText": "#37332f",
+        "main": "#545d5f",
+        "dark": "#2f5c6f",
+        "darker": "#1c3c48",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#467992",
+        "neutralFillLabel": "#fdfaf1"
       },
       "orange": {
-        "light": "#e58349",
-        "lightContrastText": "#241c17",
-        "main": "#7a513a",
-        "dark": "#92502b",
-        "darker": "#62361f",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#c46a35",
-        "neutralFillLabel": "#1f1814"
+        "light": "#e76925",
+        "lightContrastText": "#2a2824",
+        "main": "#715545",
+        "dark": "#7c3e1f",
+        "darker": "#4b2614",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#af5728",
+        "neutralFillLabel": "#fdfaf1"
       },
       "terminalHeader": {
-        "background": "#4c392e",
-        "text": "#fff8e9"
+        "background": "#796e62",
+        "text": "#fdfaf1"
       },
-      "frame": "#4c392e",
-      "divider": "#d5b99a",
+      "frame": "#796e62",
+      "divider": "#796e62",
       "action": {
-        "hover": "#4c392e14",
-        "selected": "#4c392e29",
-        "disabled": "#795a45",
-        "disabledBackground": "#efddc2"
+        "hover": "#796e6214",
+        "selected": "#796e6229",
+        "disabled": "#9e9281",
+        "disabledBackground": "#e7e0d0"
       }
     },
     "shape": {
@@ -2179,34 +3083,70 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
     "typography": {
       "fontFamily": "var(--font-sunfade-caskaydia, \"CaskaydiaCove Nerd Font\"), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", monospace",
       "h1": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "2.875rem",
+        "lineHeight": 1.08,
+        "fontWeight": 700,
+        "letterSpacing": "-0.01em"
       },
       "h2": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "2.125rem",
+        "lineHeight": 1.14,
+        "fontWeight": 600,
+        "letterSpacing": "-0.005em"
       },
       "h3": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.75rem",
+        "lineHeight": 1.18,
+        "fontWeight": 600,
+        "letterSpacing": "0"
       },
       "h4": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.5rem",
+        "lineHeight": 1.22,
+        "fontWeight": 600,
+        "letterSpacing": "0"
       },
       "h5": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.25rem",
+        "lineHeight": 1.26,
+        "fontWeight": 500,
+        "letterSpacing": "0"
       },
       "h6": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.0625rem",
+        "lineHeight": 1.28,
+        "fontWeight": 500,
+        "letterSpacing": "0.01em"
       },
       "subtitle1": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1rem",
+        "lineHeight": 1.4,
+        "fontWeight": 600,
+        "letterSpacing": "0.01em"
       },
       "subtitle2": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "0.875rem",
+        "lineHeight": 1.45,
+        "fontWeight": 600,
+        "letterSpacing": "0.01em"
       },
       "caption": {
         "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
       },
       "overline": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "0.75rem",
+        "lineHeight": 2,
+        "fontWeight": 600,
+        "letterSpacing": "0.08em"
       },
       "button": {
         "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
@@ -2216,13 +3156,13 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiCssBaseline": {
         "styleOverrides": {
           "body": {
-            "backgroundColor": "#efddc2",
-            "color": "#4c392e",
+            "backgroundColor": "#e7e0d0",
+            "color": "#796e62",
             "backgroundImage": "none"
           },
           "::selection": {
-            "backgroundColor": "#89a3a4",
-            "color": "#241c17"
+            "backgroundColor": "#64a6b1",
+            "color": "#37332f"
           }
         }
       },
@@ -2230,8 +3170,9 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "backgroundImage": "none",
-            "borderColor": "#4c392e",
-            "borderRadius": 2
+            "borderColor": "#796e62",
+            "borderRadius": 2,
+            "boxShadow": "none"
           },
           "outlined": {
             "borderWidth": 1
@@ -2249,9 +3190,9 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiAppBar": {
         "styleOverrides": {
           "root": {
-            "backgroundColor": "#4c392e",
-            "color": "#fff8e9",
-            "border": "1px solid #d5b99a"
+            "backgroundColor": "#796e62",
+            "color": "#fdfaf1",
+            "border": "1px solid #796e62"
           }
         },
         "defaultProps": {
@@ -2262,15 +3203,19 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "color": "#4c392e",
+            "color": "#796e62",
             "borderRadius": 2,
             "minHeight": 40,
             "&.Mui-selected": {
-              "backgroundColor": "#4c392e",
-              "color": "#fff8e9"
+              "backgroundColor": "#796e62",
+              "color": "#fdfaf1",
+              "&:hover": {
+                "backgroundColor": "#796e62",
+                "color": "#fdfaf1"
+              }
             },
             "&:focus-visible": {
-              "outline": "1px solid #535c5f",
+              "outline": "1px solid #e76925",
               "outlineOffset": 2
             }
           }
@@ -2281,16 +3226,34 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
           "root": {
             "borderRadius": 2,
             "boxShadow": "none",
+            "&:active": {
+              "boxShadow": "none"
+            },
             "minHeight": 40,
             "fontWeight": 600,
             "textTransform": "none",
             "&:focus-visible": {
-              "outline": "1px solid #535c5f",
+              "outline": "1px solid #e76925",
               "outlineOffset": 2
             }
           },
           "contained": {
-            "boxShadow": "none"
+            "boxShadow": "none",
+            "&:hover": {
+              "boxShadow": "none",
+              "@media (hover: none)": {
+                "boxShadow": "none"
+              }
+            },
+            "&:active": {
+              "boxShadow": "none"
+            },
+            "&.Mui-focusVisible": {
+              "boxShadow": "none"
+            },
+            "&.Mui-disabled": {
+              "boxShadow": "none"
+            }
           }
         },
         "variants": [
@@ -2299,9 +3262,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "primary"
             },
             "style": {
-              "--variant-outlinedBorder": "#535c5f",
-              "--variant-containedBg": "#66828a",
-              "--variant-containedColor": "#17120f"
+              "--variant-textColor": "#af5728",
+              "--variant-outlinedColor": "#af5728",
+              "--variant-outlinedBorder": "#af5728",
+              "--variant-containedBg": "#af5728",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -2309,9 +3274,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "secondary"
             },
             "style": {
-              "--variant-outlinedBorder": "#6a555d",
-              "--variant-containedBg": "#9a6f86",
-              "--variant-containedColor": "#14100d"
+              "--variant-textColor": "#796e62",
+              "--variant-outlinedColor": "#796e62",
+              "--variant-outlinedBorder": "#796e62",
+              "--variant-containedBg": "#796e62",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -2319,9 +3286,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "error"
             },
             "style": {
-              "--variant-outlinedBorder": "#7e4f44",
-              "--variant-containedBg": "#c05a45",
-              "--variant-containedColor": "#0d0a09"
+              "--variant-textColor": "#b24533",
+              "--variant-outlinedColor": "#b24533",
+              "--variant-outlinedBorder": "#b24533",
+              "--variant-containedBg": "#b24533",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -2329,9 +3298,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "warning"
             },
             "style": {
-              "--variant-outlinedBorder": "#6f5637",
-              "--variant-containedBg": "#c28a38",
-              "--variant-containedColor": "#241c17"
+              "--variant-textColor": "#d3a13d",
+              "--variant-outlinedColor": "#d3a13d",
+              "--variant-outlinedBorder": "#d3a13d",
+              "--variant-containedBg": "#d3a13d",
+              "--variant-containedColor": "#423e39"
             }
           },
           {
@@ -2339,9 +3310,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "success"
             },
             "style": {
-              "--variant-outlinedBorder": "#5c5d3c",
-              "--variant-containedBg": "#7f873f",
-              "--variant-containedColor": "#1f1814"
+              "--variant-textColor": "#5a7c3f",
+              "--variant-outlinedColor": "#5a7c3f",
+              "--variant-outlinedBorder": "#5a7c3f",
+              "--variant-containedBg": "#5a7c3f",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -2349,9 +3322,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "info"
             },
             "style": {
-              "--variant-outlinedBorder": "#555d50",
-              "--variant-containedBg": "#6e8b70",
-              "--variant-containedColor": "#231c17"
+              "--variant-textColor": "#467992",
+              "--variant-outlinedColor": "#467992",
+              "--variant-outlinedBorder": "#467992",
+              "--variant-containedBg": "#467992",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -2362,8 +3337,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#89a3a4",
-                  "color": "#241c17"
+                  "backgroundColor": "#e76925",
+                  "color": "#2a2824"
                 }
               }
             }
@@ -2376,8 +3351,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#b28aa0",
-                  "color": "#241c17"
+                  "backgroundColor": "#675f57",
+                  "color": "#fdfaf1"
                 }
               }
             }
@@ -2390,8 +3365,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#e4775f",
-                  "color": "#241c17"
+                  "backgroundColor": "#e6573d",
+                  "color": "#21201d"
                 }
               }
             }
@@ -2404,8 +3379,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#dfa54c",
-                  "color": "#241c17"
+                  "backgroundColor": "#eabb57",
+                  "color": "#544f48"
                 }
               }
             }
@@ -2418,8 +3393,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#a1a45b",
-                  "color": "#241c17"
+                  "backgroundColor": "#7b985c",
+                  "color": "#2b2925"
                 }
               }
             }
@@ -2432,10 +3407,115 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#91a586",
-                  "color": "#241c17"
+                  "backgroundColor": "#64a6b1",
+                  "color": "#37332f"
                 }
               }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "primary"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e76925",
+                  "color": "#2a2824",
+                  "--variant-outlinedBorder": "#2a2824"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "secondary"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#675f57",
+                  "color": "#fdfaf1",
+                  "--variant-outlinedBorder": "#fdfaf1"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "error"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e6573d",
+                  "color": "#21201d",
+                  "--variant-outlinedBorder": "#21201d"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "warning"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#eabb57",
+                  "color": "#544f48",
+                  "--variant-outlinedBorder": "#544f48"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "success"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#7b985c",
+                  "color": "#2b2925",
+                  "--variant-outlinedBorder": "#2b2925"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "info"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#64a6b1",
+                  "color": "#37332f",
+                  "--variant-outlinedBorder": "#37332f"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "inherit"
+            },
+            "style": {
+              "--variant-outlinedBg": "#f3ecdd"
             }
           }
         ]
@@ -2444,7 +3524,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "&.Mui-focusVisible": {
-              "outline": "1px solid #535c5f",
+              "outline": "1px solid #e76925",
               "outlineOffset": 2
             }
           }
@@ -2457,7 +3537,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "minWidth": 40,
             "minHeight": 40,
             "&:focus-visible": {
-              "outline": "1px solid #535c5f",
+              "outline": "1px solid #e76925",
               "outlineOffset": 2
             }
           }
@@ -2469,13 +3549,13 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
             "border": "1px solid transparent",
             "borderRadius": 2,
-            "color": "#624939",
+            "color": "#8d806f",
             "&.Mui-selected": {
-              "color": "#fff8e9",
-              "backgroundColor": "#4c392e"
+              "color": "#fdfaf1",
+              "backgroundColor": "#796e62"
             },
             "&:focus-visible": {
-              "outline": "1px solid #535c5f",
+              "outline": "1px solid #e76925",
               "outlineOffset": 1
             }
           }
@@ -2483,26 +3563,38 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       },
       "MuiOutlinedInput": {
         "styleOverrides": {
+          "notchedOutline": {
+            "borderWidth": 1,
+            "borderColor": "#796e62"
+          },
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
             "borderRadius": 2,
+            "&:hover:not(.Mui-focused):not(.Mui-error) .MuiOutlinedInput-notchedOutline": {
+              "borderColor": "#796e62"
+            },
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
               "borderWidth": 1,
-              "borderColor": "#535c5f"
+              "borderColor": "#e76925"
             }
-          },
-          "notchedOutline": {
-            "borderWidth": 1,
-            "borderColor": "#4c392e"
           }
         }
       },
       "MuiInput": {
         "styleOverrides": {
+          "root": {
+            "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+            "&::before": {
+              "borderBottomColor": "#796e62"
+            },
+            "&:hover:not(.Mui-disabled):not(.Mui-error)::before": {
+              "borderBottom": "1px solid #796e62"
+            }
+          },
           "underline": {
             "&:after": {
               "borderBottomWidth": 1,
-              "borderBottomColor": "#535c5f"
+              "borderBottomColor": "#e76925"
             }
           }
         }
@@ -2510,7 +3602,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiSelect": {
         "styleOverrides": {
           "icon": {
-            "color": "#624939"
+            "color": "#8d806f"
           }
         }
       },
@@ -2518,21 +3610,21 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "backgroundColor": "#efddc2",
-            "border": "1px solid #4c392e",
+            "backgroundColor": "#e7e0d0",
+            "border": "1px solid #796e62",
             "borderRadius": 2,
             "&:before, &:after": {
               "display": "none"
             },
             "&:hover": {
-              "backgroundColor": "#e6cfb1"
+              "backgroundColor": "#dbd2c2"
             },
             "&.Mui-focused": {
-              "backgroundColor": "#e6cfb1",
-              "borderColor": "#535c5f"
+              "backgroundColor": "#dbd2c2",
+              "borderColor": "#e76925"
             },
             "&.Mui-disabled": {
-              "backgroundColor": "#efddc2"
+              "backgroundColor": "#e7e0d0"
             }
           }
         }
@@ -2541,11 +3633,10 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "color": "#4c392e",
+            "color": "#796e62",
             "borderRadius": 2,
             "&.Mui-expanded": {
-              "minHeight": 44,
-              "borderBottom": "1px solid #d5b99a"
+              "minHeight": 44
             }
           },
           "content": {
@@ -2554,13 +3645,14 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             }
           },
           "expandIconWrapper": {
-            "color": "#624939"
+            "color": "#8d806f"
           }
         }
       },
       "MuiAccordion": {
         "styleOverrides": {
           "root": {
+            "border": "1px solid #796e62",
             "boxShadow": "none",
             "&:before": {
               "display": "none"
@@ -2572,79 +3664,182 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "border": "1px solid #4c392e",
             "borderRadius": 2,
-            "&.MuiChip-filledPrimary": {
-              "backgroundColor": "#535c5f",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#89a3a4",
-                "color": "#241c17"
+            "&.MuiChip-colorPrimary.MuiChip-filled": {
+              "backgroundColor": "#af5728",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e76925",
+                  "color": "#2a2824"
+                }
               }
             },
-            "&.MuiChip-filledSecondary": {
-              "backgroundColor": "#6a555d",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#b28aa0",
-                "color": "#241c17"
+            "&.MuiChip-colorSecondary.MuiChip-filled": {
+              "backgroundColor": "#796e62",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#675f57",
+                  "color": "#fdfaf1"
+                }
               }
             },
-            "&.MuiChip-filledError": {
-              "backgroundColor": "#7e4f44",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#e4775f",
-                "color": "#241c17"
+            "&.MuiChip-colorError.MuiChip-filled": {
+              "backgroundColor": "#b24533",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e6573d",
+                  "color": "#21201d"
+                }
               }
             },
-            "&.MuiChip-filledWarning": {
-              "backgroundColor": "#6f5637",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#dfa54c",
-                "color": "#241c17"
+            "&.MuiChip-colorWarning.MuiChip-filled": {
+              "backgroundColor": "#d3a13d",
+              "color": "#423e39",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#eabb57",
+                  "color": "#544f48"
+                }
               }
             },
-            "&.MuiChip-filledSuccess": {
-              "backgroundColor": "#5c5d3c",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#a1a45b",
-                "color": "#241c17"
+            "&.MuiChip-colorSuccess.MuiChip-filled": {
+              "backgroundColor": "#5a7c3f",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#7b985c",
+                  "color": "#2b2925"
+                }
               }
             },
-            "&.MuiChip-filledInfo": {
-              "backgroundColor": "#555d50",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#91a586",
-                "color": "#241c17"
+            "&.MuiChip-colorInfo.MuiChip-filled": {
+              "backgroundColor": "#467992",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#64a6b1",
+                  "color": "#37332f"
+                }
               }
             }
           }
-        }
+        },
+        "variants": [
+          {
+            "props": {
+              "variant": "outlined"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "primary"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "secondary"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "error"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "warning"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "success"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "info"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          }
+        ]
       },
       "MuiAlert": {
         "styleOverrides": {
           "root": {
-            "border": "1px solid #4c392e",
+            "border": "1px solid #796e62",
             "borderRadius": 2,
-            "&.MuiAlert-filledError": {
-              "backgroundColor": "#7e4f44",
-              "color": "#fff8e9"
+            "&.MuiAlert-colorError.MuiAlert-filled": {
+              "backgroundColor": "#b24533",
+              "color": "#fdfaf1"
             },
-            "&.MuiAlert-filledWarning": {
-              "backgroundColor": "#6f5637",
-              "color": "#fff8e9"
+            "&.MuiAlert-colorWarning.MuiAlert-filled": {
+              "backgroundColor": "#d3a13d",
+              "color": "#423e39"
             },
-            "&.MuiAlert-filledSuccess": {
-              "backgroundColor": "#5c5d3c",
-              "color": "#fff8e9"
+            "&.MuiAlert-colorSuccess.MuiAlert-filled": {
+              "backgroundColor": "#5a7c3f",
+              "color": "#fdfaf1"
             },
-            "&.MuiAlert-filledInfo": {
-              "backgroundColor": "#555d50",
-              "color": "#fff8e9"
+            "&.MuiAlert-colorInfo.MuiAlert-filled": {
+              "backgroundColor": "#467992",
+              "color": "#fdfaf1"
+            },
+            "&.MuiAlert-standard.MuiAlert-colorError": {
+              "backgroundColor": "#f3ecdd",
+              "color": "#4c1f19",
+              "& .MuiAlert-icon": {
+                "color": "#4c1f19"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorWarning": {
+              "backgroundColor": "#f3ecdd",
+              "color": "#714e0f",
+              "& .MuiAlert-icon": {
+                "color": "#714e0f"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorSuccess": {
+              "backgroundColor": "#f3ecdd",
+              "color": "#2c3f1e",
+              "& .MuiAlert-icon": {
+                "color": "#2c3f1e"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorInfo": {
+              "backgroundColor": "#f3ecdd",
+              "color": "#1c3c48",
+              "& .MuiAlert-icon": {
+                "color": "#1c3c48"
+              }
             }
           }
         }
@@ -2652,7 +3847,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiPopover": {
         "styleOverrides": {
           "paper": {
-            "border": "1px solid #4c392e",
+            "border": "1px solid #796e62",
             "borderRadius": 2,
             "boxShadow": "none"
           }
@@ -2661,17 +3856,17 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiDrawer": {
         "styleOverrides": {
           "paper": {
-            "backgroundColor": "#e6cfb1",
-            "borderColor": "#4c392e",
+            "backgroundColor": "#dbd2c2",
+            "borderColor": "#796e62",
             "borderRadius": 2,
             "boxShadow": "none"
           },
           "root": {
             "&.MuiDrawer-modal .MuiDrawer-paper": {
-              "border": "1px solid #4c392e"
+              "border": "1px solid #796e62"
             },
             "&.MuiDrawer-docked .MuiDrawer-paper": {
-              "border": "1px solid #4c392e"
+              "border": "1px solid #796e62"
             }
           }
         }
@@ -2679,9 +3874,18 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiDialog": {
         "styleOverrides": {
           "paper": {
-            "border": "1px solid #4c392e",
+            "border": "1px solid #796e62",
             "borderRadius": 2,
             "boxShadow": "none"
+          }
+        }
+      },
+      "MuiSnackbarContent": {
+        "styleOverrides": {
+          "root": {
+            "backgroundColor": "#dbd2c2",
+            "color": "#796e62",
+            "border": "1px solid #796e62"
           }
         }
       },
@@ -2689,7 +3893,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "tooltip": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "border": "1px solid #4c392e",
+            "border": "1px solid #796e62",
             "borderRadius": 2
           }
         }
@@ -2711,7 +3915,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiTableCell": {
         "styleOverrides": {
           "root": {
-            "borderBottomColor": "#d5b99a"
+            "borderBottomColor": "#796e62"
           }
         }
       }
@@ -2721,95 +3925,95 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
     "palette": {
       "mode": "light",
       "background": {
-        "default": "#f8e9d2",
-        "paper": "#e6cfb1"
+        "default": "#f3ecdd",
+        "paper": "#dbd2c2"
       },
       "text": {
-        "primary": "#392b24",
-        "secondary": "#4c392e",
-        "disabled": "#795a45"
+        "primary": "#675f57",
+        "secondary": "#796e62",
+        "disabled": "#9e9281"
       },
       "primary": {
-        "light": "#89a3a4",
-        "lightContrastText": "#241c17",
-        "main": "#4e5d61",
-        "dark": "#49666d",
-        "darker": "#2f484d",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#66828a",
-        "neutralFillLabel": "#17120f"
+        "light": "#e76925",
+        "lightContrastText": "#2a2824",
+        "main": "#7a523a",
+        "dark": "#7c3e1f",
+        "darker": "#4b2614",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#af5728",
+        "neutralFillLabel": "#fdfaf1"
       },
       "secondary": {
-        "light": "#b28aa0",
-        "lightContrastText": "#241c17",
-        "main": "#715260",
-        "dark": "#735063",
-        "darker": "#4a3340",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#9a6f86",
-        "neutralFillLabel": "#14100d"
+        "light": "#675f57",
+        "lightContrastText": "#fdfaf1",
+        "main": "#625a52",
+        "dark": "#8d806f",
+        "darker": "#9e9281",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#796e62",
+        "neutralFillLabel": "#fdfaf1"
       },
       "error": {
-        "light": "#e4775f",
-        "lightContrastText": "#241c17",
-        "main": "#8e4636",
-        "dark": "#914334",
-        "darker": "#602e25",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#c05a45",
-        "neutralFillLabel": "#0d0a09"
+        "light": "#e6573d",
+        "lightContrastText": "#21201d",
+        "main": "#8a493c",
+        "dark": "#7e3227",
+        "darker": "#4c1f19",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#b24533",
+        "neutralFillLabel": "#fdfaf1"
       },
       "warning": {
-        "light": "#dfa54c",
-        "lightContrastText": "#241c17",
-        "main": "#755528",
-        "dark": "#906222",
-        "darker": "#593a11",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#c28a38",
-        "neutralFillLabel": "#241c17"
+        "light": "#eabb57",
+        "lightContrastText": "#544f48",
+        "main": "#655a46",
+        "dark": "#aa791e",
+        "darker": "#714e0f",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#d3a13d",
+        "neutralFillLabel": "#423e39"
       },
       "success": {
-        "light": "#a1a45b",
-        "lightContrastText": "#241c17",
-        "main": "#5c5d2f",
-        "dark": "#61682f",
-        "darker": "#434820",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#7f873f",
-        "neutralFillLabel": "#1f1814"
+        "light": "#7b985c",
+        "lightContrastText": "#2b2925",
+        "main": "#565e45",
+        "dark": "#435e2e",
+        "darker": "#2c3f1e",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#5a7c3f",
+        "neutralFillLabel": "#fdfaf1"
       },
       "info": {
-        "light": "#91a586",
-        "lightContrastText": "#241c17",
-        "main": "#505f4d",
-        "dark": "#4f6a54",
-        "darker": "#324738",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#6e8b70",
-        "neutralFillLabel": "#231c17"
+        "light": "#64a6b1",
+        "lightContrastText": "#37332f",
+        "main": "#4f5e62",
+        "dark": "#2f5c6f",
+        "darker": "#1c3c48",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#467992",
+        "neutralFillLabel": "#fdfaf1"
       },
       "orange": {
-        "light": "#e58349",
-        "lightContrastText": "#241c17",
-        "main": "#864c29",
-        "dark": "#92502b",
-        "darker": "#62361f",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#c46a35",
-        "neutralFillLabel": "#1f1814"
+        "light": "#e76925",
+        "lightContrastText": "#2a2824",
+        "main": "#7a523a",
+        "dark": "#7c3e1f",
+        "darker": "#4b2614",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#af5728",
+        "neutralFillLabel": "#fdfaf1"
       },
       "terminalHeader": {
-        "background": "#4c392e",
-        "text": "#fff8e9"
+        "background": "#796e62",
+        "text": "#fdfaf1"
       },
-      "frame": "#4c392e",
-      "divider": "#d5b99a",
+      "frame": "#796e62",
+      "divider": "#796e62",
       "action": {
-        "hover": "#392b2414",
-        "selected": "#392b2429",
-        "disabled": "#795a45",
-        "disabledBackground": "#efddc2"
+        "hover": "#675f5714",
+        "selected": "#675f5729",
+        "disabled": "#9e9281",
+        "disabledBackground": "#e7e0d0"
       }
     },
     "shape": {
@@ -2818,34 +4022,70 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
     "typography": {
       "fontFamily": "var(--font-sunfade-caskaydia, \"CaskaydiaCove Nerd Font\"), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", monospace",
       "h1": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "2.875rem",
+        "lineHeight": 1.08,
+        "fontWeight": 700,
+        "letterSpacing": "-0.01em"
       },
       "h2": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "2.125rem",
+        "lineHeight": 1.14,
+        "fontWeight": 600,
+        "letterSpacing": "-0.005em"
       },
       "h3": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.75rem",
+        "lineHeight": 1.18,
+        "fontWeight": 600,
+        "letterSpacing": "0"
       },
       "h4": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.5rem",
+        "lineHeight": 1.22,
+        "fontWeight": 600,
+        "letterSpacing": "0"
       },
       "h5": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.25rem",
+        "lineHeight": 1.26,
+        "fontWeight": 500,
+        "letterSpacing": "0"
       },
       "h6": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.0625rem",
+        "lineHeight": 1.28,
+        "fontWeight": 500,
+        "letterSpacing": "0.01em"
       },
       "subtitle1": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1rem",
+        "lineHeight": 1.4,
+        "fontWeight": 600,
+        "letterSpacing": "0.01em"
       },
       "subtitle2": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "0.875rem",
+        "lineHeight": 1.45,
+        "fontWeight": 600,
+        "letterSpacing": "0.01em"
       },
       "caption": {
         "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
       },
       "overline": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "0.75rem",
+        "lineHeight": 2,
+        "fontWeight": 600,
+        "letterSpacing": "0.08em"
       },
       "button": {
         "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
@@ -2855,13 +4095,13 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiCssBaseline": {
         "styleOverrides": {
           "body": {
-            "backgroundColor": "#f8e9d2",
-            "color": "#392b24",
+            "backgroundColor": "#f3ecdd",
+            "color": "#675f57",
             "backgroundImage": "none"
           },
           "::selection": {
-            "backgroundColor": "#89a3a4",
-            "color": "#241c17"
+            "backgroundColor": "#64a6b1",
+            "color": "#37332f"
           }
         }
       },
@@ -2869,8 +4109,9 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "backgroundImage": "none",
-            "borderColor": "#4c392e",
-            "borderRadius": 2
+            "borderColor": "#796e62",
+            "borderRadius": 2,
+            "boxShadow": "none"
           },
           "outlined": {
             "borderWidth": 1
@@ -2888,9 +4129,9 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiAppBar": {
         "styleOverrides": {
           "root": {
-            "backgroundColor": "#4c392e",
-            "color": "#fff8e9",
-            "border": "1px solid #d5b99a"
+            "backgroundColor": "#796e62",
+            "color": "#fdfaf1",
+            "border": "1px solid #796e62"
           }
         },
         "defaultProps": {
@@ -2901,15 +4142,19 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "color": "#392b24",
+            "color": "#675f57",
             "borderRadius": 2,
             "minHeight": 40,
             "&.Mui-selected": {
-              "backgroundColor": "#4c392e",
-              "color": "#fff8e9"
+              "backgroundColor": "#796e62",
+              "color": "#fdfaf1",
+              "&:hover": {
+                "backgroundColor": "#796e62",
+                "color": "#fdfaf1"
+              }
             },
             "&:focus-visible": {
-              "outline": "1px solid #4e5d61",
+              "outline": "1px solid #e76925",
               "outlineOffset": 2
             }
           }
@@ -2920,16 +4165,34 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
           "root": {
             "borderRadius": 2,
             "boxShadow": "none",
+            "&:active": {
+              "boxShadow": "none"
+            },
             "minHeight": 40,
             "fontWeight": 600,
             "textTransform": "none",
             "&:focus-visible": {
-              "outline": "1px solid #4e5d61",
+              "outline": "1px solid #e76925",
               "outlineOffset": 2
             }
           },
           "contained": {
-            "boxShadow": "none"
+            "boxShadow": "none",
+            "&:hover": {
+              "boxShadow": "none",
+              "@media (hover: none)": {
+                "boxShadow": "none"
+              }
+            },
+            "&:active": {
+              "boxShadow": "none"
+            },
+            "&.Mui-focusVisible": {
+              "boxShadow": "none"
+            },
+            "&.Mui-disabled": {
+              "boxShadow": "none"
+            }
           }
         },
         "variants": [
@@ -2938,9 +4201,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "primary"
             },
             "style": {
-              "--variant-outlinedBorder": "#4e5d61",
-              "--variant-containedBg": "#66828a",
-              "--variant-containedColor": "#17120f"
+              "--variant-textColor": "#af5728",
+              "--variant-outlinedColor": "#af5728",
+              "--variant-outlinedBorder": "#af5728",
+              "--variant-containedBg": "#af5728",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -2948,9 +4213,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "secondary"
             },
             "style": {
-              "--variant-outlinedBorder": "#715260",
-              "--variant-containedBg": "#9a6f86",
-              "--variant-containedColor": "#14100d"
+              "--variant-textColor": "#796e62",
+              "--variant-outlinedColor": "#796e62",
+              "--variant-outlinedBorder": "#796e62",
+              "--variant-containedBg": "#796e62",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -2958,9 +4225,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "error"
             },
             "style": {
-              "--variant-outlinedBorder": "#8e4636",
-              "--variant-containedBg": "#c05a45",
-              "--variant-containedColor": "#0d0a09"
+              "--variant-textColor": "#b24533",
+              "--variant-outlinedColor": "#b24533",
+              "--variant-outlinedBorder": "#b24533",
+              "--variant-containedBg": "#b24533",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -2968,9 +4237,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "warning"
             },
             "style": {
-              "--variant-outlinedBorder": "#755528",
-              "--variant-containedBg": "#c28a38",
-              "--variant-containedColor": "#241c17"
+              "--variant-textColor": "#d3a13d",
+              "--variant-outlinedColor": "#d3a13d",
+              "--variant-outlinedBorder": "#d3a13d",
+              "--variant-containedBg": "#d3a13d",
+              "--variant-containedColor": "#423e39"
             }
           },
           {
@@ -2978,9 +4249,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "success"
             },
             "style": {
-              "--variant-outlinedBorder": "#5c5d2f",
-              "--variant-containedBg": "#7f873f",
-              "--variant-containedColor": "#1f1814"
+              "--variant-textColor": "#5a7c3f",
+              "--variant-outlinedColor": "#5a7c3f",
+              "--variant-outlinedBorder": "#5a7c3f",
+              "--variant-containedBg": "#5a7c3f",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -2988,9 +4261,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "info"
             },
             "style": {
-              "--variant-outlinedBorder": "#505f4d",
-              "--variant-containedBg": "#6e8b70",
-              "--variant-containedColor": "#231c17"
+              "--variant-textColor": "#467992",
+              "--variant-outlinedColor": "#467992",
+              "--variant-outlinedBorder": "#467992",
+              "--variant-containedBg": "#467992",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -3001,8 +4276,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#89a3a4",
-                  "color": "#241c17"
+                  "backgroundColor": "#e76925",
+                  "color": "#2a2824"
                 }
               }
             }
@@ -3015,8 +4290,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#b28aa0",
-                  "color": "#241c17"
+                  "backgroundColor": "#675f57",
+                  "color": "#fdfaf1"
                 }
               }
             }
@@ -3029,8 +4304,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#e4775f",
-                  "color": "#241c17"
+                  "backgroundColor": "#e6573d",
+                  "color": "#21201d"
                 }
               }
             }
@@ -3043,8 +4318,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#dfa54c",
-                  "color": "#241c17"
+                  "backgroundColor": "#eabb57",
+                  "color": "#544f48"
                 }
               }
             }
@@ -3057,8 +4332,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#a1a45b",
-                  "color": "#241c17"
+                  "backgroundColor": "#7b985c",
+                  "color": "#2b2925"
                 }
               }
             }
@@ -3071,10 +4346,115 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#91a586",
-                  "color": "#241c17"
+                  "backgroundColor": "#64a6b1",
+                  "color": "#37332f"
                 }
               }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "primary"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e76925",
+                  "color": "#2a2824",
+                  "--variant-outlinedBorder": "#2a2824"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "secondary"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#675f57",
+                  "color": "#fdfaf1",
+                  "--variant-outlinedBorder": "#fdfaf1"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "error"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e6573d",
+                  "color": "#21201d",
+                  "--variant-outlinedBorder": "#21201d"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "warning"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#eabb57",
+                  "color": "#544f48",
+                  "--variant-outlinedBorder": "#544f48"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "success"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#7b985c",
+                  "color": "#2b2925",
+                  "--variant-outlinedBorder": "#2b2925"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "info"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#64a6b1",
+                  "color": "#37332f",
+                  "--variant-outlinedBorder": "#37332f"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "inherit"
+            },
+            "style": {
+              "--variant-outlinedBg": "#f3ecdd"
             }
           }
         ]
@@ -3083,7 +4463,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "&.Mui-focusVisible": {
-              "outline": "1px solid #4e5d61",
+              "outline": "1px solid #e76925",
               "outlineOffset": 2
             }
           }
@@ -3096,7 +4476,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "minWidth": 40,
             "minHeight": 40,
             "&:focus-visible": {
-              "outline": "1px solid #4e5d61",
+              "outline": "1px solid #e76925",
               "outlineOffset": 2
             }
           }
@@ -3108,13 +4488,13 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
             "border": "1px solid transparent",
             "borderRadius": 2,
-            "color": "#4c392e",
+            "color": "#796e62",
             "&.Mui-selected": {
-              "color": "#fff8e9",
-              "backgroundColor": "#4c392e"
+              "color": "#fdfaf1",
+              "backgroundColor": "#796e62"
             },
             "&:focus-visible": {
-              "outline": "1px solid #4e5d61",
+              "outline": "1px solid #e76925",
               "outlineOffset": 1
             }
           }
@@ -3122,26 +4502,38 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       },
       "MuiOutlinedInput": {
         "styleOverrides": {
+          "notchedOutline": {
+            "borderWidth": 1,
+            "borderColor": "#796e62"
+          },
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
             "borderRadius": 2,
+            "&:hover:not(.Mui-focused):not(.Mui-error) .MuiOutlinedInput-notchedOutline": {
+              "borderColor": "#796e62"
+            },
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
               "borderWidth": 1,
-              "borderColor": "#4e5d61"
+              "borderColor": "#e76925"
             }
-          },
-          "notchedOutline": {
-            "borderWidth": 1,
-            "borderColor": "#4c392e"
           }
         }
       },
       "MuiInput": {
         "styleOverrides": {
+          "root": {
+            "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+            "&::before": {
+              "borderBottomColor": "#796e62"
+            },
+            "&:hover:not(.Mui-disabled):not(.Mui-error)::before": {
+              "borderBottom": "1px solid #796e62"
+            }
+          },
           "underline": {
             "&:after": {
               "borderBottomWidth": 1,
-              "borderBottomColor": "#4e5d61"
+              "borderBottomColor": "#e76925"
             }
           }
         }
@@ -3149,7 +4541,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiSelect": {
         "styleOverrides": {
           "icon": {
-            "color": "#4c392e"
+            "color": "#796e62"
           }
         }
       },
@@ -3157,21 +4549,21 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "backgroundColor": "#efddc2",
-            "border": "1px solid #4c392e",
+            "backgroundColor": "#e7e0d0",
+            "border": "1px solid #796e62",
             "borderRadius": 2,
             "&:before, &:after": {
               "display": "none"
             },
             "&:hover": {
-              "backgroundColor": "#e6cfb1"
+              "backgroundColor": "#dbd2c2"
             },
             "&.Mui-focused": {
-              "backgroundColor": "#e6cfb1",
-              "borderColor": "#4e5d61"
+              "backgroundColor": "#dbd2c2",
+              "borderColor": "#e76925"
             },
             "&.Mui-disabled": {
-              "backgroundColor": "#efddc2"
+              "backgroundColor": "#e7e0d0"
             }
           }
         }
@@ -3180,11 +4572,10 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "color": "#392b24",
+            "color": "#675f57",
             "borderRadius": 2,
             "&.Mui-expanded": {
-              "minHeight": 44,
-              "borderBottom": "1px solid #d5b99a"
+              "minHeight": 44
             }
           },
           "content": {
@@ -3193,13 +4584,14 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             }
           },
           "expandIconWrapper": {
-            "color": "#4c392e"
+            "color": "#796e62"
           }
         }
       },
       "MuiAccordion": {
         "styleOverrides": {
           "root": {
+            "border": "1px solid #796e62",
             "boxShadow": "none",
             "&:before": {
               "display": "none"
@@ -3211,79 +4603,182 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "border": "1px solid #4c392e",
             "borderRadius": 2,
-            "&.MuiChip-filledPrimary": {
-              "backgroundColor": "#4e5d61",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#89a3a4",
-                "color": "#241c17"
+            "&.MuiChip-colorPrimary.MuiChip-filled": {
+              "backgroundColor": "#af5728",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e76925",
+                  "color": "#2a2824"
+                }
               }
             },
-            "&.MuiChip-filledSecondary": {
-              "backgroundColor": "#715260",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#b28aa0",
-                "color": "#241c17"
+            "&.MuiChip-colorSecondary.MuiChip-filled": {
+              "backgroundColor": "#796e62",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#675f57",
+                  "color": "#fdfaf1"
+                }
               }
             },
-            "&.MuiChip-filledError": {
-              "backgroundColor": "#8e4636",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#e4775f",
-                "color": "#241c17"
+            "&.MuiChip-colorError.MuiChip-filled": {
+              "backgroundColor": "#b24533",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e6573d",
+                  "color": "#21201d"
+                }
               }
             },
-            "&.MuiChip-filledWarning": {
-              "backgroundColor": "#755528",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#dfa54c",
-                "color": "#241c17"
+            "&.MuiChip-colorWarning.MuiChip-filled": {
+              "backgroundColor": "#d3a13d",
+              "color": "#423e39",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#eabb57",
+                  "color": "#544f48"
+                }
               }
             },
-            "&.MuiChip-filledSuccess": {
-              "backgroundColor": "#5c5d2f",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#a1a45b",
-                "color": "#241c17"
+            "&.MuiChip-colorSuccess.MuiChip-filled": {
+              "backgroundColor": "#5a7c3f",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#7b985c",
+                  "color": "#2b2925"
+                }
               }
             },
-            "&.MuiChip-filledInfo": {
-              "backgroundColor": "#505f4d",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#91a586",
-                "color": "#241c17"
+            "&.MuiChip-colorInfo.MuiChip-filled": {
+              "backgroundColor": "#467992",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#64a6b1",
+                  "color": "#37332f"
+                }
               }
             }
           }
-        }
+        },
+        "variants": [
+          {
+            "props": {
+              "variant": "outlined"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "primary"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "secondary"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "error"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "warning"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "success"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "info"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          }
+        ]
       },
       "MuiAlert": {
         "styleOverrides": {
           "root": {
-            "border": "1px solid #4c392e",
+            "border": "1px solid #796e62",
             "borderRadius": 2,
-            "&.MuiAlert-filledError": {
-              "backgroundColor": "#8e4636",
-              "color": "#fff8e9"
+            "&.MuiAlert-colorError.MuiAlert-filled": {
+              "backgroundColor": "#b24533",
+              "color": "#fdfaf1"
             },
-            "&.MuiAlert-filledWarning": {
-              "backgroundColor": "#755528",
-              "color": "#fff8e9"
+            "&.MuiAlert-colorWarning.MuiAlert-filled": {
+              "backgroundColor": "#d3a13d",
+              "color": "#423e39"
             },
-            "&.MuiAlert-filledSuccess": {
-              "backgroundColor": "#5c5d2f",
-              "color": "#fff8e9"
+            "&.MuiAlert-colorSuccess.MuiAlert-filled": {
+              "backgroundColor": "#5a7c3f",
+              "color": "#fdfaf1"
             },
-            "&.MuiAlert-filledInfo": {
-              "backgroundColor": "#505f4d",
-              "color": "#fff8e9"
+            "&.MuiAlert-colorInfo.MuiAlert-filled": {
+              "backgroundColor": "#467992",
+              "color": "#fdfaf1"
+            },
+            "&.MuiAlert-standard.MuiAlert-colorError": {
+              "backgroundColor": "#f3ecdd",
+              "color": "#4c1f19",
+              "& .MuiAlert-icon": {
+                "color": "#4c1f19"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorWarning": {
+              "backgroundColor": "#f3ecdd",
+              "color": "#714e0f",
+              "& .MuiAlert-icon": {
+                "color": "#714e0f"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorSuccess": {
+              "backgroundColor": "#f3ecdd",
+              "color": "#2c3f1e",
+              "& .MuiAlert-icon": {
+                "color": "#2c3f1e"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorInfo": {
+              "backgroundColor": "#f3ecdd",
+              "color": "#1c3c48",
+              "& .MuiAlert-icon": {
+                "color": "#1c3c48"
+              }
             }
           }
         }
@@ -3291,7 +4786,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiPopover": {
         "styleOverrides": {
           "paper": {
-            "border": "1px solid #4c392e",
+            "border": "1px solid #796e62",
             "borderRadius": 2,
             "boxShadow": "none"
           }
@@ -3300,17 +4795,17 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiDrawer": {
         "styleOverrides": {
           "paper": {
-            "backgroundColor": "#e6cfb1",
-            "borderColor": "#4c392e",
+            "backgroundColor": "#dbd2c2",
+            "borderColor": "#796e62",
             "borderRadius": 2,
             "boxShadow": "none"
           },
           "root": {
             "&.MuiDrawer-modal .MuiDrawer-paper": {
-              "border": "1px solid #4c392e"
+              "border": "1px solid #796e62"
             },
             "&.MuiDrawer-docked .MuiDrawer-paper": {
-              "border": "1px solid #4c392e"
+              "border": "1px solid #796e62"
             }
           }
         }
@@ -3318,9 +4813,18 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiDialog": {
         "styleOverrides": {
           "paper": {
-            "border": "1px solid #4c392e",
+            "border": "1px solid #796e62",
             "borderRadius": 2,
             "boxShadow": "none"
+          }
+        }
+      },
+      "MuiSnackbarContent": {
+        "styleOverrides": {
+          "root": {
+            "backgroundColor": "#dbd2c2",
+            "color": "#675f57",
+            "border": "1px solid #796e62"
           }
         }
       },
@@ -3328,7 +4832,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "tooltip": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "border": "1px solid #4c392e",
+            "border": "1px solid #796e62",
             "borderRadius": 2
           }
         }
@@ -3350,7 +4854,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiTableCell": {
         "styleOverrides": {
           "root": {
-            "borderBottomColor": "#d5b99a"
+            "borderBottomColor": "#796e62"
           }
         }
       }
@@ -3360,95 +4864,95 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
     "palette": {
       "mode": "light",
       "background": {
-        "default": "#fff8e9",
-        "paper": "#d5b99a"
+        "default": "#fdfaf1",
+        "paper": "#c5bdb0"
       },
       "text": {
-        "primary": "#241c17",
-        "secondary": "#392b24",
-        "disabled": "#795a45"
+        "primary": "#544f48",
+        "secondary": "#675f57",
+        "disabled": "#9e9281"
       },
       "primary": {
-        "light": "#89a3a4",
-        "lightContrastText": "#241c17",
-        "main": "#454f50",
-        "dark": "#49666d",
-        "darker": "#2f484d",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#66828a",
-        "neutralFillLabel": "#17120f"
+        "light": "#e76925",
+        "lightContrastText": "#2a2824",
+        "main": "#af5728",
+        "dark": "#7c3e1f",
+        "darker": "#4b2614",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#af5728",
+        "neutralFillLabel": "#fdfaf1"
       },
       "secondary": {
-        "light": "#b28aa0",
-        "lightContrastText": "#241c17",
-        "main": "#604650",
-        "dark": "#735063",
-        "darker": "#4a3340",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#9a6f86",
-        "neutralFillLabel": "#14100d"
+        "light": "#675f57",
+        "lightContrastText": "#fdfaf1",
+        "main": "#796e62",
+        "dark": "#8d806f",
+        "darker": "#9e9281",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#796e62",
+        "neutralFillLabel": "#fdfaf1"
       },
       "error": {
-        "light": "#e4775f",
-        "lightContrastText": "#241c17",
-        "main": "#763d2f",
-        "dark": "#914334",
-        "darker": "#602e25",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#c05a45",
-        "neutralFillLabel": "#0d0a09"
+        "light": "#e6573d",
+        "lightContrastText": "#21201d",
+        "main": "#b24533",
+        "dark": "#7e3227",
+        "darker": "#4c1f19",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#b24533",
+        "neutralFillLabel": "#fdfaf1"
       },
       "warning": {
-        "light": "#dfa54c",
-        "lightContrastText": "#241c17",
-        "main": "#634824",
-        "dark": "#906222",
-        "darker": "#593a11",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#c28a38",
-        "neutralFillLabel": "#241c17"
+        "light": "#eabb57",
+        "lightContrastText": "#544f48",
+        "main": "#d3a13d",
+        "dark": "#aa791e",
+        "darker": "#714e0f",
+        "contrastText": "#423e39",
+        "neutralFill": "#d3a13d",
+        "neutralFillLabel": "#423e39"
       },
       "success": {
-        "light": "#a1a45b",
-        "lightContrastText": "#241c17",
-        "main": "#4f4f2a",
-        "dark": "#61682f",
-        "darker": "#434820",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#7f873f",
-        "neutralFillLabel": "#1f1814"
+        "light": "#7b985c",
+        "lightContrastText": "#2b2925",
+        "main": "#5a7c3f",
+        "dark": "#435e2e",
+        "darker": "#2c3f1e",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#5a7c3f",
+        "neutralFillLabel": "#fdfaf1"
       },
       "info": {
-        "light": "#91a586",
-        "lightContrastText": "#241c17",
-        "main": "#465040",
-        "dark": "#4f6a54",
-        "darker": "#324738",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#6e8b70",
-        "neutralFillLabel": "#231c17"
+        "light": "#64a6b1",
+        "lightContrastText": "#37332f",
+        "main": "#467992",
+        "dark": "#2f5c6f",
+        "darker": "#1c3c48",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#467992",
+        "neutralFillLabel": "#fdfaf1"
       },
       "orange": {
-        "light": "#e58349",
-        "lightContrastText": "#241c17",
-        "main": "#714125",
-        "dark": "#92502b",
-        "darker": "#62361f",
-        "contrastText": "#fff8e9",
-        "neutralFill": "#c46a35",
-        "neutralFillLabel": "#1f1814"
+        "light": "#e76925",
+        "lightContrastText": "#2a2824",
+        "main": "#af5728",
+        "dark": "#7c3e1f",
+        "darker": "#4b2614",
+        "contrastText": "#fdfaf1",
+        "neutralFill": "#af5728",
+        "neutralFillLabel": "#fdfaf1"
       },
       "terminalHeader": {
-        "background": "#4c392e",
-        "text": "#fff8e9"
+        "background": "#796e62",
+        "text": "#fdfaf1"
       },
-      "frame": "#4c392e",
-      "divider": "#a88a6f",
+      "frame": "#796e62",
+      "divider": "#796e62",
       "action": {
-        "hover": "#241c1714",
-        "selected": "#241c1729",
-        "disabled": "#795a45",
-        "disabledBackground": "#e6cfb1"
+        "hover": "#544f4814",
+        "selected": "#544f4829",
+        "disabled": "#9e9281",
+        "disabledBackground": "#dbd2c2"
       }
     },
     "shape": {
@@ -3457,34 +4961,70 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
     "typography": {
       "fontFamily": "var(--font-sunfade-caskaydia, \"CaskaydiaCove Nerd Font\"), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", monospace",
       "h1": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "2.875rem",
+        "lineHeight": 1.08,
+        "fontWeight": 700,
+        "letterSpacing": "-0.01em"
       },
       "h2": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "2.125rem",
+        "lineHeight": 1.14,
+        "fontWeight": 600,
+        "letterSpacing": "-0.005em"
       },
       "h3": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.75rem",
+        "lineHeight": 1.18,
+        "fontWeight": 600,
+        "letterSpacing": "0"
       },
       "h4": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.5rem",
+        "lineHeight": 1.22,
+        "fontWeight": 600,
+        "letterSpacing": "0"
       },
       "h5": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.25rem",
+        "lineHeight": 1.26,
+        "fontWeight": 500,
+        "letterSpacing": "0"
       },
       "h6": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1.0625rem",
+        "lineHeight": 1.28,
+        "fontWeight": 500,
+        "letterSpacing": "0.01em"
       },
       "subtitle1": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "1rem",
+        "lineHeight": 1.4,
+        "fontWeight": 600,
+        "letterSpacing": "0.01em"
       },
       "subtitle2": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "0.875rem",
+        "lineHeight": 1.45,
+        "fontWeight": 600,
+        "letterSpacing": "0.01em"
       },
       "caption": {
         "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
       },
       "overline": {
-        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+        "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "fontSize": "0.75rem",
+        "lineHeight": 2,
+        "fontWeight": 600,
+        "letterSpacing": "0.08em"
       },
       "button": {
         "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
@@ -3494,13 +5034,13 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiCssBaseline": {
         "styleOverrides": {
           "body": {
-            "backgroundColor": "#fff8e9",
-            "color": "#241c17",
+            "backgroundColor": "#fdfaf1",
+            "color": "#544f48",
             "backgroundImage": "none"
           },
           "::selection": {
-            "backgroundColor": "#89a3a4",
-            "color": "#241c17"
+            "backgroundColor": "#64a6b1",
+            "color": "#37332f"
           }
         }
       },
@@ -3508,8 +5048,9 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "backgroundImage": "none",
-            "borderColor": "#4c392e",
-            "borderRadius": 2
+            "borderColor": "#796e62",
+            "borderRadius": 2,
+            "boxShadow": "none"
           },
           "outlined": {
             "borderWidth": 1
@@ -3527,9 +5068,9 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiAppBar": {
         "styleOverrides": {
           "root": {
-            "backgroundColor": "#4c392e",
-            "color": "#fff8e9",
-            "border": "1px solid #a88a6f"
+            "backgroundColor": "#796e62",
+            "color": "#fdfaf1",
+            "border": "1px solid #796e62"
           }
         },
         "defaultProps": {
@@ -3540,15 +5081,19 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "color": "#241c17",
+            "color": "#544f48",
             "borderRadius": 2,
             "minHeight": 40,
             "&.Mui-selected": {
-              "backgroundColor": "#4c392e",
-              "color": "#fff8e9"
+              "backgroundColor": "#796e62",
+              "color": "#fdfaf1",
+              "&:hover": {
+                "backgroundColor": "#796e62",
+                "color": "#fdfaf1"
+              }
             },
             "&:focus-visible": {
-              "outline": "1px solid #454f50",
+              "outline": "1px solid #e76925",
               "outlineOffset": 2
             }
           }
@@ -3559,16 +5104,34 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
           "root": {
             "borderRadius": 2,
             "boxShadow": "none",
+            "&:active": {
+              "boxShadow": "none"
+            },
             "minHeight": 40,
             "fontWeight": 600,
             "textTransform": "none",
             "&:focus-visible": {
-              "outline": "1px solid #454f50",
+              "outline": "1px solid #e76925",
               "outlineOffset": 2
             }
           },
           "contained": {
-            "boxShadow": "none"
+            "boxShadow": "none",
+            "&:hover": {
+              "boxShadow": "none",
+              "@media (hover: none)": {
+                "boxShadow": "none"
+              }
+            },
+            "&:active": {
+              "boxShadow": "none"
+            },
+            "&.Mui-focusVisible": {
+              "boxShadow": "none"
+            },
+            "&.Mui-disabled": {
+              "boxShadow": "none"
+            }
           }
         },
         "variants": [
@@ -3577,9 +5140,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "primary"
             },
             "style": {
-              "--variant-outlinedBorder": "#454f50",
-              "--variant-containedBg": "#66828a",
-              "--variant-containedColor": "#17120f"
+              "--variant-textColor": "#af5728",
+              "--variant-outlinedColor": "#af5728",
+              "--variant-outlinedBorder": "#af5728",
+              "--variant-containedBg": "#af5728",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -3587,9 +5152,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "secondary"
             },
             "style": {
-              "--variant-outlinedBorder": "#604650",
-              "--variant-containedBg": "#9a6f86",
-              "--variant-containedColor": "#14100d"
+              "--variant-textColor": "#796e62",
+              "--variant-outlinedColor": "#796e62",
+              "--variant-outlinedBorder": "#796e62",
+              "--variant-containedBg": "#796e62",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -3597,9 +5164,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "error"
             },
             "style": {
-              "--variant-outlinedBorder": "#763d2f",
-              "--variant-containedBg": "#c05a45",
-              "--variant-containedColor": "#0d0a09"
+              "--variant-textColor": "#b24533",
+              "--variant-outlinedColor": "#b24533",
+              "--variant-outlinedBorder": "#b24533",
+              "--variant-containedBg": "#b24533",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -3607,9 +5176,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "warning"
             },
             "style": {
-              "--variant-outlinedBorder": "#634824",
-              "--variant-containedBg": "#c28a38",
-              "--variant-containedColor": "#241c17"
+              "--variant-textColor": "#d3a13d",
+              "--variant-outlinedColor": "#d3a13d",
+              "--variant-outlinedBorder": "#d3a13d",
+              "--variant-containedBg": "#d3a13d",
+              "--variant-containedColor": "#423e39"
             }
           },
           {
@@ -3617,9 +5188,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "success"
             },
             "style": {
-              "--variant-outlinedBorder": "#4f4f2a",
-              "--variant-containedBg": "#7f873f",
-              "--variant-containedColor": "#1f1814"
+              "--variant-textColor": "#5a7c3f",
+              "--variant-outlinedColor": "#5a7c3f",
+              "--variant-outlinedBorder": "#5a7c3f",
+              "--variant-containedBg": "#5a7c3f",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -3627,9 +5200,11 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
               "color": "info"
             },
             "style": {
-              "--variant-outlinedBorder": "#465040",
-              "--variant-containedBg": "#6e8b70",
-              "--variant-containedColor": "#231c17"
+              "--variant-textColor": "#467992",
+              "--variant-outlinedColor": "#467992",
+              "--variant-outlinedBorder": "#467992",
+              "--variant-containedBg": "#467992",
+              "--variant-containedColor": "#fdfaf1"
             }
           },
           {
@@ -3640,8 +5215,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#89a3a4",
-                  "color": "#241c17"
+                  "backgroundColor": "#e76925",
+                  "color": "#2a2824"
                 }
               }
             }
@@ -3654,8 +5229,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#b28aa0",
-                  "color": "#241c17"
+                  "backgroundColor": "#675f57",
+                  "color": "#fdfaf1"
                 }
               }
             }
@@ -3668,8 +5243,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#e4775f",
-                  "color": "#241c17"
+                  "backgroundColor": "#e6573d",
+                  "color": "#21201d"
                 }
               }
             }
@@ -3682,8 +5257,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#dfa54c",
-                  "color": "#241c17"
+                  "backgroundColor": "#eabb57",
+                  "color": "#544f48"
                 }
               }
             }
@@ -3696,8 +5271,8 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#a1a45b",
-                  "color": "#241c17"
+                  "backgroundColor": "#7b985c",
+                  "color": "#2b2925"
                 }
               }
             }
@@ -3710,10 +5285,115 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "style": {
               "@media (hover: hover)": {
                 "&:hover": {
-                  "backgroundColor": "#91a586",
-                  "color": "#241c17"
+                  "backgroundColor": "#64a6b1",
+                  "color": "#37332f"
                 }
               }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "primary"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e76925",
+                  "color": "#2a2824",
+                  "--variant-outlinedBorder": "#2a2824"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "secondary"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#675f57",
+                  "color": "#fdfaf1",
+                  "--variant-outlinedBorder": "#fdfaf1"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "error"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e6573d",
+                  "color": "#21201d",
+                  "--variant-outlinedBorder": "#21201d"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "warning"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#eabb57",
+                  "color": "#544f48",
+                  "--variant-outlinedBorder": "#544f48"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "success"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#7b985c",
+                  "color": "#2b2925",
+                  "--variant-outlinedBorder": "#2b2925"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "info"
+            },
+            "style": {
+              "backgroundColor": "#f3ecdd",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#64a6b1",
+                  "color": "#37332f",
+                  "--variant-outlinedBorder": "#37332f"
+                }
+              }
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "inherit"
+            },
+            "style": {
+              "--variant-outlinedBg": "#f3ecdd"
             }
           }
         ]
@@ -3722,7 +5402,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "&.Mui-focusVisible": {
-              "outline": "1px solid #454f50",
+              "outline": "1px solid #e76925",
               "outlineOffset": 2
             }
           }
@@ -3735,7 +5415,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "minWidth": 40,
             "minHeight": 40,
             "&:focus-visible": {
-              "outline": "1px solid #454f50",
+              "outline": "1px solid #e76925",
               "outlineOffset": 2
             }
           }
@@ -3747,13 +5427,13 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
             "border": "1px solid transparent",
             "borderRadius": 2,
-            "color": "#392b24",
+            "color": "#675f57",
             "&.Mui-selected": {
-              "color": "#fff8e9",
-              "backgroundColor": "#4c392e"
+              "color": "#fdfaf1",
+              "backgroundColor": "#796e62"
             },
             "&:focus-visible": {
-              "outline": "1px solid #454f50",
+              "outline": "1px solid #e76925",
               "outlineOffset": 1
             }
           }
@@ -3761,26 +5441,38 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       },
       "MuiOutlinedInput": {
         "styleOverrides": {
+          "notchedOutline": {
+            "borderWidth": 1,
+            "borderColor": "#796e62"
+          },
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
             "borderRadius": 2,
+            "&:hover:not(.Mui-focused):not(.Mui-error) .MuiOutlinedInput-notchedOutline": {
+              "borderColor": "#796e62"
+            },
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
               "borderWidth": 1,
-              "borderColor": "#454f50"
+              "borderColor": "#e76925"
             }
-          },
-          "notchedOutline": {
-            "borderWidth": 1,
-            "borderColor": "#4c392e"
           }
         }
       },
       "MuiInput": {
         "styleOverrides": {
+          "root": {
+            "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+            "&::before": {
+              "borderBottomColor": "#796e62"
+            },
+            "&:hover:not(.Mui-disabled):not(.Mui-error)::before": {
+              "borderBottom": "1px solid #796e62"
+            }
+          },
           "underline": {
             "&:after": {
               "borderBottomWidth": 1,
-              "borderBottomColor": "#454f50"
+              "borderBottomColor": "#e76925"
             }
           }
         }
@@ -3788,7 +5480,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiSelect": {
         "styleOverrides": {
           "icon": {
-            "color": "#392b24"
+            "color": "#675f57"
           }
         }
       },
@@ -3796,21 +5488,21 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "backgroundColor": "#e6cfb1",
-            "border": "1px solid #4c392e",
+            "backgroundColor": "#dbd2c2",
+            "border": "1px solid #796e62",
             "borderRadius": 2,
             "&:before, &:after": {
               "display": "none"
             },
             "&:hover": {
-              "backgroundColor": "#d5b99a"
+              "backgroundColor": "#c5bdb0"
             },
             "&.Mui-focused": {
-              "backgroundColor": "#d5b99a",
-              "borderColor": "#454f50"
+              "backgroundColor": "#c5bdb0",
+              "borderColor": "#e76925"
             },
             "&.Mui-disabled": {
-              "backgroundColor": "#e6cfb1"
+              "backgroundColor": "#dbd2c2"
             }
           }
         }
@@ -3819,11 +5511,10 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "color": "#241c17",
+            "color": "#544f48",
             "borderRadius": 2,
             "&.Mui-expanded": {
-              "minHeight": 44,
-              "borderBottom": "1px solid #a88a6f"
+              "minHeight": 44
             }
           },
           "content": {
@@ -3832,13 +5523,14 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
             }
           },
           "expandIconWrapper": {
-            "color": "#392b24"
+            "color": "#675f57"
           }
         }
       },
       "MuiAccordion": {
         "styleOverrides": {
           "root": {
+            "border": "1px solid #796e62",
             "boxShadow": "none",
             "&:before": {
               "display": "none"
@@ -3850,79 +5542,182 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "root": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "border": "1px solid #4c392e",
             "borderRadius": 2,
-            "&.MuiChip-filledPrimary": {
-              "backgroundColor": "#454f50",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#89a3a4",
-                "color": "#241c17"
+            "&.MuiChip-colorPrimary.MuiChip-filled": {
+              "backgroundColor": "#af5728",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e76925",
+                  "color": "#2a2824"
+                }
               }
             },
-            "&.MuiChip-filledSecondary": {
-              "backgroundColor": "#604650",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#b28aa0",
-                "color": "#241c17"
+            "&.MuiChip-colorSecondary.MuiChip-filled": {
+              "backgroundColor": "#796e62",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#675f57",
+                  "color": "#fdfaf1"
+                }
               }
             },
-            "&.MuiChip-filledError": {
-              "backgroundColor": "#763d2f",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#e4775f",
-                "color": "#241c17"
+            "&.MuiChip-colorError.MuiChip-filled": {
+              "backgroundColor": "#b24533",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#e6573d",
+                  "color": "#21201d"
+                }
               }
             },
-            "&.MuiChip-filledWarning": {
-              "backgroundColor": "#634824",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#dfa54c",
-                "color": "#241c17"
+            "&.MuiChip-colorWarning.MuiChip-filled": {
+              "backgroundColor": "#d3a13d",
+              "color": "#423e39",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#eabb57",
+                  "color": "#544f48"
+                }
               }
             },
-            "&.MuiChip-filledSuccess": {
-              "backgroundColor": "#4f4f2a",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#a1a45b",
-                "color": "#241c17"
+            "&.MuiChip-colorSuccess.MuiChip-filled": {
+              "backgroundColor": "#5a7c3f",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#7b985c",
+                  "color": "#2b2925"
+                }
               }
             },
-            "&.MuiChip-filledInfo": {
-              "backgroundColor": "#465040",
-              "color": "#fff8e9",
-              "&:hover": {
-                "backgroundColor": "#91a586",
-                "color": "#241c17"
+            "&.MuiChip-colorInfo.MuiChip-filled": {
+              "backgroundColor": "#467992",
+              "color": "#fdfaf1",
+              "@media (hover: hover)": {
+                "&:hover": {
+                  "backgroundColor": "#64a6b1",
+                  "color": "#37332f"
+                }
               }
             }
           }
-        }
+        },
+        "variants": [
+          {
+            "props": {
+              "variant": "outlined"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "primary"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "secondary"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "error"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "warning"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "success"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          },
+          {
+            "props": {
+              "variant": "outlined",
+              "color": "info"
+            },
+            "style": {
+              "border": "1px solid currentColor"
+            }
+          }
+        ]
       },
       "MuiAlert": {
         "styleOverrides": {
           "root": {
-            "border": "1px solid #4c392e",
+            "border": "1px solid #796e62",
             "borderRadius": 2,
-            "&.MuiAlert-filledError": {
-              "backgroundColor": "#763d2f",
-              "color": "#fff8e9"
+            "&.MuiAlert-colorError.MuiAlert-filled": {
+              "backgroundColor": "#b24533",
+              "color": "#fdfaf1"
             },
-            "&.MuiAlert-filledWarning": {
-              "backgroundColor": "#634824",
-              "color": "#fff8e9"
+            "&.MuiAlert-colorWarning.MuiAlert-filled": {
+              "backgroundColor": "#d3a13d",
+              "color": "#423e39"
             },
-            "&.MuiAlert-filledSuccess": {
-              "backgroundColor": "#4f4f2a",
-              "color": "#fff8e9"
+            "&.MuiAlert-colorSuccess.MuiAlert-filled": {
+              "backgroundColor": "#5a7c3f",
+              "color": "#fdfaf1"
             },
-            "&.MuiAlert-filledInfo": {
-              "backgroundColor": "#465040",
-              "color": "#fff8e9"
+            "&.MuiAlert-colorInfo.MuiAlert-filled": {
+              "backgroundColor": "#467992",
+              "color": "#fdfaf1"
+            },
+            "&.MuiAlert-standard.MuiAlert-colorError": {
+              "backgroundColor": "#f3ecdd",
+              "color": "#4c1f19",
+              "& .MuiAlert-icon": {
+                "color": "#4c1f19"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorWarning": {
+              "backgroundColor": "#f3ecdd",
+              "color": "#714e0f",
+              "& .MuiAlert-icon": {
+                "color": "#714e0f"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorSuccess": {
+              "backgroundColor": "#f3ecdd",
+              "color": "#2c3f1e",
+              "& .MuiAlert-icon": {
+                "color": "#2c3f1e"
+              }
+            },
+            "&.MuiAlert-standard.MuiAlert-colorInfo": {
+              "backgroundColor": "#f3ecdd",
+              "color": "#1c3c48",
+              "& .MuiAlert-icon": {
+                "color": "#1c3c48"
+              }
             }
           }
         }
@@ -3930,7 +5725,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiPopover": {
         "styleOverrides": {
           "paper": {
-            "border": "1px solid #4c392e",
+            "border": "1px solid #796e62",
             "borderRadius": 2,
             "boxShadow": "none"
           }
@@ -3939,17 +5734,17 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiDrawer": {
         "styleOverrides": {
           "paper": {
-            "backgroundColor": "#d5b99a",
-            "borderColor": "#4c392e",
+            "backgroundColor": "#c5bdb0",
+            "borderColor": "#796e62",
             "borderRadius": 2,
             "boxShadow": "none"
           },
           "root": {
             "&.MuiDrawer-modal .MuiDrawer-paper": {
-              "border": "1px solid #4c392e"
+              "border": "1px solid #796e62"
             },
             "&.MuiDrawer-docked .MuiDrawer-paper": {
-              "border": "1px solid #4c392e"
+              "border": "1px solid #796e62"
             }
           }
         }
@@ -3957,9 +5752,18 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiDialog": {
         "styleOverrides": {
           "paper": {
-            "border": "1px solid #4c392e",
+            "border": "1px solid #796e62",
             "borderRadius": 2,
             "boxShadow": "none"
+          }
+        }
+      },
+      "MuiSnackbarContent": {
+        "styleOverrides": {
+          "root": {
+            "backgroundColor": "#c5bdb0",
+            "color": "#544f48",
+            "border": "1px solid #796e62"
           }
         }
       },
@@ -3967,7 +5771,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
         "styleOverrides": {
           "tooltip": {
             "fontFamily": "var(--font-sunfade-montserrat, \"Montserrat\"), \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
-            "border": "1px solid #4c392e",
+            "border": "1px solid #796e62",
             "borderRadius": 2
           }
         }
@@ -3989,7 +5793,7 @@ export const sunfadeThemeOptions: Record<SunfadeVariant, ThemeOptions> = {
       "MuiTableCell": {
         "styleOverrides": {
           "root": {
-            "borderBottomColor": "#a88a6f"
+            "borderBottomColor": "#796e62"
           }
         }
       }
