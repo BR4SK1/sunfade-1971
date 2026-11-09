@@ -38,21 +38,35 @@ describe('contrast presentation', () => {
         .toEqual([palette.fg2, palette.fg1, palette.fg0]);
       expect(soft.palette.background.paper).toBe(palette.bg1);
       expect(hard.palette.background.paper).toBe(palette.bg2);
-      expect(hard.palette.divider).not.toBe(medium.palette.divider);
+      // Dividers share the themed border color (the frame tone, always the fg2
+      // swatch) in every contrast — they must not fall back to bg tiers.
+      expect(hard.palette.divider).toBe(medium.palette.divider);
+      expect(soft.palette.divider).toBe(medium.palette.divider);
+      expect(soft.palette.divider).toBe(palette.fg2);
       expect(soft.palette.primary.main).not.toBe(medium.palette.primary.main);
       expect(hard.palette.primary.main).not.toBe(medium.palette.primary.main);
-      expect(medium.palette.primary.main).toBe(mediumRoles.accents.blue.main);
+      expect(medium.palette.primary.main).toBe(mediumRoles.accents.orange.main);
+      // Secondary is fg-family chrome: the raw fill is the fg2 swatch and the
+      // readable text role adjusts only if an edited fg2 loses readability.
+      expect(medium.palette.secondary.main).toBe(mediumRoles.secondary.main);
+      expect(mediumRoles.secondary.neutralFill).toBe(palette.fg2);
+      expect(mediumRoles.secondary.main).not.toBe(mediumRoles.secondary.light);
+      expect(medium.palette.info.main).toBe(mediumRoles.accents.blue.main);
       expect(palette).toEqual(original);
 
       for (const [index, theme] of themes.entries()) {
         const roles = getContrastRoles(palette, mode, CONTRASTS[index]);
         expect(theme.palette.background.paper).toBe(roles.paper);
         expect(theme.palette.divider).toBe(roles.divider);
-        expect(theme.palette.primary.contrastText).toBe(roles.accents.blue.contrastText);
+        // Divider lines always carry the themed border color (the frame tone),
+        // which is also what MUI paints ToggleButton borders with.
+        expect(roles.divider).toBe(roles.frame);
+        expect(theme.palette.primary.contrastText).toBe(roles.accents.orange.contrastText);
         expect(theme.components?.MuiButton?.styleOverrides).toMatchObject({
           // The frame border belongs to surfaces, not buttons: the Button root
-          // must not carry it. Its shared focus-visible accent is expected.
-          root: { '&:focus-visible': { outline: `1px solid ${roles.accents.blue.main}` } },
+          // must not carry it. Its shared focus-visible treatment is the exact
+          // bright_orange palette swatch (explicit user direction).
+          root: { '&:focus-visible': { outline: `1px solid ${palette.bright_orange}` } },
         });
         // Default cards are quiet paper surfaces: no standing frame. The
         // explicitly outlined Paper/Card variant keeps its 1px frame.
@@ -64,22 +78,23 @@ describe('contrast presentation', () => {
           root: { borderColor: roles.frame },
           outlined: { borderWidth: 1 },
         });
-        // Interior sections and ordinary icon actions are quiet: no frames.
-        expect((theme.components?.MuiAccordion?.styleOverrides?.root as Record<string, unknown>).border).toBeUndefined();
+        // Interior sections carry the shared 1px frame (cream in dark mode);
+        // ordinary icon actions stay quiet with no frames.
+        expect((theme.components?.MuiAccordion?.styleOverrides?.root as Record<string, unknown>).border).toBe(`1px solid ${roles.frame}`);
         expect((theme.components?.MuiIconButton?.styleOverrides?.root as Record<string, unknown>).border).toBeUndefined();
         // Filled inputs keep a visible boundary at rest and an obvious
-        // keyboard-focus treatment: fill lifts to the hover tier and the
-        // border takes the independent blue focus accent. The accent must
-        // clear 3:1 (WCAG 1.4.11 non-text) against the actual focused
-        // surfaces — the lifted fill and the surrounding paper.
+        // keyboard-focus treatment: the fill lifts to the hover tier and the
+        // border takes the shared focus treatment — the exact bright_orange
+        // swatch (explicit user direction). No non-text contrast floor is
+        // asserted for that border: bright_orange sits below 3:1 against the
+        // lifted fill and the paper in the light variants, a trade-off the
+        // user accepted; no WCAG claim is made for the focus indicator.
         const filledRoot = theme.components?.MuiFilledInput?.styleOverrides?.root as Record<string, Record<string, string>>;
         expect(filledRoot.border).toBe(`1px solid ${roles.frame}`);
         const focusedFilled = filledRoot['&.Mui-focused'];
         expect(focusedFilled.backgroundColor).toBe(roles.inputHover);
-        expect(focusedFilled.borderColor).toBe(roles.accents.blue.main);
+        expect(focusedFilled.borderColor).toBe(palette.bright_orange);
         expect(focusedFilled.borderColor).not.toBe(roles.frame);
-        expect(getContrastRatio(roles.accents.blue.main, roles.inputHover), `${mode} ${CONTRASTS[index]} focus border vs filled fill`).toBeGreaterThanOrEqual(3);
-        expect(getContrastRatio(roles.accents.blue.main, roles.paper), `${mode} ${CONTRASTS[index]} focus border vs paper`).toBeGreaterThanOrEqual(3);
         // The lifted focused fill keeps its label readable (the input text
         // sits on the fill while focused).
         expect(getContrastRatio(roles.text, roles.inputHover), `${mode} ${CONTRASTS[index]} text on focused fill`).toBeGreaterThanOrEqual(4.5);
@@ -125,8 +140,12 @@ describe('contrast presentation', () => {
         expect(output).toContain(`"primary": "${roles.text}"`);
         expect(output).toContain(`"secondary": "${roles.secondaryText}"`);
         expect(output).toContain(`"divider": "${roles.divider}"`);
+        // Primary is the orange accent, info the blue accent, secondary the
+        // fg-family chrome — all three roles must appear in the export.
+        expect(output).toContain(`"main": "${roles.accents.orange.main}"`);
         expect(output).toContain(`"main": "${roles.accents.blue.main}"`);
-        expect(output).toContain(`"contrastText": "${roles.accents.blue.contrastText}"`);
+        expect(output).toContain(`"main": "${roles.secondary.main}"`);
+        expect(output).toContain(`"contrastText": "${roles.accents.orange.contrastText}"`);
         expect(output).toContain(`"backgroundColor": "${roles.inputHover}"`);
         expect(output).toContain(`"background": "${roles.headerBackground}"`);
         expect(output).toContain(`"border": "1px solid ${roles.frame}"`);
@@ -146,8 +165,8 @@ describe('contrast presentation', () => {
       bg1: '#394953',
       fg0: '#f6f1e8',
       fg2: '#c9c3b7',
-      neutral_blue: '#648fa2',
-      bright_blue: '#91b8c4',
+      neutral_orange: '#c98a52',
+      bright_orange: '#f0a468',
     };
     const modePalettes: ModePalettes = {
       dark: { baseColors: { ...DEFAULT_DARK_BASE_COLORS }, overrides },
@@ -159,33 +178,41 @@ describe('contrast presentation', () => {
 
     expect(theme.palette.background.default).toBe(resolved.bg0_hard);
     expect(theme.palette.text.primary).toBe(resolved.fg0);
-    expect(theme.palette.primary.main).toBe(roles.accents.blue.main);
-    expect(theme.palette.primary.main).not.toBe(DARK_DEFAULTS.bright_blue);
-    expect(serializeMuiTheme(modePalettes)).toContain(`"main": "${roles.accents.blue.main}"`);
+    // Primary follows the edited orange accent's readable text role.
+    expect(theme.palette.primary.main).toBe(roles.accents.orange.main);
+    expect(theme.palette.primary.main).not.toBe(DARK_DEFAULTS.bright_orange);
+    // Secondary keeps the raw fg-family fill even when fg2 is edited.
+    expect(theme.palette.secondary.main).toBe(roles.secondary.main);
+    expect(roles.secondary.neutralFill).toBe(resolved.fg2);
+    expect(serializeMuiTheme(modePalettes)).toContain(`"main": "${roles.accents.orange.main}"`);
   });
 });
 
 // ── Hover/highlight behavior ─────────────────────────────────
-// Filled fills rest on the neutral-tier main and lift to the bright tier on
+// Filled fills rest on the raw neutral fill and lift to the bright tier on
 // hover, with a label ink recomputed for the bright fill. Coverage spans all
-// six variants (both modes × all contrasts) and every semantic accent, and
-// checks the actual hover foreground/background pair — not just the page.
+// six variants (both modes × all contrasts) and every MUI color — the five
+// accent-mapped ones plus secondary's fg-family chrome — and checks the
+// actual hover foreground/background pair, not just the page.
 
-type AccentKey = 'blue' | 'purple' | 'red' | 'yellow' | 'green' | 'aqua' | 'orange';
-
-const SEMANTIC_ACCENTS: { name: AccentKey; chipClass: string; buttonColor: string }[] = [
-  { name: 'blue', chipClass: '&.MuiChip-filledPrimary', buttonColor: 'primary' },
-  { name: 'purple', chipClass: '&.MuiChip-filledSecondary', buttonColor: 'secondary' },
-  { name: 'red', chipClass: '&.MuiChip-filledError', buttonColor: 'error' },
-  { name: 'yellow', chipClass: '&.MuiChip-filledWarning', buttonColor: 'warning' },
-  { name: 'green', chipClass: '&.MuiChip-filledSuccess', buttonColor: 'success' },
-  { name: 'aqua', chipClass: '&.MuiChip-filledInfo', buttonColor: 'info' },
+const MUI_COLORS: {
+  label: string;
+  pick: (roles: ReturnType<typeof getContrastRoles>) => { neutralFill: string; neutralFillLabel: string; light: string; lightContrastText: string; main: string; contrastText: string };
+  chipClass: string;
+  buttonColor: string;
+}[] = [
+  { label: 'primary (orange accent)', pick: (roles) => roles.accents.orange, chipClass: '&.MuiChip-colorPrimary.MuiChip-filled', buttonColor: 'primary' },
+  { label: 'secondary (fg chrome)', pick: (roles) => roles.secondary, chipClass: '&.MuiChip-colorSecondary.MuiChip-filled', buttonColor: 'secondary' },
+  { label: 'error (red accent)', pick: (roles) => roles.accents.red, chipClass: '&.MuiChip-colorError.MuiChip-filled', buttonColor: 'error' },
+  { label: 'warning (yellow accent)', pick: (roles) => roles.accents.yellow, chipClass: '&.MuiChip-colorWarning.MuiChip-filled', buttonColor: 'warning' },
+  { label: 'success (green accent)', pick: (roles) => roles.accents.green, chipClass: '&.MuiChip-colorSuccess.MuiChip-filled', buttonColor: 'success' },
+  { label: 'info (blue accent)', pick: (roles) => roles.accents.blue, chipClass: '&.MuiChip-colorInfo.MuiChip-filled', buttonColor: 'info' },
 ];
 
 describe('hover and highlight behavior', () => {
   for (const { mode, palette } of MODES) {
     for (const contrast of CONTRASTS) {
-      it(`rests on neutral and lifts to bright with passing contrast in ${mode}/${contrast}`, () => {
+      it(`rests on the raw neutral fill and lifts to bright with passing contrast in ${mode}/${contrast}`, () => {
         const theme = buildMuiTheme(palette, mode, contrast);
         const roles = getContrastRoles(palette, mode, contrast);
         const components = theme.components as Record<string, { styleOverrides?: Record<string, unknown>; variants?: unknown }>;
@@ -195,32 +222,35 @@ describe('hover and highlight behavior', () => {
           style?: Record<string, unknown>;
         }>;
 
-        for (const { name, chipClass, buttonColor } of SEMANTIC_ACCENTS) {
-          const accent = roles.accents[name];
-          const chipStyle = (components.MuiChip?.styleOverrides?.root ?? {}) as Record<string, Record<string, Record<string, string>>>;
+        for (const { label, pick, chipClass, buttonColor } of MUI_COLORS) {
+          const tier = pick(roles);
+          const chipStyle = (components.MuiChip?.styleOverrides?.root ?? {}) as Record<string, Record<string, Record<string, Record<string, string>>>>;
           const chipRest = chipStyle[chipClass];
-          const chipHover = chipRest?.['&:hover'];
+          const chipHover = chipRest?.['@media (hover: hover)']?.['&:hover'];
           const buttonHover = (buttonVariants.find((variant) =>
             variant.props?.variant === 'contained' && variant.props?.color === buttonColor)
             ?.style?.['@media (hover: hover)'] as Record<string, Record<string, string>> | undefined)?.['&:hover'];
 
-          // The resting fill is the readable neutral main — never the bright tier.
-          expect(chipRest?.backgroundColor, `${mode}/${contrast} ${name} chip rest`).toBe(accent.main);
-          expect(accent.main).not.toBe(accent.light);
+          // The resting fill is the RAW neutral fill — never the bright tier,
+          // never the readability-adjusted text role.
+          expect(chipRest?.backgroundColor, `${mode}/${contrast} ${label} chip rest fill`).toBe(tier.neutralFill);
+          expect(tier.neutralFill).not.toBe(tier.light);
 
-          // Hover lifts to the bright tier with the recomputed label ink.
-          expect(chipHover?.backgroundColor, `${mode}/${contrast} ${name} chip hover bg`).toBe(accent.light);
-          expect(chipHover?.color, `${mode}/${contrast} ${name} chip hover ink`).toBe(accent.lightContrastText);
-          expect(buttonHover?.backgroundColor, `${mode}/${contrast} ${name} button hover bg`).toBe(accent.light);
-          expect(buttonHover?.color, `${mode}/${contrast} ${name} button hover ink`).toBe(accent.lightContrastText);
+          // The rest label is the ink computed for that raw fill, and the
+          // pair passes 4.5:1.
+          expect(chipRest?.color, `${mode}/${contrast} ${label} chip rest ink`).toBe(tier.neutralFillLabel);
+          expect(getContrastRatio(tier.neutralFillLabel, tier.neutralFill), `${mode}/${contrast} ${label} rest pair`).toBeGreaterThanOrEqual(4.5);
 
-          // The actual hover foreground/background pair passes 4.5:1, and the
-          // resting fill keeps its own accessible label.
-          expect(getContrastRatio(accent.lightContrastText, accent.light), `${mode}/${contrast} ${name} hover pair`).toBeGreaterThanOrEqual(4.5);
-          expect(getContrastRatio(accent.contrastText, accent.main), `${mode}/${contrast} ${name} rest pair`).toBeGreaterThanOrEqual(4.5);
+          // Hover lifts to the bright tier with the recomputed label ink —
+          // identical treatment on chips and buttons.
+          expect(chipHover?.backgroundColor, `${mode}/${contrast} ${label} chip hover bg`).toBe(tier.light);
+          expect(chipHover?.color, `${mode}/${contrast} ${label} chip hover ink`).toBe(tier.lightContrastText);
+          expect(buttonHover?.backgroundColor, `${mode}/${contrast} ${label} button hover bg`).toBe(tier.light);
+          expect(buttonHover?.color, `${mode}/${contrast} ${label} button hover ink`).toBe(tier.lightContrastText);
+          expect(getContrastRatio(tier.lightContrastText, tier.light), `${mode}/${contrast} ${label} hover pair`).toBeGreaterThanOrEqual(4.5);
         }
 
-        // Selection shares the highlight treatment on the primary accent.
+        // Selection shares the highlight treatment on the info accent (blue).
         const selection = (components.MuiCssBaseline?.styleOverrides as Record<string, Record<string, string>>)?.['::selection'];
         expect(selection?.backgroundColor).toBe(roles.accents.blue.light);
         expect(selection?.color).toBe(roles.accents.blue.lightContrastText);
@@ -276,9 +306,10 @@ describe('selected toggle treatment', () => {
         expect(roles.headerBackground).not.toBe(roles.paper);
         expect(getContrastRatio(roles.headerText, roles.headerBackground), `${mode}/${contrast} selected pair`).toBeGreaterThanOrEqual(4.5);
 
-        // Focus is outline-only — a different, non-fill treatment.
-        expect(selected?.backgroundColor).not.toBe(roles.accents.blue.main);
-        expect(toggle['&:focus-visible']?.outline).toContain(roles.accents.blue.main);
+        // Focus is outline-only — a different, non-fill treatment, in the
+        // exact bright_orange focus color (explicit user direction).
+        expect(selected?.backgroundColor).not.toBe(palette.bright_orange);
+        expect(toggle['&:focus-visible']?.outline).toContain(palette.bright_orange);
       });
     }
   }

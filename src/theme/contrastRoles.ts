@@ -32,6 +32,13 @@ export interface ContrastRoles {
   text: string;
   secondaryText: string;
   disabledText: string;
+  /**
+   * Divider-line color: the same prominent border tone as `frame` (the fg2
+   * swatch) in every mode and contrast. MUI draws ToggleButton borders,
+   * Divider components, table rules and the sx `borderColor: 'divider'`
+   * shorthand from this one role, so a quieter background tier here is what
+   * made those lines read as inconsistent grey.
+   */
   divider: string;
   /** Prominent element-frame color: always the fg2 swatch. */
   frame: string;
@@ -40,6 +47,16 @@ export interface ContrastRoles {
   headerBackground: string;
   headerText: string;
   accents: Record<AccentName, AccentRoles>;
+  /**
+   * The MUI `secondary` color: structural chrome, not an accent. Built from
+   * the mode-appropriate fg family with fg2 as the base — the same swatch
+   * that paints frames and header bands — so secondary controls read as part
+   * of the cream/charcoal structure and orange (primary) stays the single
+   * accent. The raw-fill vs readable-role separation is identical to the
+   * accents: `neutralFill` is the exact fg2 swatch, `main` is the
+   * readability-adjusted text/border role.
+   */
+  secondary: AccentRoles;
 }
 
 function blend(from: string, to: string, amount: number): string {
@@ -139,6 +156,32 @@ function accentRoles(
   };
 }
 
+/**
+ * The secondary MUI color, built from the mode-appropriate fg family with
+ * fg2 as the base (the frame/header swatch). The fg family flips with the
+ * mode — light creams in dark mode, dark browns in light mode — but its
+ * prominence order is mode-independent: fg0 is the strongest ink in both,
+ * fg4 the dullest. Tiers therefore follow that order uniformly: fg1 (one
+ * step stronger than fg2) is the highlight tier the hover lifts to, fg3/fg4
+ * the darker tiers. fg0 stays reserved for body-text ink (it is a label
+ * candidate in readableLabel, never a fill). fg2 already clears ≥ 4.5:1
+ * against background and paper in every variant, so `main` survives
+ * readableAccent unchanged with the default palettes; the adjustment only
+ * engages when an edited fg2 loses readability.
+ */
+function fgSecondaryRoles(palette: ResolvedPalette, background: string, paper: string): AccentRoles {
+  return {
+    light: palette.fg1,
+    lightContrastText: readableLabel(palette.fg1, palette),
+    main: readableAccent(palette.fg2, palette, background, paper),
+    dark: palette.fg3,
+    darker: palette.fg4,
+    contrastText: readableLabel(palette.fg2, palette),
+    neutralFill: palette.fg2,
+    neutralFillLabel: readableLabel(palette.fg2, palette),
+  };
+}
+
 export function getContrastRoles(palette: ResolvedPalette, mode: Mode, contrast: Contrast): ContrastRoles {
   // Filled title bars use fg2 so the frame and the header share one accent tone.
   // readableLabel picks the strongest ink on that fill; fg0 stays reserved for body text.
@@ -150,7 +193,6 @@ export function getContrastRoles(palette: ResolvedPalette, mode: Mode, contrast:
       paper: palette.bg1,
       text: palette.fg2,
       secondaryText: palette.fg3,
-      divider: palette.bg2,
       input: palette.bg0_soft,
       inputHover: palette.bg1,
     },
@@ -159,7 +201,6 @@ export function getContrastRoles(palette: ResolvedPalette, mode: Mode, contrast:
       paper: palette.bg1,
       text: palette.fg1,
       secondaryText: palette.fg2,
-      divider: palette.bg2,
       input: palette.bg0_soft,
       inputHover: palette.bg1,
     },
@@ -168,7 +209,6 @@ export function getContrastRoles(palette: ResolvedPalette, mode: Mode, contrast:
       paper: palette.bg2,
       text: palette.fg0,
       secondaryText: palette.fg1,
-      divider: palette.bg4,
       input: palette.bg1,
       inputHover: palette.bg2,
     },
@@ -179,5 +219,18 @@ export function getContrastRoles(palette: ResolvedPalette, mode: Mode, contrast:
       .map((name) => [name, accentRoles(palette, name, mode, contrast, surfaces.background, surfaces.paper)]),
   ) as Record<AccentName, AccentRoles>;
 
-  return { ...surfaces, disabledText: palette.fg4, frame: palette.fg2, headerBackground, headerText, accents };
+  return {
+    ...surfaces,
+    // Divider lines share the themed border tone in every mode and contrast —
+    // always the fg2 swatch, like `frame`, never a per-contrast background
+    // tier: MUI draws ToggleButton borders, Divider components, table rules
+    // and the sx `borderColor: 'divider'` shorthand from this single role.
+    divider: palette.fg2,
+    disabledText: palette.fg4,
+    frame: palette.fg2,
+    headerBackground,
+    headerText,
+    accents,
+    secondary: fgSecondaryRoles(palette, surfaces.background, surfaces.paper),
+  };
 }

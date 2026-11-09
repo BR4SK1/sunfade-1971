@@ -79,9 +79,15 @@ export function ColorEditorPanel() {
       <Typography variant="caption" sx={{ fontWeight: 600, mb: 0.5, display: 'block', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
         Accents
       </Typography>
-      {ACCENT_NAMES.map((accent) => (
-        <AccentColorGroup key={accent} accent={accent} />
-      ))}
+      {/* Accent stack: adjacent accordions overlap by exactly 1px so the
+          seam between their frames reads as a single shared line. Scoped to
+          this stack only — the shared theme stays free of sibling-spacing
+          rules so exported theme consumers keep their own layout. */}
+      <Box sx={{ '& .MuiAccordion-root + .MuiAccordion-root': { marginTop: '-1px' } }}>
+        {ACCENT_NAMES.map((accent) => (
+          <AccentColorGroup key={accent} accent={accent} />
+        ))}
+      </Box>
 
       <Divider sx={{ my: 1.5 }} />
 
